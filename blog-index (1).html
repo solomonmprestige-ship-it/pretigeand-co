@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commercial Thinking — Prestige &amp; Co Blog</title>
+<meta name="description" content="Plain reads on UK capital markets, growth-stage businesses, and property development. Commercial commentary from Prestige &amp; Co — no jargon, no advice, honest observations.">
+<meta name="author" content="Solomon Prestige">
+<link rel="canonical" href="https://prestigeand.co/blog/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Commercial Thinking — Prestige &amp; Co">
+<meta property="og:description" content="Plain reads on UK capital markets, growth-stage businesses, and property development. Commercial commentary from Solomon Prestige.">
+<meta property="og:url" content="https://prestigeand.co/blog/">
+<meta property="og:site_name" content="Prestige &amp; Co">
+<meta property="og:image" content="https://prestigeand.co/og.png">
+<meta property="og:locale" content="en_GB">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Commercial Thinking — Prestige &amp; Co Blog">
+<meta name="twitter:description" content="Plain reads on UK capital markets, growth-stage businesses, and property development.">
+<meta name="twitter:image" content="https://prestigeand.co/og.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" href="/favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Commercial Thinking — Prestige & Co",
+  "description": "Plain reads on UK capital markets, growth-stage businesses, and property development.",
+  "url": "https://prestigeand.co/blog/",
+  "author": {
+    "@type": "Person",
+    "name": "Solomon Prestige",
+    "url": "https://prestigeand.co"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Prestige & Co",
+    "url": "https://prestigeand.co"
+  }
+}
+</script>
+
+<style>
+:root {
+  --charcoal: #1A1D23;
+  --slate: #3B4A5C;
+  --brass: #B8935A;
+  --brass-soft: #C9A875;
+  --brass-dim: rgba(184,147,90,0.13);
+  --offwhite: #FAF8F3;
+  --offwhite-warm: #F3EFE5;
+  --rule: rgba(184,147,90,0.45);
+  --muted: #5A6372;
+  --border: rgba(26,29,35,0.09);
+  --serif: "EB Garamond","Adobe Caslon Pro","Caslon",Georgia,serif;
+  --max: 1140px;
+  --gutter: clamp(1.25rem,5vw,2.75rem);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--offwhite);color:var(--charcoal);font-family:var(--serif);font-size:clamp(17px,1.1vw,19px);line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+::selection{background:var(--brass);color:var(--offwhite);}
+img{display:block;max-width:100%;height:auto;}
+a{color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--rule);transition:color 160ms ease,border-color 160ms ease;}
+a:hover{color:var(--brass);border-color:var(--brass);}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter);}
+
+/* TOP BAR */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(250,248,243,0.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:1.1rem 0;}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;}
+.wordmark-small{font-size:1.15rem;font-weight:500;color:var(--charcoal);border:none;letter-spacing:0.01em;white-space:nowrap;}
+.wordmark-small:hover{color:var(--brass);}
+.topbar nav{display:flex;gap:clamp(0.9rem,2vw,1.75rem);font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;flex-wrap:wrap;justify-content:flex-end;}
+.topbar nav a{border:none;color:var(--muted);font-weight:500;}
+.topbar nav a:hover{color:var(--brass);}
+.topbar nav a[aria-current="page"]{color:var(--brass);}
+
+/* BLOG HEADER */
+.blog-header{padding:clamp(4rem,10vh,7rem) 0 clamp(2.5rem,5vh,4rem);border-bottom:2px solid var(--brass);}
+.blog-header .wrap{display:grid;grid-template-columns:1fr;gap:1.5rem;}
+@media(min-width:760px){.blog-header .wrap{grid-template-columns:1fr 1fr;align-items:end;gap:3rem;}}
+.blog-eyebrow{font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--brass);font-weight:500;margin-bottom:1.25rem;display:block;}
+.blog-header h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.08;font-weight:500;letter-spacing:-0.01em;}
+.blog-header-desc{font-size:clamp(0.95rem,1.3vw,1.1rem);color:var(--slate);line-height:1.7;max-width:46ch;font-style:italic;align-self:end;}
+
+/* BLOG GRID */
+.blog-section{padding:clamp(3rem,7vh,5rem) 0;}
+.blog-grid{display:grid;grid-template-columns:1fr;gap:0;}
+.blog-post-card{display:grid;grid-template-columns:1fr;gap:0.5rem;padding:2rem 0;border-bottom:1px solid var(--border);transition:background 160ms ease;}
+.blog-post-card:first-child{padding-top:0;}
+@media(min-width:700px){
+  .blog-post-card{grid-template-columns:1fr auto;gap:1rem 3rem;align-items:start;}
+  .card-meta{text-align:right;}
+}
+.card-tag{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass);font-weight:500;border:none;display:inline-block;margin-bottom:0.6rem;}
+.card-tag:hover{color:var(--brass-soft);}
+.card-title{font-size:clamp(1.2rem,1.8vw,1.5rem);font-weight:500;color:var(--charcoal);line-height:1.2;margin-bottom:0.65rem;border:none;}
+.card-title:hover{color:var(--brass);}
+.card-excerpt{font-size:0.93rem;color:var(--slate);line-height:1.65;max-width:58ch;margin-bottom:0.75rem;}
+.card-read-more{font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--brass);font-weight:500;border:none;display:inline-flex;align-items:center;gap:0.4rem;}
+.card-read-more::after{content:'→';}
+.card-read-more:hover{color:var(--brass-soft);}
+.card-meta{display:flex;flex-direction:column;gap:0.4rem;padding-top:0.2rem;flex-shrink:0;}
+.card-date{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-weight:500;white-space:nowrap;}
+.card-author{font-size:0.72rem;color:var(--muted);white-space:nowrap;}
+
+/* EMPTY STATE */
+.blog-coming{padding:3rem 0;color:var(--muted);font-style:italic;font-size:0.95rem;}
+
+/* SIDEBAR */
+.blog-layout{display:grid;grid-template-columns:1fr;gap:3rem;}
+@media(min-width:900px){.blog-layout{grid-template-columns:1fr 260px;gap:4rem;align-items:start;}}
+.blog-sidebar{position:sticky;top:5.5rem;}
+.sidebar-card{padding:1.6rem;background:var(--charcoal);margin-bottom:1.5rem;}
+.sidebar-card-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass);font-weight:500;margin-bottom:0.75rem;display:block;}
+.sidebar-card h2{font-size:1rem;font-weight:500;color:var(--offwhite);margin-bottom:0.65rem;line-height:1.3;}
+.sidebar-card p{font-size:0.86rem;color:rgba(250,248,243,0.62);line-height:1.6;margin-bottom:1.1rem;}
+.sidebar-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.4rem;background:var(--brass);color:var(--charcoal);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;border:none;font-family:var(--serif);transition:background 180ms ease;white-space:nowrap;}
+.sidebar-btn:hover{background:var(--brass-soft);color:var(--charcoal);border:none;}
+.sidebar-about{padding:1.5rem;border:1px solid var(--border);margin-bottom:1.5rem;}
+.sidebar-about-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:0.75rem;display:block;}
+.sidebar-about p{font-size:0.86rem;color:var(--slate);line-height:1.6;margin-bottom:0.75rem;}
+.sidebar-about p:last-child{margin-bottom:0;}
+.sidebar-topics{padding:1.5rem;border:1px solid var(--border);}
+.sidebar-topics-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:1rem;display:block;}
+.topic-list{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.topic-tag{font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--charcoal);background:var(--brass-dim);border:1px solid rgba(184,147,90,0.25);padding:0.3rem 0.75rem;font-weight:500;}
+
+/* FOOTER */
+footer{background:var(--charcoal);border-top:2px solid var(--brass);padding:2.75rem 0 3rem;}
+.footer-inner{display:grid;grid-template-columns:1fr;gap:2rem;}
+@media(min-width:700px){.footer-inner{grid-template-columns:1.8fr 1fr;gap:3rem;align-items:start;}}
+.footer-brand{font-size:1rem;color:var(--offwhite);font-weight:500;margin-bottom:1rem;display:block;}
+.footer-disclosure{font-size:0.84rem;font-style:italic;line-height:1.72;color:rgba(250,248,243,0.68);max-width:56ch;margin-bottom:1.25rem;}
+.footer-reg{font-size:0.83rem;color:rgba(250,248,243,0.55);line-height:1.72;max-width:54ch;padding-top:1rem;border-top:1px solid rgba(184,147,90,0.15);}
+.footer-reg strong{color:rgba(250,248,243,0.82);font-weight:600;display:block;margin-bottom:0.2rem;}
+.footer-nav{display:flex;flex-direction:column;gap:0.5rem;}
+.footer-nav a{color:rgba(250,248,243,0.45);border:none;font-size:0.83rem;letter-spacing:0.05em;transition:color 160ms ease;padding:0.18rem 0;}
+.footer-nav a:hover{color:var(--brass);}
+.footer-bottom{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(184,147,90,0.12);display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:space-between;align-items:center;font-size:0.78rem;color:rgba(250,248,243,0.35);}
+
+/* ANIMATIONS */
+@media(prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(10px);animation:rise 900ms cubic-bezier(0.2,0.6,0.2,1) forwards;}
+  .reveal.d1{animation-delay:150ms;}
+  .reveal.d2{animation-delay:300ms;}
+  @keyframes rise{to{opacity:1;transform:translateY(0);}}
+}
+
+@media(max-width:639px){
+  .blog-sidebar{position:static;}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="/" class="wordmark-small" aria-label="Prestige and Co — home">Prestige &amp; Co</a>
+    <nav aria-label="Primary navigation">
+      <a href="/#who">Who we work with</a>
+      <a href="/#services">Services</a>
+      <a href="/#founder">Founder</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- BLOG HEADER -->
+  <div class="blog-header" role="banner">
+    <div class="wrap">
+      <div>
+        <span class="blog-eyebrow reveal">Prestige &amp; Co · Commercial Commentary</span>
+        <h1 class="reveal d1">Commercial<br>Thinking</h1>
+      </div>
+      <p class="blog-header-desc reveal d2">Plain reads on UK capital markets, growth-stage businesses, and property development. No jargon. No advice. Honest observations from twenty-five years in financial services and corporate advisory.</p>
+    </div>
+  </div>
+
+  <!-- BLOG CONTENT -->
+  <section class="blog-section" aria-label="Articles">
+    <div class="wrap">
+      <div class="blog-layout">
+
+        <!-- POST LIST -->
+        <div>
+          <div class="blog-grid" role="list">
+
+            <!-- POST 01 -->
+            <article class="blog-post-card" role="listitem" aria-label="Article: The Blind Spot Most Founders Have Before a Raise">
+              <div>
+                <a href="/blog/the-blind-spot-most-founders-have-before-a-raise/"
+                   class="card-tag"
+                   aria-label="Category: Startups and Growth Stage">Startups &amp; Growth-Stage</a>
+                <h2>
+                  <a href="/blog/the-blind-spot-most-founders-have-before-a-raise/"
+                     class="card-title">The Blind Spot Most Founders Have Before a Raise</a>
+                </h2>
+                <p class="card-excerpt">Most founders preparing to approach investors focus on the financial model. That's rarely the problem. What investors are actually doing — from the first conversation, before any term sheet exists — is something different entirely.</p>
+                <a href="/blog/the-blind-spot-most-founders-have-before-a-raise/"
+                   class="card-read-more"
+                   aria-label="Read full article: The Blind Spot Most Founders Have Before a Raise">Read article</a>
+              </div>
+              <div class="card-meta">
+                <time class="card-date" datetime="2026-05-01">1 May 2026</time>
+                <span class="card-author">Solomon Prestige</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="blog-sidebar" aria-label="About this blog and contact">
+
+          <div class="sidebar-card">
+            <span class="sidebar-card-label">Start a conversation</span>
+            <h2>Financial Reality Session</h2>
+            <p>A single session. A plain commercial read of where your business actually stands. Fixed scope. Honest number.</p>
+            <a href="https://wa.me/447835822331?text=Hello%20Solomon%2C%20I%20would%20like%20to%20discuss%20a%20Financial%20Reality%20Session."
+               class="sidebar-btn"
+               aria-label="Contact Solomon Prestige via WhatsApp UK to discuss a Financial Reality Session">WhatsApp — UK</a>
+          </div>
+
+          <div class="sidebar-about">
+            <span class="sidebar-about-label">About the author</span>
+            <p>Solomon Prestige is the founder of Prestige &amp; Co. Twenty-five years in UK financial services and corporate advisory — Bristol &amp; West, FTSE 100 fund management, M&amp;A, and European real estate.</p>
+            <p>Chartered Insurance Institute — Financial Planning and Discretionary Investment Management. Chartered Institute for Securities &amp; Investment — Corporate Finance.</p>
+          </div>
+
+          <div class="sidebar-topics">
+            <span class="sidebar-topics-label">Topics covered</span>
+            <div class="topic-list" role="list" aria-label="Article topics">
+              <span class="topic-tag" role="listitem">Capital Raise</span>
+              <span class="topic-tag" role="listitem">Exit Readiness</span>
+              <span class="topic-tag" role="listitem">Due Diligence</span>
+              <span class="topic-tag" role="listitem">Growth Stage</span>
+              <span class="topic-tag" role="listitem">Property</span>
+              <span class="topic-tag" role="listitem">UK Startups</span>
+              <span class="topic-tag" role="listitem">Corporate Finance</span>
+              <span class="topic-tag" role="listitem">Investor Readiness</span>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <span class="footer-brand">Prestige &amp; Co</span>
+        <p class="footer-disclosure">
+          Prestige &amp; Co is a trading name of Solomon Prestige Group Ltd. We are a commercial consultancy and are not authorised or regulated by the Financial Conduct Authority. We do not provide regulated financial advice, arrange regulated investments, or hold client money. Where regulated advice or regulated introductions are required, we refer to appropriately authorised partners.
+        </p>
+        <p class="footer-reg">
+          <strong>Solomon Prestige Group Ltd &nbsp;·&nbsp; Registered in England and Wales &nbsp;·&nbsp; Company No. 17189399</strong>
+          Registered Office: 71–75 Shelton Street, Covent Garden, London WC2H 9JQ
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/#who">Who we work with</a>
+        <a href="/#approach">Approach</a>
+        <a href="/#services">Services</a>
+        <a href="/#founder">Founder</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#contact">Contact</a>
+        <a href="mailto:solomon@prestigeand.co">solomon@prestigeand.co</a>
+        <a href="https://wa.me/447835822331">WhatsApp — UK</a>
+        <a href="https://wa.me/34672526630">WhatsApp — Spain</a>
+        <a href="https://x.com/PrestigeCoUK" target="_blank" rel="noopener noreferrer">X — @PrestigeCoUK</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="yr"></span> Solomon Prestige Group Ltd. All rights reserved.</p>
+      <p>prestigeand.co</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
