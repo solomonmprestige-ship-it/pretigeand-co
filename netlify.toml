@@ -1,0 +1,32 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/crm/contacts/*"
+  to = "/.netlify/functions/crm-contacts/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/crm/contacts"
+  to = "/.netlify/functions/crm-contacts"
+  status = 200
+
+[[redirects]]
+  from = "/api/crm/companies/*"
+  to = "/.netlify/functions/crm-companies/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/crm/companies"
+  to = "/.netlify/functions/crm-companies"
+  status = 200
+
+[[redirects]]
+  from = "/api/crm/deals/*"
+  to = "/.netlify/functions/crm-deals/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/crm/deals"
+  to = "/.netlify/functions/crm-deals"
+  status = 200
