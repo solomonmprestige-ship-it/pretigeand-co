@@ -100,16 +100,16 @@ h1, h2, h3, h4 { font-family: 'EB Garamond', 'Adobe Caslon Pro', Georgia, serif;
 .btn { display: inline-flex; align-items: center; justify-content: center; background: var(--brass); color: var(--offwhite); font-family: Georgia, 'EB Garamond', serif; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; padding: 18px 36px; border: 1px solid var(--brass); cursor: pointer; transition: all 0.25s ease; white-space: nowrap; }
 .btn:hover { background: transparent; color: var(--brass); }
 
-/* HERO */
-.idx-hero { position: relative; min-height: 60vh; display: flex; align-items: center; background: var(--charcoal); color: var(--offwhite); overflow: hidden; padding: 160px 0 90px; }
-.idx-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.28) saturate(0.5); z-index: 0; }
-.idx-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,29,35,0.55) 0%, rgba(26,29,35,0.4) 40%, rgba(26,29,35,0.78) 100%); z-index: 1; }
-.idx-hero-content { position: relative; z-index: 2; max-width: 880px; }
-.idx-hero-eyebrow { display: block; font-size: 1rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--brass); font-weight: 500; margin-bottom: 28px; }
-.idx-hero h1 { font-size: clamp(2.4rem, 5.4vw, 4.2rem); font-weight: 500; line-height: 1.08; letter-spacing: 0.005em; color: var(--offwhite); display: inline-block; position: relative; padding-bottom: 18px; }
-.idx-hero h1::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 0.5px; background: var(--brass); }
-.idx-hero-subtitle { font-size: clamp(1.1rem, 1.6vw, 1.35rem); color: rgba(250,248,243,0.88); margin: 32px 0 20px; line-height: 1.55; max-width: 720px; }
-.idx-hero-lede { font-size: clamp(1rem, 1.3vw, 1.1rem); color: rgba(250,248,243,0.72); max-width: 720px; line-height: 1.65; }
+/* INTRO */
+.idx-intro { position: relative; min-height: 60vh; display: flex; align-items: center; background: var(--charcoal); color: var(--offwhite); overflow: hidden; padding: 160px 0 90px; }
+.idx-intro-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.28) saturate(0.5); z-index: 0; }
+.idx-intro-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,29,35,0.55) 0%, rgba(26,29,35,0.4) 40%, rgba(26,29,35,0.78) 100%); z-index: 1; }
+.idx-intro-content { position: relative; z-index: 2; max-width: 880px; }
+.idx-intro-eyebrow { display: block; font-size: 1rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--brass); font-weight: 500; margin-bottom: 28px; }
+.idx-intro h1 { font-size: clamp(2.4rem, 5.4vw, 4.2rem); font-weight: 500; line-height: 1.08; letter-spacing: 0.005em; color: var(--offwhite); display: inline-block; position: relative; padding-bottom: 18px; }
+.idx-intro h1::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 0.5px; background: var(--brass); }
+.idx-intro-subtitle { font-size: clamp(1.1rem, 1.6vw, 1.35rem); color: rgba(250,248,243,0.88); margin: 32px 0 20px; line-height: 1.55; max-width: 720px; }
+.idx-intro-lede { font-size: clamp(1rem, 1.3vw, 1.1rem); color: rgba(250,248,243,0.72); max-width: 720px; line-height: 1.65; }
 
 @media (prefers-reduced-motion: no-preference) {
   .fade-up { opacity: 0; transform: translateY(18px); animation: fadeUp 0.9s ease forwards; }
@@ -203,7 +203,7 @@ h1, h2, h3, h4 { font-family: 'EB Garamond', 'Adobe Caslon Pro', Georgia, serif;
   body { font-size: 17px; }
   .container { padding: 0 24px; }
   .nav-inner { padding: 0 24px; }
-  .idx-hero { padding: 130px 0 70px; min-height: auto; }
+  .idx-intro { padding: 130px 0 70px; min-height: auto; }
   .idx-card-body { padding: 30px 28px 32px; }
 }
 </style>
@@ -234,15 +234,15 @@ h1, h2, h3, h4 { font-family: 'EB Garamond', 'Adobe Caslon Pro', Georgia, serif;
 
 <main id="main">
 
-  <!-- HERO -->
-  <section class="idx-hero" aria-labelledby="idx-heading">
-    <img class="idx-hero-bg" src="/uk-corporate-finance-consultancy-london-prestige-co.png" alt="Prestige and Co — UK corporate finance case studies, owner-managed business work" title="Case Studies — Prestige and Co" loading="eager" fetchpriority="high">
-    <div class="idx-hero-overlay"></div>
-    <div class="container idx-hero-content">
-      <span class="idx-hero-eyebrow fade-up d1">Prestige &amp; Co</span>
+  <!-- INTRO -->
+  <section class="idx-intro" aria-labelledby="idx-heading">
+    <img class="idx-intro-bg" src="/uk-corporate-finance-consultancy-london-prestige-co.png" alt="Prestige and Co — UK corporate finance case studies, owner-managed business work" title="Case Studies — Prestige and Co" loading="eager" fetchpriority="high">
+    <div class="idx-intro-overlay"></div>
+    <div class="container idx-intro-content">
+      <span class="idx-intro-eyebrow fade-up d1">Prestige &amp; Co</span>
       <h1 id="idx-heading" class="fade-up d2">Case Studies</h1>
-      <p class="idx-hero-subtitle fade-up d3">The work that gets a business past the ceiling working harder cannot move. The work that gets it ready for sale at the price its years are worth. The work done before anyone is asking.</p>
-      <p class="idx-hero-lede fade-up d4">Each case study below is published with the owner's permission. Some name the business. Some do not. All of them name the work — and the lesson worth taking from it.</p>
+      <p class="idx-intro-subtitle fade-up d3">The work that gets a business past the ceiling working harder cannot move. The work that gets it ready for sale at the price its years are worth. The work done before anyone is asking.</p>
+      <p class="idx-intro-lede fade-up d4">Each case study below is published with the owner's permission. Some name the business. Some do not. All of them name the work — and the lesson worth taking from it.</p>
     </div>
   </section>
 

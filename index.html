@@ -144,17 +144,17 @@ p:last-child { margin-bottom: 0; }
 .via-whatsapp.dark { color: rgba(26, 29, 35, 0.6); }
 .wa-icon { width: 14px; height: 14px; fill: currentColor; }
 
-.hero { position: relative; min-height: 100vh; display: flex; align-items: center; background: var(--charcoal); color: var(--offwhite); overflow: hidden; padding: 140px 0 100px; }
-.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.28) saturate(0.5); z-index: 0; }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,29,35,0.55) 0%, rgba(26,29,35,0.4) 40%, rgba(26,29,35,0.78) 100%); z-index: 1; }
-.hero-content { position: relative; z-index: 2; max-width: 820px; }
-.hero-brand { display: block; font-size: 1.05rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--brass); font-weight: 500; margin-bottom: 28px; font-family: 'EB Garamond', Georgia, serif; }
-.hero h1 { font-size: clamp(2.4rem, 5.8vw, 4.6rem); font-weight: 500; line-height: 1.05; letter-spacing: 0.005em; color: var(--offwhite); display: inline-block; position: relative; padding-bottom: 18px; }
-.hero h1::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 0.5px; background: var(--brass); }
-.hero-subtitle { font-size: clamp(1.15rem, 1.8vw, 1.45rem); color: rgba(250,248,243,0.92); margin: 32px 0 28px; line-height: 1.5; max-width: 720px; }
-.hero-lede { font-size: clamp(1rem, 1.4vw, 1.18rem); color: rgba(250,248,243,0.78); margin-bottom: 44px; max-width: 720px; line-height: 1.6; }
-.hero .cta-row { gap: 22px; }
-.hero-cta-caption { font-size: 0.86rem; font-style: italic; color: rgba(250,248,243,0.65); margin-top: 18px; line-height: 1.5; max-width: 520px; }
+.intro { position: relative; min-height: 100vh; display: flex; align-items: center; background: var(--charcoal); color: var(--offwhite); overflow: hidden; padding: 140px 0 100px; }
+.intro-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.28) saturate(0.5); z-index: 0; }
+.intro-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,29,35,0.55) 0%, rgba(26,29,35,0.4) 40%, rgba(26,29,35,0.78) 100%); z-index: 1; }
+.intro-content { position: relative; z-index: 2; max-width: 820px; }
+.intro-brand { display: block; font-size: 1.05rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--brass); font-weight: 500; margin-bottom: 28px; font-family: 'EB Garamond', Georgia, serif; }
+.intro h1 { font-size: clamp(2.4rem, 5.8vw, 4.6rem); font-weight: 500; line-height: 1.05; letter-spacing: 0.005em; color: var(--offwhite); display: inline-block; position: relative; padding-bottom: 18px; }
+.intro h1::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 0.5px; background: var(--brass); }
+.intro-subtitle { font-size: clamp(1.15rem, 1.8vw, 1.45rem); color: rgba(250,248,243,0.92); margin: 32px 0 28px; line-height: 1.5; max-width: 720px; }
+.intro-lede { font-size: clamp(1rem, 1.4vw, 1.18rem); color: rgba(250,248,243,0.78); margin-bottom: 44px; max-width: 720px; line-height: 1.6; }
+.intro .cta-row { gap: 22px; }
+.intro-cta-caption { font-size: 0.86rem; font-style: italic; color: rgba(250,248,243,0.65); margin-top: 18px; line-height: 1.5; max-width: 520px; }
 
 @media (prefers-reduced-motion: no-preference) {
   .fade-up { opacity: 0; transform: translateY(18px); animation: fadeUp 0.9s ease forwards; }
@@ -316,7 +316,7 @@ p:last-child { margin-bottom: 0; }
 .modal .eyebrow { margin-bottom: 8px; }
 @media (max-width: 600px) { .modal { padding: 40px 28px 30px; } }
 
-@media (max-width: 760px) { .section { padding: 80px 0; } body { font-size: 17px; } .container { padding: 0 24px; } .nav-inner { padding: 0 24px; } .hero { padding: 130px 0 80px; } .who-card-body { padding: 30px 26px 32px; } .credentials, .approach-cta { padding: 28px 24px; } }
+@media (max-width: 760px) { .section { padding: 80px 0; } body { font-size: 17px; } .container { padding: 0 24px; } .nav-inner { padding: 0 24px; } .intro { padding: 130px 0 80px; } .who-card-body { padding: 30px 26px 32px; } .credentials, .approach-cta { padding: 28px 24px; } }
 .service-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 8px 0 18px; max-width: 580px; }
 .btn-svc { display: inline-flex; align-items: center; justify-content: center; text-align: center; background: transparent; color: var(--offwhite); border: 0.5px solid rgba(184,147,90,0.5); padding: 18px 22px; font-family: 'EB Garamond', Georgia, serif; font-size: 0.92rem; letter-spacing: 0.04em; line-height: 1.3; font-weight: 500; cursor: pointer; transition: all 0.25s ease; min-height: 64px; }
 .btn-svc:hover { border-color: var(--brass); background: var(--brass); color: var(--charcoal); }
@@ -333,7 +333,7 @@ p:last-child { margin-bottom: 0; }
 
 <header class="nav" role="banner">
   <div class="nav-inner">
-    <a href="#hero" class="nav-mark" aria-label="Prestige and Co — homepage">Prestige &amp; Co</a>
+    <a href="#intro" class="nav-mark" aria-label="Prestige and Co — homepage">Prestige &amp; Co</a>
     <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">Menu</button>
     <nav aria-label="Primary">
       <ul class="nav-links" id="navlinks">
@@ -352,19 +352,19 @@ p:last-child { margin-bottom: 0; }
 
 <main id="main">
 
-  <section class="hero" id="hero" aria-labelledby="hero-heading">
-    <img class="hero-bg" src="/uk-corporate-finance-consultant-london-prestige-co.png" alt="Prestige and Co — UK Corporate Finance Consultant, City of London skyline at golden hour" title="The City of London — Prestige and Co" loading="eager" fetchpriority="high">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <span class="hero-brand fade-up d1">Prestige &amp; Co</span>
-      <h1 id="hero-heading" class="fade-up d2">UK Corporate Finance Consultant</h1>
-      <p class="hero-subtitle fade-up d3">Money was the means. It was never the meaning.<br>The meaning was the legacy. The freedom. The proof.<br>I make sure the deal honours all of it.</p>
-      <p class="hero-lede fade-up d4">To raise the capital that takes what you are building to the next level. To sell what you have built for what it is worth. To get what you are building, built. For UK founders, owner-managers, and property developers.</p>
+  <section class="intro" id="intro" aria-labelledby="intro-heading">
+    <img class="intro-bg" src="/uk-corporate-finance-consultant-london-prestige-co.png" alt="Prestige and Co — UK Corporate Finance Consultant, City of London skyline at golden hour" title="The City of London — Prestige and Co" loading="eager" fetchpriority="high">
+    <div class="intro-overlay"></div>
+    <div class="container intro-content">
+      <span class="intro-brand fade-up d1">Prestige &amp; Co</span>
+      <h1 id="intro-heading" class="fade-up d2">UK Corporate Finance Consultant</h1>
+      <p class="intro-subtitle fade-up d3">Money was the means. It was never the meaning.<br>The meaning was the legacy. The freedom. The proof.<br>I make sure the deal honours all of it.</p>
+      <p class="intro-lede fade-up d4">To raise the capital that takes what you are building to the next level. To sell what you have built for what it is worth. To get what you are building, built. For UK founders, owner-managers, and property developers.</p>
       <div class="cta-row fade-up d5">
         <a class="btn" href="#contact" aria-label="Start the conversation with Solomon Prestige">Start the Conversation</a>
         <a class="btn btn-ghost" href="#services" aria-label="View Prestige and Co services">View Services</a>
       </div>
-      <p class="hero-cta-caption fade-up d5">Tell me your goals. Your dreams. Your vision for what comes next.<br>The detail belongs in a conversation.</p>
+      <p class="intro-cta-caption fade-up d5">Tell me your goals. Your dreams. Your vision for what comes next.<br>The detail belongs in a conversation.</p>
     </div>
   </section>
 
@@ -604,7 +604,7 @@ p:last-child { margin-bottom: 0; }
   <div class="container">
     <div class="footer-grid">
       <div class="footer-left">
-        <a href="#hero" class="footer-mark" aria-label="Prestige and Co">Prestige &amp; Co</a>
+        <a href="#intro" class="footer-mark" aria-label="Prestige and Co">Prestige &amp; Co</a>
         <p class="footer-disclosure">Prestige &amp; Co is the trading name of Solomon Prestige Group Ltd — a commercial advisory consultancy. Not authorised or regulated by the Financial Conduct Authority. Where regulated advice is required, we refer to appropriately authorised partners.</p>
         <p class="footer-reg">Solomon Prestige Group Ltd · Company No. 17189399 · 71–75 Shelton Street, Covent Garden, London WC2H 9JQ</p>
         <div class="footer-social" aria-label="Social links">

@@ -126,21 +126,21 @@ p:last-child { margin-bottom: 0; }
 .via-whatsapp.dark { color: rgba(26, 29, 35, 0.6); }
 .wa-icon { width: 14px; height: 14px; fill: currentColor; }
 
-/* CASE STUDY HERO */
-.cs-hero { position: relative; min-height: 78vh; display: flex; align-items: center; background: var(--charcoal); color: var(--offwhite); overflow: hidden; padding: 160px 0 100px; }
-.cs-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.28) saturate(0.5); z-index: 0; }
-.cs-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,29,35,0.55) 0%, rgba(26,29,35,0.4) 40%, rgba(26,29,35,0.78) 100%); z-index: 1; }
-.cs-hero-content { position: relative; z-index: 2; max-width: 880px; }
-.cs-hero-eyebrow { display: block; font-size: 0.82rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--brass); font-weight: 500; margin-bottom: 28px; }
-.cs-hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 500; line-height: 1.08; letter-spacing: 0.005em; color: var(--offwhite); display: inline-block; position: relative; padding-bottom: 18px; max-width: 880px; }
-.cs-hero h1::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 0.5px; background: var(--brass); }
-.cs-hero-subtitle { font-size: clamp(1.1rem, 1.5vw, 1.3rem); color: rgba(250,248,243,0.82); font-style: italic; margin: 32px 0 36px; line-height: 1.55; max-width: 720px; }
-.cs-hero-meta { margin-top: 44px; padding-top: 28px; border-top: 0.5px solid rgba(184,147,90,0.4); display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; max-width: 820px; }
-.cs-hero-meta .meta-label { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); margin-bottom: 8px; display: block; }
-.cs-hero-meta .meta-value { font-size: 1rem; color: rgba(250,248,243,0.9); line-height: 1.4; }
+/* CASE STUDY INTRO */
+.cs-intro { position: relative; min-height: 78vh; display: flex; align-items: center; background: var(--charcoal); color: var(--offwhite); overflow: hidden; padding: 160px 0 100px; }
+.cs-intro-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.28) saturate(0.5); z-index: 0; }
+.cs-intro-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,29,35,0.55) 0%, rgba(26,29,35,0.4) 40%, rgba(26,29,35,0.78) 100%); z-index: 1; }
+.cs-intro-content { position: relative; z-index: 2; max-width: 880px; }
+.cs-intro-eyebrow { display: block; font-size: 0.82rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--brass); font-weight: 500; margin-bottom: 28px; }
+.cs-intro h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 500; line-height: 1.08; letter-spacing: 0.005em; color: var(--offwhite); display: inline-block; position: relative; padding-bottom: 18px; max-width: 880px; }
+.cs-intro h1::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 0.5px; background: var(--brass); }
+.cs-intro-subtitle { font-size: clamp(1.1rem, 1.5vw, 1.3rem); color: rgba(250,248,243,0.82); font-style: italic; margin: 32px 0 36px; line-height: 1.55; max-width: 720px; }
+.cs-intro-meta { margin-top: 44px; padding-top: 28px; border-top: 0.5px solid rgba(184,147,90,0.4); display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; max-width: 820px; }
+.cs-intro-meta .meta-label { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); margin-bottom: 8px; display: block; }
+.cs-intro-meta .meta-value { font-size: 1rem; color: rgba(250,248,243,0.9); line-height: 1.4; }
 @media (max-width: 760px) {
-  .cs-hero-meta { grid-template-columns: 1fr 1fr; gap: 22px; }
-  .cs-hero { min-height: auto; padding: 130px 0 80px; }
+  .cs-intro-meta { grid-template-columns: 1fr 1fr; gap: 22px; }
+  .cs-intro { min-height: auto; padding: 130px 0 80px; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -272,15 +272,15 @@ p:last-child { margin-bottom: 0; }
 
 <main id="main">
 
-  <!-- HERO -->
-  <section class="cs-hero" aria-labelledby="cs-heading">
-    <img class="cs-hero-bg" src="/marina-alta-waste-management-case-study-prestige-co.jpg" alt="All Clear Solutions waste management case study — documented disposal at a licensed Marina Alta facility, Prestige and Co" title="All Clear Solutions Case Study — Marina Alta — Prestige and Co" loading="eager" fetchpriority="high">
-    <div class="cs-hero-overlay"></div>
-    <div class="container cs-hero-content">
-      <span class="cs-hero-eyebrow fade-up d1">Case Study — Business Repositioning</span>
+  <!-- INTRO -->
+  <section class="cs-intro" aria-labelledby="cs-heading">
+    <img class="cs-intro-bg" src="/marina-alta-waste-management-case-study-prestige-co.jpg" alt="All Clear Solutions waste management case study — documented disposal at a licensed Marina Alta facility, Prestige and Co" title="All Clear Solutions Case Study — Marina Alta — Prestige and Co" loading="eager" fetchpriority="high">
+    <div class="cs-intro-overlay"></div>
+    <div class="container cs-intro-content">
+      <span class="cs-intro-eyebrow fade-up d1">Case Study — Business Repositioning</span>
       <h1 id="cs-heading" class="fade-up d2">From Man-and-Van to Compliance Operation: All Clear Solutions, Marina Alta</h1>
-      <p class="cs-hero-subtitle fade-up d3">To take a business past the ceiling that working harder cannot move. To turn a round into an operation. To build something a buyer would pay for — not a job that pays the owner.</p>
-      <div class="cs-hero-meta fade-up d4">
+      <p class="cs-intro-subtitle fade-up d3">To take a business past the ceiling that working harder cannot move. To turn a round into an operation. To build something a buyer would pay for — not a job that pays the owner.</p>
+      <div class="cs-intro-meta fade-up d4">
         <div>
           <span class="meta-label">Sector</span>
           <span class="meta-value">Waste &amp; Property Services</span>
