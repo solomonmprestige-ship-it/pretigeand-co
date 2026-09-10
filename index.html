@@ -559,7 +559,6 @@ p:last-child { margin-bottom: 0; }
           <p class="service-buttons-note">One conversation to begin. No fee.</p>
           <div class="contact-rows">
             <div class="contact-row"><span class="label">Email</span><a href="mailto:solomon@prestigeand.co">solomon@prestigeand.co</a></div>
-            <div class="contact-row"><span class="label">WhatsApp</span><a href="https://wa.me/447835822331" target="_blank" rel="noopener noreferrer">+44 7835 822331</a></div>
             <div class="contact-row"><span class="label">Office</span><span>71–75 Shelton Street, Covent Garden, London WC2H 9JQ</span></div>
             <div class="contact-row"><span class="label">Hours</span><span>Monday — Friday · 09:00 — 18:00 GMT</span></div>
           </div>
@@ -700,16 +699,10 @@ p:last-child { margin-bottom: 0; }
       ev.preventDefault();
       var service = btn.getAttribute('data-service') || '';
       var msg = 'Hello Solomon, I found Prestige & Co online. I would like to discuss ' + service + '.';
-      var url;
-      if (isMobile()) {
-        url = 'https://wa.me/447835822331?text=' + encodeURIComponent(msg);
-        window.open(url, '_blank', 'noopener,noreferrer');
-      } else {
-        var subject = 'Prestige & Co — ' + service;
-        var body = msg + '\n\n[Tell me a little about where you are and what you are trying to do.]';
-        url = 'mailto:solomon@prestigeand.co?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        window.location.href = url;
-      }
+      var subject = 'Prestige & Co — ' + service;
+      var body = msg + '\n\n[Tell me a little about where you are and what you are trying to do.]';
+      var url = 'mailto:solomon@prestigeand.co?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      window.location.href = url;
     });
   });
 })();
