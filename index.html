@@ -180,21 +180,22 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   max-width: 860px;
 }
 .cover-statement {
-  font-size: clamp(2rem, 4.2vw, 3.8rem);
+  font-size: clamp(2.6rem, 5.5vw, 5.2rem);
   font-weight: 400;
-  line-height: 1.18;
+  line-height: 1.15;
   color: var(--offwhite);
   letter-spacing: 0.01em;
   margin: 0;
 }
 @media (max-width: 600px) {
-  .cover-statement { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+  .cover-statement { font-size: clamp(2.2rem, 8vw, 3.2rem); }
 }
 
 /* ─── SECTION 2 · PEDIGREE ────────────────────────────── */
 .pedigree {
   padding: 140px 0;
-  border-top: 1px solid var(--rule);
+  background: var(--offwhite);
+  border-top: none;
 }
 .pedigree-inner {
   max-width: 800px; margin: 0 auto; padding: 0 40px;
@@ -209,7 +210,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   font-size: clamp(1.5rem, 2.8vw, 2.3rem);
   font-weight: 400;
   line-height: 1.42;
-  color: var(--offwhite);
+  color: var(--brass);
   letter-spacing: 0.01em;
   margin: 0;
 }
