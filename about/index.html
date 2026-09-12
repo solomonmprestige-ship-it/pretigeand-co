@@ -27,8 +27,13 @@
     .eyebrow { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); font-weight: 500; display: block; text-align: center; margin-bottom: 56px; }
 
     /* OPENING */
-    .opening { padding: 120px 0 60px; max-width: 860px; margin: 0 auto; text-align: center; padding-inline: 40px; }
+    .opening { padding: 0; max-width: none; margin: 0; }
+    .opening-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; max-width: 1280px; margin: 0 auto; }
+    .opening-img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; display: block; }
+    .opening-body { padding: 100px 80px; display: flex; flex-direction: column; justify-content: center; }
+    .opening-rule { margin: 0 0 56px; }
     .opening-statement { font-size: clamp(1.8rem, 3.2vw, 2.8rem); font-weight: 400; line-height: 1.35; color: var(--offwhite); letter-spacing: 0.01em; }
+    @media (max-width: 900px) { .opening-grid { grid-template-columns: 1fr; } .opening-img { min-height: 320px; } .opening-body { padding: 60px 40px; } }
 
     /* MOTTO — near top */
     .motto-top { padding: 56px 0; border-top: 1px solid var(--rule); text-align: center; }
@@ -156,8 +161,16 @@
 
   <!-- OPENING STATEMENT -->
   <div class="opening" aria-label="Opening statement">
-    <hr class="section-rule" aria-hidden="true">
-    <p class="opening-statement">Prestige &amp; Co is a boutique, independent corporate finance consultancy.<br>We have been on every side of the table — as founder, fundraiser, and dealmaker — for 25 years.</p>
+    <div class="opening-grid">
+      <img class="opening-img"
+        src="/prestige-and-co-corporate-finance-desk.jpg"
+        alt="Prestige &amp; Co boutique corporate finance consultancy — desk with strategic review documents and merger feasibility analysis"
+        loading="eager">
+      <div class="opening-body">
+        <hr class="section-rule opening-rule" aria-hidden="true">
+        <p class="opening-statement">Prestige &amp; Co is a boutique, independent corporate finance consultancy.<br>We have been on every side of the table — as founder, fundraiser, and dealmaker — for 25 years.</p>
+      </div>
+    </div>
   </div>
 
   <!-- MOTTO — near top, directly after opening -->
