@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Leaders — Prestige &amp; Co</title>
+  <meta name="description" content="For founders and business leaders raising capital or preparing for a transaction. Prestige &amp; Co corporate finance, London.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #111111;
+      --brass: #B8935A;
+      --offwhite: #F0EDE6;
+      --muted: #888880;
+      --rule: rgba(240, 237, 230, 0.1);
+    }
+    html { background: var(--bg); color: var(--offwhite); font-family: 'EB Garamond', Georgia, serif; }
+    body { background: var(--bg); padding: 0 16px; }
+    img { max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 32px 0; max-width: 1280px; margin: 0 auto;
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-logo { font-size: 1.05rem; letter-spacing: 0.08em; color: var(--offwhite); }
+    .nav-links { display: flex; gap: 40px; list-style: none; }
+    .nav-links a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a[aria-current] { color: var(--offwhite); }
+    @media (max-width: 640px) { .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } }
+
+    /* SHARED */
+    .section-rule { width: 40px; height: 1px; background: var(--brass); border: none; margin: 0 auto 56px; }
+    .eyebrow { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); font-weight: 500; display: block; text-align: center; margin-bottom: 56px; }
+
+    /* COVER IMAGE */
+    .cover {
+      position: relative; width: 100%; height: clamp(420px, 60vh, 700px);
+      overflow: hidden;
+    }
+    .cover-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+    }
+    .cover-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(17,17,17,0.35) 0%, rgba(17,17,17,0.6) 100%);
+    }
+    .cover-inner {
+      position: relative; z-index: 1;
+      height: 100%; display: flex; align-items: flex-end;
+      max-width: 1280px; margin: 0 auto; padding: 0 40px 80px;
+    }
+    .cover-statement {
+      font-size: clamp(2.2rem, 4.5vw, 4rem);
+      font-weight: 400; line-height: 1.15; color: var(--offwhite);
+      letter-spacing: 0.01em; max-width: 860px;
+    }
+    @media (max-width: 600px) { .cover-statement { font-size: clamp(1.8rem, 7vw, 2.6rem); } .cover-inner { padding: 0 24px 60px; } }
+
+    /* INTRO */
+    .intro-section {
+      padding: 120px 0;
+      border-top: 1px solid var(--rule);
+    }
+    .intro-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .intro-inner p {
+      font-size: 1.15rem; line-height: 1.8; color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .intro-inner p:last-child { margin-bottom: 0; }
+    .intro-inner p strong { color: var(--offwhite); font-weight: 400; }
+
+    /* SERVICES */
+    .services-section {
+      padding: 120px 0;
+      border-top: 1px solid var(--rule);
+    }
+    .services-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); }
+    .service-item { background: var(--bg); padding: 48px 40px; }
+    .service-item h3 { font-size: 1rem; letter-spacing: 0.08em; color: var(--offwhite); font-weight: 400; margin-bottom: 16px; }
+    .service-item p { font-size: 0.95rem; line-height: 1.65; color: var(--muted); margin-bottom: 24px; }
+    .service-link { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); border-bottom: 1px solid var(--brass); padding-bottom: 2px; transition: opacity 0.2s; }
+    .service-link:hover { opacity: 0.7; }
+    @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* MOTTO */
+    .motto-section {
+      padding: 100px 0;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+    }
+    .motto-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
+    .motto-statement {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 400; line-height: 1.3; color: var(--brass);
+      letter-spacing: 0.04em; font-style: italic;
+    }
+
+    /* USP */
+    .usp-section {
+      padding: 100px 0;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+    }
+    .usp-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .usp-statement {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-weight: 400; line-height: 1.5; color: var(--brass);
+      font-style: italic;
+    }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid var(--rule);
+      padding: 80px 0 60px;
+      max-width: 1280px; margin: 0 auto;
+    }
+    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px; margin-bottom: 60px; }
+    .footer-col-head { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 24px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul a { font-size: 0.88rem; color: var(--muted); letter-spacing: 0.04em; transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--offwhite); }
+    .footer-col p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--muted); letter-spacing: 0.06em; }
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; gap: 12px; text-align: center; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="/" class="nav-logo">Prestige &amp; Co</a>
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/founders" aria-current="page">Business Leaders</a></li>
+      <li><a href="/investors">Investors</a></li>
+      <li><a href="/property">Property</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
+    </ul>
+  </nav>
+
+  <!-- COVER IMAGE -->
+  <section class="cover" aria-label="Business Leaders">
+    <img class="cover-bg"
+      src="/founder-silhouette-office%20%281%29.jpg"
+      alt="Founder silhouette in a London office, representing Prestige &amp; Co's advisory work for business leaders"
+      loading="eager" fetchpriority="high">
+    <div class="cover-overlay" aria-hidden="true"></div>
+    <div class="cover-inner">
+      <p class="cover-statement">For the founders and business leaders who are ready to move.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro-section" aria-label="Who we work with">
+    <div class="intro-inner">
+      <p>You've built something real — revenue, a team, a business that works. The next move is capital that takes it further, or getting it properly ready to sell for what it's actually worth.</p>
+      <p>We check the numbers before an investor does. <strong>20 of our 25 years have been spent founding, fundraising, and deal-making</strong> — we know exactly what gets picked apart, because we have been on both sides of that process. We have raised capital as founders and we have reviewed businesses as advisers. We have sat across the table from buyers and we have prepared vendors for that process. That direct experience is what we bring to every engagement.</p>
+      <p>Nothing about your business goes further than it needs to. We operate on a strict need-to-know basis. The work we do for you stays between us.</p>
+      <p>We work with a small number of business leaders at any time — not because of capacity constraints, but because every client we take on receives direct senior attention throughout. There is no handover to a junior team once the mandate is agreed.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" aria-labelledby="services-label">
+    <div class="services-inner">
+      <span class="eyebrow" id="services-label">What we offer</span>
+      <div class="services-grid">
+
+        <div class="service-item">
+          <h3>Investability Assessment</h3>
+          <p>The due diligence questionnaire that checks whether a deal is actually ready — before capital ever sees it. We identify what an investor's team will find and address it first.</p>
+          <a class="service-link" href="/investability-assessment">Learn more</a>
+        </div>
+
+        <div class="service-item">
+          <h3>Sale Readiness Assessment</h3>
+          <p>Find what a buyer's team would find, before they find it. A rigorous review of the business through the lens of a buyer's due diligence process.</p>
+          <a class="service-link" href="/sale-readiness-assessment">Learn more</a>
+        </div>
+
+        <div class="service-item">
+          <h3>Financial Reality Session</h3>
+          <p>See what the business is actually worth today — not what you hope it is worth, but what an informed buyer or investor will conclude when they look at the numbers properly.</p>
+          <a class="service-link" href="/financial-reality-session">Learn more</a>
+        </div>
+
+        <div class="service-item">
+          <h3>Commercial Direction</h3>
+          <p>Senior counsel in the room for the calls that matter. Strategic commercial advice during live fundraising processes, sale negotiations, or critical business decisions.</p>
+          <a class="service-link" href="/commercial-direction">Learn more</a>
+        </div>
+
+        <div class="service-item">
+          <h3>Operating Partner</h3>
+          <p>Senior leadership inside the business, working alongside the founder. Hands-on involvement in the commercial and financial operations of the business for a defined period.</p>
+          <a class="service-link" href="/operating-partner">Learn more</a>
+        </div>
+
+        <div class="service-item">
+          <h3>Mergers &amp; Acquisitions</h3>
+          <p>Structuring and preparing the deal itself. We manage the M&amp;A process from preparation through to completion, on the buy side or the sell side.</p>
+          <a class="service-link" href="/mergers-and-acquisitions">Learn more</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MOTTO -->
+  <section class="motto-section" aria-label="Our motto">
+    <div class="motto-inner">
+      <hr class="section-rule" aria-hidden="true">
+      <p class="motto-statement">Discretion. Integrity. Diligence.</p>
+    </div>
+  </section>
+
+  <!-- USP -->
+  <section class="usp-section" aria-label="Our experience">
+    <div class="usp-inner">
+      <p class="usp-statement">Built, raised, and sold — 25 years on every side of the table, not just advising from outside it.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="footer-col-head">Prestige &amp; Co</span>
+        <p>A boutique UK corporate finance consultancy.</p>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-head">Services</span>
+        <ul>
+          <li><a href="/investability-assessment">Investability Assessment</a></li>
+          <li><a href="/sale-readiness-assessment">Sale Readiness Assessment</a></li>
+          <li><a href="/financial-reality-session">Financial Reality Session</a></li>
+          <li><a href="/commercial-direction">Commercial Direction</a></li>
+          <li><a href="/operating-partner">Operating Partner</a></li>
+          <li><a href="/mergers-and-acquisitions">Mergers &amp; Acquisitions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-head">Who We Work With</span>
+        <ul>
+          <li><a href="/founders">Business Leaders</a></li>
+          <li><a href="/investors">Investors</a></li>
+          <li><a href="/property">Property</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-head">Company</span>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Discretion. Integrity. Diligence.</span>
+      <span>&copy; 2025 Prestige &amp; Co</span>
+    </div>
+  </footer>
+
+</body>
+</html>
