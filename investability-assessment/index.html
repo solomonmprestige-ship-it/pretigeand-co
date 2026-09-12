@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Investability Assessment — Prestige &amp; Co</title>
-  <meta name="description" content="The due diligence questionnaire that checks whether a deal is actually ready — before capital ever sees it. £300. Prestige &amp; Co, London.">
+  <meta name="description" content="The due diligence questionnaire that checks whether a deal is actually ready — before an investor ever sees it. £300. Prestige &amp; Co, London.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -25,6 +25,18 @@
     .service-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 40px; }
     .page-title { font-size: clamp(2rem, 4vw, 3.6rem); font-weight: 400; line-height: 1.15; color: var(--offwhite); margin-bottom: 32px; }
     .page-price { font-size: 1.1rem; color: var(--brass); letter-spacing: 0.06em; margin-bottom: 0; }
+
+    /* MOTTO — near top */
+    .motto-top { padding: 56px 0; border-top: 1px solid var(--rule); text-align: center; }
+    .motto-top-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
+    .motto-line { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.06em; font-style: italic; }
+
+    /* SERVICE IMAGE */
+    .service-img-section { border-top: 1px solid var(--rule); }
+    .service-img-inner { max-width: 1280px; margin: 0 auto; }
+    .service-img-inner img { width: 100%; height: 420px; object-fit: cover; display: block; }
+    @media (max-width: 600px) { .service-img-inner img { height: 260px; } }
+
     .page-body { padding: 80px 0 120px; max-width: 760px; margin: 0 auto; padding-inline: 40px; border-top: 1px solid var(--rule); }
     .page-body p { font-size: 1.1rem; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
     .page-body p:last-child { margin-bottom: 0; }
@@ -33,6 +45,12 @@
     .page-body ul { list-style: none; margin-bottom: 28px; }
     .page-body ul li { font-size: 1.05rem; line-height: 1.7; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--rule); padding-left: 20px; position: relative; }
     .page-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--brass); }
+
+    /* BODY IMAGE — inline break within body content */
+    .body-image { margin: 48px 0; }
+    .body-image img { width: 100%; height: 320px; object-fit: cover; display: block; }
+    @media (max-width: 600px) { .body-image img { height: 200px; } }
+
     .motto-section { padding: 100px 0; border-top: 1px solid var(--rule); text-align: center; }
     .motto-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
     .motto-statement { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.04em; font-style: italic; }
@@ -71,11 +89,33 @@
     <p class="page-price">£300</p>
   </header>
 
+  <!-- MOTTO — near top, directly after H1 -->
+  <section class="motto-top" aria-label="Our motto">
+    <div class="motto-top-inner">
+      <p class="motto-line">Discretion. Integrity. Diligence.</p>
+    </div>
+  </section>
+
+  <!-- SERVICE IMAGE -->
+  <div class="service-img-section" aria-hidden="true">
+    <div class="service-img-inner">
+      <img src="/uk-corporate-finance-foundations-prestige-co.png"
+        alt="Historical financial documents, representing the rigorous due diligence process of a Prestige &amp; Co investability assessment"
+        loading="lazy">
+    </div>
+  </div>
+
   <div class="page-body">
-    <p><strong>The due diligence questionnaire that checks whether a deal is actually ready — before capital ever sees it.</strong></p>
-    <p>Most businesses that approach investors are not actually ready for investment. Not because they are bad businesses — but because the materials, the financial model, and the narrative have not been stress-tested against the questions an investor's team will ask. The Investability Assessment finds those gaps before they cost you the deal.</p>
-    <p>We review your business through the lens of a professional investor conducting due diligence. We apply the same framework an investor's team would use — the same questions, the same tests, the same scrutiny. We identify what will be challenged, what is missing, and what needs to change before you present to capital.</p>
-    <p>The output is a clear, direct assessment of where you stand — not a polished report designed to make you feel confident, but an honest account of what is working and what is not. You leave with a clear list of what to address before you go to market.</p>
+    <p><strong>The due diligence questionnaire that checks whether a deal is actually ready — before an investor ever sees it.</strong></p>
+    <p>Most businesses that approach investors are not actually ready for investment. Not because they are bad businesses — the materials, the financial model, and the narrative have not been stress-tested against the questions an investor's team will ask. The Investability Assessment finds those gaps before they cost you the deal.</p>
+    <p>We review your business through the lens of a professional investor conducting due diligence. We apply the same framework an investor's team would use — the same questions, the same tests, the same scrutiny. We identify what will be challenged, what is missing, and what needs to change before you present to investors.</p>
+    <p>The output is a clear, direct assessment of where you stand — not a polished report designed to make you feel confident, an honest account of what is working and what is not. You leave with a clear list of what to address before you go to market.</p>
+
+    <div class="body-image" aria-hidden="true">
+      <img src="/uk-corporate-finance-consultant-london-prestige-co.png"
+        alt="Professional advisory meeting, representing the thorough assessment process of Prestige &amp; Co"
+        loading="lazy">
+    </div>
 
     <h2>What we assess</h2>
     <ul>
@@ -83,9 +123,9 @@
       <li>Revenue quality — how defensible the revenue is and what an investor will conclude about its predictability</li>
       <li>Management team — how the team will be perceived by investors and where the gaps are</li>
       <li>Market and competitive position — whether the claims in the deck hold up against available evidence</li>
-      <li>Use of funds — whether the proposed use of capital makes sense against the stated growth objectives</li>
+      <li>Use of funds — whether the proposed use of investment makes sense against the stated growth objectives</li>
       <li>Governance and legal — whether the corporate structure, cap table, and legal position will create problems</li>
-      <li>The investor narrative — whether the story being told is the right story for the capital being pursued</li>
+      <li>The investor narrative — whether the story being told is the right story for the investment being pursued</li>
     </ul>
 
     <p>The assessment takes up to five working days from receipt of materials. The output is delivered as a written report with a follow-up session to work through the findings and agree priorities.</p>

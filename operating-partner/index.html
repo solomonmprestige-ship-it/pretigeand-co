@@ -24,6 +24,18 @@
     .page-header { padding: 120px 0 80px; max-width: 860px; margin: 0 auto; padding-inline: 40px; }
     .service-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 40px; }
     .page-title { font-size: clamp(2rem, 4vw, 3.6rem); font-weight: 400; line-height: 1.15; color: var(--offwhite); margin-bottom: 0; }
+
+    /* MOTTO — near top */
+    .motto-top { padding: 56px 0; border-top: 1px solid var(--rule); text-align: center; }
+    .motto-top-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
+    .motto-line { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.06em; font-style: italic; }
+
+    /* SERVICE IMAGE */
+    .service-img-section { border-top: 1px solid var(--rule); }
+    .service-img-inner { max-width: 1280px; margin: 0 auto; }
+    .service-img-inner img { width: 100%; height: 420px; object-fit: cover; display: block; }
+    @media (max-width: 600px) { .service-img-inner img { height: 260px; } }
+
     .page-body { padding: 80px 0 120px; max-width: 760px; margin: 0 auto; padding-inline: 40px; border-top: 1px solid var(--rule); }
     .page-body p { font-size: 1.1rem; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
     .page-body p:last-child { margin-bottom: 0; }
@@ -32,6 +44,11 @@
     .page-body ul { list-style: none; margin-bottom: 28px; }
     .page-body ul li { font-size: 1.05rem; line-height: 1.7; color: var(--muted); padding: 12px 0; border-bottom: 1px solid var(--rule); padding-left: 20px; position: relative; }
     .page-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--brass); }
+
+    .body-image { margin: 48px 0; }
+    .body-image img { width: 100%; height: 320px; object-fit: cover; display: block; }
+    @media (max-width: 600px) { .body-image img { height: 200px; } }
+
     .motto-section { padding: 100px 0; border-top: 1px solid var(--rule); text-align: center; }
     .motto-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
     .motto-statement { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.04em; font-style: italic; }
@@ -69,17 +86,39 @@
     <h1 class="page-title">Operating Partner</h1>
   </header>
 
+  <!-- MOTTO — near top, directly after H1 -->
+  <section class="motto-top" aria-label="Our motto">
+    <div class="motto-top-inner">
+      <p class="motto-line">Discretion. Integrity. Diligence.</p>
+    </div>
+  </section>
+
+  <!-- SERVICE IMAGE -->
+  <div class="service-img-section" aria-hidden="true">
+    <div class="service-img-inner">
+      <img src="/tech-startup-founder-dashboard.jpg"
+        alt="Modern business workspace, representing the hands-on operating partner work Prestige &amp; Co undertakes inside growth-stage businesses"
+        loading="lazy">
+    </div>
+  </div>
+
   <div class="page-body">
     <p><strong>Senior leadership inside the business, working alongside the founder.</strong></p>
-    <p>There are moments when a business needs experienced senior leadership in the room, not at arm's length. A critical growth phase. Preparation for a transaction. A period of commercial restructuring. A situation where the founder needs a peer with direct commercial and financial experience to work alongside them — not an adviser reviewing outputs, but a partner working through the problems.</p>
+    <p>There are moments when a business needs experienced senior leadership in the room, not at arm's length. A critical growth phase. Preparation for a transaction. A period of commercial restructuring. A situation where the founder needs a peer with direct commercial and financial experience to work alongside them — not an adviser reviewing outputs, a partner working through the problems.</p>
     <p>The Operating Partner engagement puts us inside the business for a defined period. We work directly with the founder and the leadership team on the commercial and financial workstreams that matter most during that phase — strategy, financial management, investor relations, operational structure, and transaction preparation.</p>
     <p>This is not a non-executive or advisory role. It is hands-on senior involvement — in the meetings, on the numbers, and engaged in the decisions.</p>
+
+    <div class="body-image" aria-hidden="true">
+      <img src="/uk-founders-growth-businesses-prestige-co.png"
+        alt="Financial history of UK business, representing the depth of experience Prestige &amp; Co brings to operating partner engagements"
+        loading="lazy">
+    </div>
 
     <h2>What the engagement covers</h2>
     <ul>
       <li>Commercial and financial strategy — working with the founder to set and execute the right priorities for the phase</li>
       <li>Financial management — reviewing the numbers, the model, and the metrics that the business should be tracking and reporting</li>
-      <li>Investor and capital partner relationships — managing communications and positioning ahead of, during, or after a fundraise</li>
+      <li>Investor relationships — managing communications and positioning ahead of, during, or after a fundraise</li>
       <li>Transaction preparation — building the business into a state where a transaction is achievable and well-positioned</li>
       <li>Board and stakeholder management — supporting the founder in managing the conversations that require senior credibility</li>
     </ul>

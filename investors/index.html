@@ -4,121 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Investors — Prestige &amp; Co</title>
-  <meta name="description" content="Properly vetted deal flow for investors. We check the deal before it reaches you. Prestige &amp; Co corporate finance, London.">
+  <meta name="description" content="Vetted investment opportunities for UK investors. We check the deal before it reaches you. Prestige &amp; Co corporate finance, London.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #111111;
-      --brass: #B8935A;
-      --offwhite: #F0EDE6;
-      --muted: #888880;
-      --rule: rgba(240, 237, 230, 0.1);
-    }
+    :root { --bg: #111111; --brass: #B8935A; --offwhite: #F0EDE6; --muted: #888880; --rule: rgba(240,237,230,0.1); }
     html { background: var(--bg); color: var(--offwhite); font-family: 'EB Garamond', Georgia, serif; }
     body { background: var(--bg); padding: 0 16px; }
     img { max-width: 100%; }
     a { color: inherit; text-decoration: none; }
 
-    /* NAV */
-    .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 32px 0; max-width: 1280px; margin: 0 auto;
-      border-bottom: 1px solid var(--rule);
-    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 32px 0; max-width: 1280px; margin: 0 auto; border-bottom: 1px solid var(--rule); }
     .nav-logo { font-size: 1.05rem; letter-spacing: 0.08em; color: var(--offwhite); }
     .nav-links { display: flex; gap: 40px; list-style: none; }
     .nav-links a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
     .nav-links a:hover, .nav-links a[aria-current] { color: var(--offwhite); }
     @media (max-width: 640px) { .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } }
 
-    /* SHARED */
     .section-rule { width: 40px; height: 1px; background: var(--brass); border: none; margin: 0 auto 56px; }
     .eyebrow { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); font-weight: 500; display: block; text-align: center; margin-bottom: 56px; }
 
-    /* COVER IMAGE */
-    .cover {
-      position: relative; width: 100%; height: clamp(420px, 60vh, 700px);
-      overflow: hidden;
-    }
-    .cover-bg {
-      position: absolute; inset: 0; width: 100%; height: 100%;
-      object-fit: cover; object-position: center;
-    }
-    .cover-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(17,17,17,0.35) 0%, rgba(17,17,17,0.6) 100%);
-    }
-    .cover-inner {
-      position: relative; z-index: 1;
-      height: 100%; display: flex; align-items: flex-end;
-      max-width: 1280px; margin: 0 auto; padding: 0 40px 80px;
-    }
-    .cover-statement {
-      font-size: clamp(2.2rem, 4.5vw, 4rem);
-      font-weight: 400; line-height: 1.15; color: var(--offwhite);
-      letter-spacing: 0.01em; max-width: 860px;
-    }
+    /* COVER */
+    .cover { position: relative; width: 100%; height: clamp(420px, 60vh, 700px); overflow: hidden; }
+    .cover-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .cover-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(17,17,17,0.35) 0%, rgba(17,17,17,0.6) 100%); }
+    .cover-inner { position: relative; z-index: 1; height: 100%; display: flex; align-items: flex-end; max-width: 1280px; margin: 0 auto; padding: 0 40px 80px; }
+    .cover-statement { font-size: clamp(2.2rem, 4.5vw, 4rem); font-weight: 400; line-height: 1.15; color: var(--offwhite); letter-spacing: 0.01em; max-width: 860px; }
     @media (max-width: 600px) { .cover-statement { font-size: clamp(1.8rem, 7vw, 2.6rem); } .cover-inner { padding: 0 24px 60px; } }
 
-    /* INTRO */
-    .intro-section {
-      padding: 120px 0;
-      border-top: 1px solid var(--rule);
-    }
-    .intro-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
-    .intro-inner p {
-      font-size: 1.15rem; line-height: 1.8; color: var(--muted);
-      margin-bottom: 28px;
-    }
-    .intro-inner p:last-child { margin-bottom: 0; }
-    .intro-inner p strong { color: var(--offwhite); font-weight: 400; }
+    /* MOTTO — near top */
+    .motto-top { padding: 56px 0; border-top: 1px solid var(--rule); text-align: center; }
+    .motto-top-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
+    .motto-line { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.06em; font-style: italic; }
+
+    /* CONTENT ROWS */
+    .content-row { border-top: 1px solid var(--rule); }
+    .content-row-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; max-width: 1280px; margin: 0 auto; }
+    .content-row-img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; display: block; }
+    .content-row-body { padding: 80px 60px; }
+    .content-row-body h2 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); font-weight: 400; color: var(--offwhite); line-height: 1.3; margin-bottom: 32px; }
+    .content-row-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 22px; }
+    .content-row-body p:last-child { margin-bottom: 0; }
+    .content-row-body p strong { color: var(--offwhite); font-weight: 400; }
+    @media (max-width: 900px) { .content-row-grid { grid-template-columns: 1fr; } .content-row-img { min-height: 280px; } .content-row-body { padding: 60px 40px; } }
+    @media (max-width: 600px) { .content-row-body { padding: 40px 24px; } }
 
     /* WHAT WE CHECK */
-    .check-section {
-      padding: 120px 0;
-      border-top: 1px solid var(--rule);
-    }
-    .check-inner { max-width: 860px; margin: 0 auto; padding: 0 40px; }
+    .check-section { padding: 120px 0; border-top: 1px solid var(--rule); }
+    .check-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
     .check-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; }
     .check-item h3 { font-size: 1rem; letter-spacing: 0.08em; color: var(--offwhite); font-weight: 400; margin-bottom: 16px; }
     .check-item p { font-size: 1rem; line-height: 1.7; color: var(--muted); }
     @media (max-width: 700px) { .check-grid { grid-template-columns: 1fr; gap: 40px; } }
 
-    /* MOTTO */
-    .motto-section {
-      padding: 100px 0;
-      border-top: 1px solid var(--rule);
-      text-align: center;
-    }
-    .motto-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
-    .motto-statement {
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      font-weight: 400; line-height: 1.3; color: var(--brass);
-      letter-spacing: 0.04em; font-style: italic;
-    }
-
     /* USP */
-    .usp-section {
-      padding: 100px 0;
-      border-top: 1px solid var(--rule);
-      text-align: center;
-    }
+    .usp-section { padding: 100px 0; border-top: 1px solid var(--rule); text-align: center; }
     .usp-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
-    .usp-statement {
-      font-size: clamp(1.2rem, 2vw, 1.6rem);
-      font-weight: 400; line-height: 1.5; color: var(--brass);
-      font-style: italic;
-    }
+    .usp-statement { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; line-height: 1.5; color: var(--brass); font-style: italic; }
 
     /* FOOTER */
-    .footer {
-      border-top: 1px solid var(--rule);
-      padding: 80px 0 60px;
-      max-width: 1280px; margin: 0 auto;
-    }
+    .footer { border-top: 1px solid var(--rule); padding: 80px 0 60px; max-width: 1280px; margin: 0 auto; }
     .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px; margin-bottom: 60px; }
     .footer-col-head { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 24px; }
     .footer-col ul { list-style: none; }
@@ -144,7 +91,7 @@
     </ul>
   </nav>
 
-  <!-- COVER IMAGE -->
+  <!-- COVER IMAGE — H1 rewritten with searchable keywords -->
   <section class="cover" aria-label="Investors">
     <img class="cover-bg"
       src="/antique-uk-share-certificate%20%282%29.jpg"
@@ -152,21 +99,50 @@
       loading="eager" fetchpriority="high">
     <div class="cover-overlay" aria-hidden="true"></div>
     <div class="cover-inner">
-      <p class="cover-statement">We check the deal before it reaches you.</p>
+      <h1 class="cover-statement">Vetted Investment Opportunities for UK Investors.</h1>
     </div>
   </section>
 
-  <!-- INTRO -->
-  <section class="intro-section" aria-label="Who we work with">
-    <div class="intro-inner">
-      <p>You see more deals than you have time to check properly. We check the deal before it reaches you — the numbers, the story, the parts a founder hopes won't come up. Fewer introductions, each one already vetted, every conversation held in confidence.</p>
-      <p>We have spent 25 years on both sides of the investment process — as founders raising capital, and as advisers reviewing businesses on behalf of capital. That means we know what to look for and where the problems usually are. We do not pass an opportunity to you until we are satisfied it holds up to scrutiny.</p>
-      <p>We work with a defined group of capital partners. <strong>We do not broadcast opportunities.</strong> When we make an introduction, it is because we believe the match is right and the business is ready. The introductions are fewer; the conversations are better.</p>
-      <p>Every engagement is held in strict confidence. We do not discuss what businesses we are reviewing, what we have introduced, or to whom. The founders we work with know that discretion is a condition of our involvement.</p>
+  <!-- MOTTO — directly after cover -->
+  <section class="motto-top" aria-label="Our motto">
+    <div class="motto-top-inner">
+      <p class="motto-line">Discretion. Integrity. Diligence.</p>
     </div>
   </section>
 
-  <!-- WHAT WE CHECK -->
+  <!-- INTRO — with image, USP integrated naturally -->
+  <section class="content-row" aria-label="Who we work with">
+    <div class="content-row-grid">
+      <div class="content-row-body">
+        <h2>We check the deal before it reaches you.</h2>
+        <p>You see more deals than you have time to check properly. We check the deal before it reaches you — the numbers, the story, the parts a founder hopes won't come up. Fewer introductions, each one already vetted, every conversation held in confidence.</p>
+        <p>We have spent 25 years on both sides of the investment process — as founders raising capital, and as advisers reviewing businesses on behalf of investors. <strong>Built, raised, and sold: 25 years on every side of the table, not just advising from outside it.</strong> That means we know what to look for and where the problems usually are.</p>
+        <p>We work with a defined group of investors. We do not broadcast opportunities. When we make an introduction, it is because we believe the match is right and the business is ready. The introductions are fewer; the conversations are better.</p>
+        <p>Every engagement is held in strict confidence. We do not discuss what businesses we are reviewing, what we have introduced, or to whom. The founders we work with know that discretion is a condition of our involvement.</p>
+      </div>
+      <img class="content-row-img"
+        src="/uk-corporate-finance-consultant-london-prestige-co.png"
+        alt="Professional advisory meeting in a City of London office, representing the investor advisory work of Prestige &amp; Co"
+        loading="lazy">
+    </div>
+  </section>
+
+  <!-- WHAT WE CHECK — grid section, with supporting image above -->
+  <section class="content-row" aria-label="Our diligence process">
+    <div class="content-row-grid">
+      <img class="content-row-img"
+        src="/uk-corporate-finance-foundations-prestige-co.png"
+        alt="Historical financial documents, representing the thoroughness of Prestige &amp; Co's deal review process"
+        loading="lazy">
+      <div class="content-row-body">
+        <h2>The parts a founder hopes won't come up.</h2>
+        <p>Customer concentration. Founder dependency. Legal exposures. IP ownership. Key-person risk. Revenue quality. These are the questions a rigorous due diligence process will surface. We find them first — so there are no surprises in the room when the deal is live.</p>
+        <p>We look at the numbers the way an investor's team will. We stress-test the story against the evidence in the business. And we only make an introduction when we are satisfied the opportunity holds up.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE CHECK — detail grid -->
   <section class="check-section" aria-labelledby="check-label">
     <div class="check-inner">
       <span class="eyebrow" id="check-label">What we check</span>
@@ -177,7 +153,7 @@
         </div>
         <div class="check-item">
           <h3>The story</h3>
-          <p>Whether the narrative the founder is presenting holds up against the evidence in the business. A compelling story built on weak foundations creates more problems than it solves. We check both sides of that equation.</p>
+          <p>Whether the narrative holds up against the evidence in the business. A compelling story built on weak foundations creates more problems than it solves. We check both sides of that equation.</p>
         </div>
         <div class="check-item">
           <h3>The parts a founder hopes won't come up</h3>
@@ -191,22 +167,14 @@
     </div>
   </section>
 
-  <!-- MOTTO -->
-  <section class="motto-section" aria-label="Our motto">
-    <div class="motto-inner">
-      <hr class="section-rule" aria-hidden="true">
-      <p class="motto-statement">Discretion. Integrity. Diligence.</p>
-    </div>
-  </section>
-
   <!-- USP -->
   <section class="usp-section" aria-label="Our experience">
     <div class="usp-inner">
+      <hr class="section-rule" aria-hidden="true">
       <p class="usp-statement">Built, raised, and sold — 25 years on every side of the table, not just advising from outside it.</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer" aria-label="Site footer">
     <div class="footer-grid">
       <div class="footer-col">

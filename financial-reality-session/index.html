@@ -24,11 +24,28 @@
     .page-header { padding: 120px 0 80px; max-width: 860px; margin: 0 auto; padding-inline: 40px; }
     .service-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 40px; }
     .page-title { font-size: clamp(2rem, 4vw, 3.6rem); font-weight: 400; line-height: 1.15; color: var(--offwhite); margin-bottom: 0; }
+
+    /* MOTTO — near top */
+    .motto-top { padding: 56px 0; border-top: 1px solid var(--rule); text-align: center; }
+    .motto-top-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
+    .motto-line { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.06em; font-style: italic; }
+
+    /* SERVICE IMAGE */
+    .service-img-section { border-top: 1px solid var(--rule); }
+    .service-img-inner { max-width: 1280px; margin: 0 auto; }
+    .service-img-inner img { width: 100%; height: 420px; object-fit: cover; display: block; }
+    @media (max-width: 600px) { .service-img-inner img { height: 260px; } }
+
     .page-body { padding: 80px 0 120px; max-width: 760px; margin: 0 auto; padding-inline: 40px; border-top: 1px solid var(--rule); }
     .page-body p { font-size: 1.1rem; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
     .page-body p:last-child { margin-bottom: 0; }
     .page-body p strong { color: var(--offwhite); font-weight: 400; }
     .page-body h2 { font-size: 1.2rem; font-weight: 400; color: var(--offwhite); letter-spacing: 0.06em; margin: 56px 0 24px; }
+
+    .body-image { margin: 48px 0; }
+    .body-image img { width: 100%; height: 320px; object-fit: cover; display: block; }
+    @media (max-width: 600px) { .body-image img { height: 200px; } }
+
     .motto-section { padding: 100px 0; border-top: 1px solid var(--rule); text-align: center; }
     .motto-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
     .motto-statement { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.04em; font-style: italic; }
@@ -66,11 +83,33 @@
     <h1 class="page-title">Financial Reality Session</h1>
   </header>
 
+  <!-- MOTTO — near top, directly after H1 -->
+  <section class="motto-top" aria-label="Our motto">
+    <div class="motto-top-inner">
+      <p class="motto-line">Discretion. Integrity. Diligence.</p>
+    </div>
+  </section>
+
+  <!-- SERVICE IMAGE -->
+  <div class="service-img-section" aria-hidden="true">
+    <div class="service-img-inner">
+      <img src="/uk-corporate-finance-consultant-london-prestige-co.png"
+        alt="Advisory meeting, representing the direct financial assessment work of a Prestige &amp; Co Financial Reality Session"
+        loading="lazy">
+    </div>
+  </div>
+
   <div class="page-body">
     <p><strong>See what the business is actually worth today.</strong></p>
     <p>Most founders have a number in mind when they think about what their business is worth. That number is often based on what they believe the business could be worth under the right conditions — not what an informed buyer or investor will conclude when they look at the numbers properly and apply the valuation methods active in today's market.</p>
     <p>The Financial Reality Session closes that gap. We work through the business's financial position with you — revenue, margins, cash generation, EBITDA, and the assumptions underpinning the growth story — and we give you an honest account of what that translates to in valuation terms, and why.</p>
     <p>We draw on current transaction comparables, active deal flow, and 25 years of experience on both sides of investment and M&amp;A transactions. The output is not a theoretical valuation range — it is a direct, frank assessment of where a business like yours, in its current condition, would trade in the market today.</p>
+
+    <div class="body-image" aria-hidden="true">
+      <img src="/uk-corporate-finance-foundations-prestige-co.png"
+        alt="Financial records, representing the rigorous valuation analysis Prestige &amp; Co applies to every Financial Reality Session"
+        loading="lazy">
+    </div>
 
     <h2>What we cover</h2>
     <p>The session typically runs two to three hours. We work through the financial model together, identify the key value drivers and the key value risks, and arrive at a clear view of current value and what would need to change to move it materially. The session can be followed by a written summary of the findings if required.</p>
