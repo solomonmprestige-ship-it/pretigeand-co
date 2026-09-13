@@ -16,14 +16,14 @@
     img { max-width: 100%; }
     a { color: inherit; text-decoration: none; }
 
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 32px 0; max-width: 1280px; margin: 0 auto; border-bottom: 1px solid var(--rule); }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 32px 0; max-width: 1280px; margin: 0 auto; }
     .nav-logo { font-size: 1.05rem; letter-spacing: 0.08em; color: var(--offwhite); }
     .nav-links { display: flex; gap: 40px; list-style: none; }
     .nav-links a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
     .nav-links a:hover, .nav-links a[aria-current] { color: var(--offwhite); }
     @media (max-width: 640px) { .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } }
 
-    .section-rule { width: 40px; height: 1px; background: var(--brass); border: none; margin: 0 auto 56px; }
+    .section-rule { display: none; }
     .eyebrow { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); font-weight: 500; display: block; text-align: center; margin-bottom: 56px; }
 
     /* OPENING */
@@ -32,16 +32,17 @@
     .opening-img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; display: block; }
     .opening-body { padding: 100px 80px; display: flex; flex-direction: column; justify-content: center; }
     .opening-rule { margin: 0 0 56px; }
-    .opening-statement { font-size: clamp(1.8rem, 3.2vw, 2.8rem); font-weight: 400; line-height: 1.35; color: var(--offwhite); letter-spacing: 0.01em; }
+    .opening-primary { font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 400; line-height: 1.2; color: var(--offwhite); letter-spacing: 0.01em; margin-bottom: 28px; }
+    .opening-secondary { font-size: clamp(0.9rem, 1.3vw, 1.1rem); font-weight: 400; line-height: 1.65; color: var(--muted); letter-spacing: 0.04em; }
     @media (max-width: 900px) { .opening-grid { grid-template-columns: 1fr; } .opening-img { min-height: 320px; } .opening-body { padding: 60px 40px; } }
 
     /* MOTTO — near top */
-    .motto-top { padding: 100px 0; border-top: 1px solid var(--rule); text-align: center; }
+    .motto-top { padding: 100px 0; text-align: center; }
     .motto-top-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
     .motto-line { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.06em; font-style: italic; }
 
     /* MOTTO EXPLANATIONS */
-    .motto-explain { padding: 100px 0; border-top: 1px solid var(--rule); }
+    .motto-explain { padding: 100px 0; }
     .motto-explain-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
     .motto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
     .motto-item h3 { font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); font-weight: 400; margin-bottom: 20px; }
@@ -60,10 +61,10 @@
     }
     @keyframes tl-in { from { opacity: 0; } to { opacity: 1; } }
 
-    /* Counter + rule */
-    .tl-counter-row { display: flex; justify-content: flex-end; margin-bottom: 20px; }
+    /* Counter */
+    .tl-counter-row { display: flex; justify-content: flex-end; margin-bottom: 40px; }
     .tl-counter { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); }
-    .tl-divider { width: 100%; height: 1px; background: var(--rule); border: none; margin-bottom: 60px; }
+    .tl-divider { display: none; }
 
     /* 2-col content */
     .tl-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -83,7 +84,6 @@
     }
     .tl-logo { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
     .tl-logo-fallback { font-size: 1rem; letter-spacing: 0.1em; color: var(--offwhite); text-align: center; display: none; }
-    /* when onerror fires, parent gets .logo-err class */
     .tl-logo-frame.logo-err .tl-logo { display: none; }
     .tl-logo-frame.logo-err .tl-logo-fallback { display: block; }
 
@@ -98,7 +98,7 @@
     .tl-body strong { color: var(--offwhite); font-weight: 400; }
 
     /* Navigation */
-    .tl-nav { display: flex; justify-content: flex-end; align-items: center; gap: 8px; padding: 40px 0 72px; border-top: 1px solid var(--rule); margin-top: 20px; }
+    .tl-nav { display: flex; justify-content: flex-end; align-items: center; gap: 8px; padding: 40px 0 72px; margin-top: 20px; }
     .tl-btn {
       background: none;
       border: 1px solid var(--rule);
@@ -115,25 +115,34 @@
     .tl-btn:disabled { opacity: 0.3; cursor: default; }
     .tl-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; vertical-align: middle; }
 
-    /* CONTENT ROWS (image + text) */
-    .content-row { border-top: 1px solid var(--rule); }
+    /* NARRATIVE — stacked (image top, text below) */
+    .narrative-section { padding: 0; }
+    .narrative-img { width: 100%; height: 560px; object-fit: cover; display: block; }
+    .narrative-body { max-width: 1100px; margin: 0 auto; padding: 80px 60px; }
+    .narrative-body h2 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); font-weight: 400; color: var(--offwhite); line-height: 1.3; margin-bottom: 32px; }
+    .narrative-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 22px; }
+    .narrative-body p:last-child { margin-bottom: 0; }
+    @media (max-width: 900px) { .narrative-img { height: 360px; } .narrative-body { padding: 60px 40px; } }
+    @media (max-width: 600px) { .narrative-img { height: 260px; } .narrative-body { padding: 40px 24px; } }
+
+    /* CONTENT ROWS (approach uses this) */
+    .content-row { }
     .content-row-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; max-width: 1280px; margin: 0 auto; }
     .content-row-img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; display: block; }
     .content-row-body { padding: 80px 60px; }
     .content-row-body h2 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); font-weight: 400; color: var(--offwhite); line-height: 1.3; margin-bottom: 32px; }
     .content-row-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 22px; }
     .content-row-body p:last-child { margin-bottom: 0; }
-    .content-row-body .eyebrow { text-align: left; margin-bottom: 24px; }
     @media (max-width: 900px) { .content-row-grid { grid-template-columns: 1fr; } .content-row-img { min-height: 280px; } .content-row-body { padding: 60px 40px; } }
     @media (max-width: 600px) { .content-row-body { padding: 40px 24px; } }
 
-    /* USP */
-    .usp-section { padding: 100px 0; border-top: 1px solid var(--rule); text-align: center; }
+    /* USP / PULL-QUOTE */
+    .usp-section { padding: 100px 0; text-align: center; }
     .usp-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
     .usp-statement { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; line-height: 1.5; color: var(--brass); font-style: italic; }
 
     /* FOOTER */
-    .footer { border-top: 1px solid var(--rule); padding: 80px 0 60px; max-width: 1280px; margin: 0 auto; }
+    .footer { padding: 80px 0 60px; max-width: 1280px; margin: 0 auto; }
     .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px; margin-bottom: 60px; }
     .footer-col-head { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 24px; }
     .footer-col ul { list-style: none; }
@@ -168,7 +177,8 @@
         loading="eager">
       <div class="opening-body">
         <hr class="section-rule opening-rule" aria-hidden="true">
-        <p class="opening-statement">Prestige &amp; Co is a boutique, independent corporate finance consultancy.<br>We have been on every side of the table — as founder, fundraiser, and dealmaker — for 25 years.</p>
+        <p class="opening-primary">Prestige &amp; Co is a boutique, independent corporate finance consultancy.</p>
+        <p class="opening-secondary">We have been on every side of the table — as founder, fundraiser, and dealmaker — for 25 years.</p>
       </div>
     </div>
   </div>
@@ -200,31 +210,36 @@
     </div>
   </section>
 
-  <!-- NARRATIVE — with supporting image -->
-  <section class="content-row" aria-labelledby="narrative-label">
-    <div class="content-row-grid">
-      <div class="content-row-body">
-        <h2 id="narrative-label">Drawing on 25 years across banking, real estate, and business-building.</h2>
-        <p>A corporate finance boutique with an edge.</p>
-        <p>What do we have that many corporate finance companies don't?</p>
-        <p>Experience building a business as a founder.</p>
-        <p>Experience raising money to fund a startup venture, then selling the business.</p>
-        <p>Experience as an early employee taking a startup to market, from the inside.</p>
-        <p>Of course, many corporate finance consultants have sat on both sides of the table.</p>
-        <p>However...</p>
-        <p>How many in this industry have a grounding in business development? Have bootstrapped their way to revenue, pounding the streets to find customers? Have felt the pain of rejection, when an investor pitch doesn't go to plan? Or experienced a sales pitch fall apart in front of a crucial client that may be the difference between paying the mortgage this month or not?</p>
-        <p>How many advisors in this space have a foundation in financial planning? Have sat with individuals and applied the regulatory discipline of a deep fact-find: not just the hard facts — income, assets, liabilities — the soft facts too, the ones that actually determine whether an opportunity is right for someone. Attitude to risk. Tolerance of risk. Capacity for risk.</p>
-        <p>We have experience talking to an individual investor to position an opportunity correctly and in line with their goals.</p>
-        <p>Likewise at an institutional level — as a broker consultant in wealth management. Fact-finding to understand the investment needs of financial firms, before working with fund managers to create tailored investments for their clients. Raising millions in funds under management.</p>
-        <p>Being the early employee for an exciting startup. Working on a business with entrepreneurial founders. Monetising the model. Shaping and executing the go-to-market strategy. Securing new business contracts with global brands. Pitching some of the world's most iconic high-street names.</p>
-        <p>Real world experience.</p>
-        <p>Pitching investors. The feeling of rejection. Making 100 sales calls per day. Landing a deal, then it falling out. Months with no income. Building a reputation from scratch.</p>
-        <p>And all of this wrapped up in the technical studies: corporate finance, investment management, financial planning, and mortgage advice.</p>
-      </div>
-      <img class="content-row-img"
-        src="/solomon-prestige-corporate-finance-london.png"
-        alt="Leadenhall Market, London — close to where Prestige &amp; Co operates in the City"
-        loading="lazy">
+  <!-- NARRATIVE — stacked layout: image on top, text below -->
+  <section class="narrative-section" aria-labelledby="narrative-label">
+    <img class="narrative-img"
+      src="/solomon-prestige-corporate-finance-london.png"
+      alt="Leadenhall Market, London — close to where Prestige &amp; Co operates in the City"
+      loading="lazy">
+    <div class="narrative-body">
+      <h2 id="narrative-label">Drawing on 25 years across banking, real estate, and business-building.</h2>
+      <p>A corporate finance boutique with an edge.</p>
+      <p>What do we have that many corporate finance companies don't?</p>
+      <p>Experience building a business as a founder.</p>
+      <p>Experience raising money to fund a startup venture, then selling the business.</p>
+      <p>Experience as an early employee taking a startup to market, from the inside.</p>
+      <p>Of course, many corporate finance consultants have sat on both sides of the table.</p>
+      <p>However...</p>
+      <p>How many in this industry have a grounding in business development? Have bootstrapped their way to revenue, pounding the streets to find customers? Have felt the pain of rejection, when an investor pitch doesn't go to plan? Or experienced a sales pitch fall apart in front of a crucial client that may be the difference between paying the mortgage this month or not?</p>
+      <p>How many advisors in this space have a foundation in financial planning? Have sat with individuals and applied the regulatory discipline of a deep fact-find: not just the hard facts — income, assets, liabilities — the soft facts too, the ones that actually determine whether an opportunity is right for someone. Attitude to risk. Tolerance of risk. Capacity for risk.</p>
+      <p>We have experience talking to an individual investor to position an opportunity correctly and in line with their goals.</p>
+      <p>Likewise at an institutional level — as a broker consultant in wealth management. Fact-finding to understand the investment needs of financial firms, before working with fund managers to create tailored investments for their clients. Raising millions in funds under management.</p>
+      <p>Being the early employee for an exciting startup. Working on a business with entrepreneurial founders. Monetising the model. Shaping and executing the go-to-market strategy. Securing new business contracts with global brands. Pitching some of the world's most iconic high-street names.</p>
+      <p>Real world experience.</p>
+      <p>Pitching investors. The feeling of rejection. Making 100 sales calls per day. Landing a deal, then it falling out. Months with no income. Building a reputation from scratch.</p>
+      <p>And all of this wrapped up in the technical studies: corporate finance, investment management, financial planning, and mortgage advice.</p>
+    </div>
+  </section>
+
+  <!-- PULL-QUOTE — above timeline -->
+  <section class="usp-section" aria-label="Our experience">
+    <div class="usp-inner">
+      <p class="usp-statement">Built, raised, and sold — 25 years on every side of the table, not just advising from outside it.</p>
     </div>
   </section>
 
@@ -241,7 +256,6 @@
         <div class="tl-content">
           <div class="tl-visual">
             <div class="tl-logo-frame" id="lf-01">
-              <!-- Logo file needed: /bristol-west-logo.png -->
               <img class="tl-logo" src="/bristol-west-logo.png" alt="Bristol West"
                 onerror="document.getElementById('lf-01').classList.add('logo-err')">
               <span class="tl-logo-fallback">Bristol West</span>
@@ -263,7 +277,6 @@
         <div class="tl-content">
           <div class="tl-visual">
             <div class="tl-logo-frame" id="lf-02">
-              <!-- Logo file needed: /WH-ireland-logo.png -->
               <img class="tl-logo" src="/WH-ireland-logo.png" alt="WH Ireland"
                 onerror="document.getElementById('lf-02').classList.add('logo-err')">
               <span class="tl-logo-fallback">WH Ireland</span>
@@ -317,7 +330,6 @@
         <div class="tl-content">
           <div class="tl-visual">
             <div class="tl-logo-frame" id="lf-05">
-              <!-- Logo file needed: /nomensa-logo.png -->
               <img class="tl-logo" src="/nomensa-logo.png" alt="Nomensa"
                 onerror="document.getElementById('lf-05').classList.add('logo-err')">
               <span class="tl-logo-fallback">Nomensa</span>
@@ -339,7 +351,6 @@
         <div class="tl-content">
           <div class="tl-visual">
             <div class="tl-logo-frame" id="lf-06">
-              <!-- Logo file needed: /Beep-Treat.jpeg -->
               <img class="tl-logo" src="/Beep-Treat.jpeg" alt="Beep Treat"
                 onerror="document.getElementById('lf-06').classList.add('logo-err')">
               <span class="tl-logo-fallback">Beep Treat</span>
@@ -448,14 +459,6 @@
         <h2 id="approach-label">Our approach to business.</h2>
         <p>Every business we work with goes through the same process before it ever reaches investors: an application form, a screening stage, and an Investability Assessment. On the investor side, the same discipline applies — proof of funds, and fact-finding to understand exactly what they're looking for before any introduction is made. This means investors only see opportunities that have already been checked, and businesses are only introduced to investors who actually fit what they're looking for — saving time on both sides.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- USP -->
-  <section class="usp-section" aria-label="Our experience">
-    <div class="usp-inner">
-      <hr class="section-rule" aria-hidden="true">
-      <p class="usp-statement">Built, raised, and sold — 25 years on every side of the table, not just advising from outside it.</p>
     </div>
   </section>
 

@@ -118,7 +118,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   background: rgba(17, 17, 17, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--rule);
+ 
   z-index: 200; padding: 22px 0;
 }
 .nav-inner {
@@ -147,11 +147,11 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   .nav-links {
     position: absolute; top: 100%; left: 0; right: 0;
     background: #111111; flex-direction: column; gap: 0;
-    padding: 16px 40px 28px; border-bottom: 1px solid var(--rule);
+    padding: 16px 40px 28px;
     display: none;
   }
   .nav-links.open { display: flex; }
-  .nav-links li { border-bottom: 1px solid var(--rule); }
+  .nav-links li { }
   .nav-links li:last-child { border-bottom: none; }
   .nav-links a { padding: 16px 0; display: block; }
 }
@@ -194,7 +194,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 /* ─── SECTION 2 · PEDIGREE ────────────────────────────── */
 .pedigree {
   padding: 140px 0;
-  border-top: 1px solid var(--rule);
+ 
 }
 .pedigree-inner {
   max-width: 800px; margin: 0 auto; padding: 0 40px;
@@ -217,7 +217,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 /* ─── SECTION 2.5 · MOTTO ────────────────────────────── */
 .motto {
   padding: 100px 0;
-  border-top: 1px solid var(--rule);
+ 
   background: var(--bg);
 }
 .motto-inner {
@@ -237,7 +237,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 /* ─── SECTION 3 · THREE MARKETS ──────────────────────── */
 .markets {
   padding: 120px 0;
-  border-top: 1px solid var(--rule);
+ 
 }
 .markets-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
 .markets-label {
@@ -283,7 +283,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 /* ─── SECTION 4 · STATS ──────────────────────────────── */
 .stats {
   padding: 120px 0;
-  border-top: 1px solid var(--rule);
+ 
 }
 .stats-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
 .stats-grid {
@@ -310,7 +310,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 
 /* ─── SECTION 5 · FOUNDER ────────────────────────────── */
 .founder {
-  border-top: 1px solid var(--rule);
+ 
 }
 .founder-grid {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -361,13 +361,13 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 /* ─── SECTION 6 · SERVICES ───────────────────────────── */
 .services {
   padding: 120px 0;
-  border-top: 1px solid var(--rule);
+ 
 }
 .services-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
 .services-top {
   display: flex; align-items: baseline; justify-content: space-between;
   gap: 24px; margin-bottom: 0;
-  padding-bottom: 28px; border-bottom: 1px solid var(--rule);
+  padding-bottom: 28px;
 }
 .services-top h2 {
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
@@ -382,7 +382,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   display: grid;
   grid-template-columns: 1.4fr 100px 2fr 60px;
   align-items: baseline; gap: 0 36px;
-  padding: 28px 0; border-bottom: 1px solid var(--rule);
+  padding: 28px 0;
   transition: background 0.15s ease;
   cursor: pointer;
 }
@@ -425,7 +425,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 /* ─── FOOTER ─────────────────────────────────────────── */
 .footer {
   padding: 80px 0 48px;
-  border-top: 1px solid var(--rule);
+ 
 }
 .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
 .footer-cols {
@@ -444,7 +444,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 }
 .footer-col ul a:hover { color: var(--offwhite); }
 .footer-bottom {
-  padding-top: 36px; border-top: 1px solid var(--rule);
+  padding-top: 36px;
   display: flex; flex-wrap: wrap; gap: 20px 48px;
   align-items: flex-start;
 }
