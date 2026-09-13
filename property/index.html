@@ -39,17 +39,18 @@
     .motto-top-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
     .motto-line { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.06em; font-style: italic; }
 
-    /* CONTENT ROWS */
-    .content-row { }
-    .content-row-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; max-width: 1280px; margin: 0 auto; }
-    .content-row-img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; display: block; }
-    .content-row-body { padding: 80px 60px; }
-    .content-row-body h2 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); font-weight: 400; color: var(--offwhite); line-height: 1.3; margin-bottom: 32px; }
-    .content-row-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 22px; }
-    .content-row-body p:last-child { margin-bottom: 0; }
-    .content-row-body p strong { color: var(--offwhite); font-weight: 400; }
-    @media (max-width: 900px) { .content-row-grid { grid-template-columns: 1fr; } .content-row-img { min-height: 280px; } .content-row-body { padding: 60px 40px; } }
-    @media (max-width: 600px) { .content-row-body { padding: 40px 24px; } }
+    /* CONTENT PANELS */
+    .content-panel { position: relative; width: 100%; min-height: 520px; overflow: hidden; display: flex; }
+    .content-panel-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .content-panel-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.92) 45%, rgba(17,17,17,0.4) 100%); }
+    .content-panel-inner { position: relative; z-index: 1; max-width: 1280px; width: 100%; margin: 0 auto; padding: 80px 40px; display: flex; align-items: center; }
+    .content-panel-body { max-width: 560px; }
+    .content-panel-body h2 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); font-weight: 400; color: var(--offwhite); line-height: 1.3; margin-bottom: 32px; }
+    .content-panel-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 22px; }
+    .content-panel-body p:last-child { margin-bottom: 0; }
+    .content-panel-body p strong { color: var(--offwhite); font-weight: 400; }
+    @media (max-width: 900px) { .content-panel-inner { padding: 60px 40px; } .content-panel { min-height: 400px; } }
+    @media (max-width: 600px) { .content-panel-inner { padding: 40px 24px; } }
 
     /* MARKETS */
     .markets-section { padding: 120px 0; }
@@ -162,18 +163,19 @@
   </section>
 
   <!-- INTRO — with image, waffle cut, networks added -->
-  <section class="content-row" aria-label="Property advisory">
-    <div class="content-row-grid">
-      <div class="content-row-body">
+  <section class="content-panel" aria-label="Property advisory">
+    <img class="content-panel-bg"
+      src="/uk-property-developers-london-prestige-co.png"
+      alt="The Gherkin and City of London skyline, representing Prestige &amp; Co's real estate advisory network"
+      loading="lazy">
+    <div class="content-panel-overlay" aria-hidden="true"></div>
+    <div class="content-panel-inner">
+      <div class="content-panel-body">
         <h2>We check it properly before anyone puts money behind it — and tell you the truth about it either way.</h2>
         <p>Developing a site, holding a portfolio, or looking to invest in real estate: the work is the same. We review the numbers, the assumptions, and the project before anyone else sees it. If it stacks up, we present it in the form that investors want to receive it. If it does not, we tell you what needs to change.</p>
         <p>We have a <strong>global real estate network</strong> built through active deal origination and placement since 2005. Over that period we have placed real estate opportunities with family offices, institutional desks, and private investors across the UK and internationally. The network is built on relationships, not directories — and every introduction through it is preceded by a proper review.</p>
         <p>Property Sourcing is a material part of what we do — not just a listed service name. We identify development sites, portfolio assets, and off-market opportunities for investors with specific acquisition briefs. The sourcing is done through a <strong>professional intermediary network</strong> built over 20 years: estate agents, planning consultants, solicitors, insolvency practitioners, and lenders who bring us opportunities before they are marketed.</p>
       </div>
-      <img class="content-row-img"
-        src="/uk-property-developers-london-prestige-co.png"
-        alt="The Gherkin and City of London skyline, representing Prestige &amp; Co's real estate advisory network"
-        loading="lazy">
     </div>
   </section>
 

@@ -39,17 +39,18 @@
     .motto-top-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
     .motto-line { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.06em; font-style: italic; }
 
-    /* CONTENT ROWS */
-    .content-row { }
-    .content-row-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; max-width: 1280px; margin: 0 auto; }
-    .content-row-img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; display: block; }
-    .content-row-body { padding: 80px 60px; }
-    .content-row-body h2 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); font-weight: 400; color: var(--offwhite); line-height: 1.3; margin-bottom: 32px; }
-    .content-row-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 22px; }
-    .content-row-body p:last-child { margin-bottom: 0; }
-    .content-row-body p strong { color: var(--offwhite); font-weight: 400; }
-    @media (max-width: 900px) { .content-row-grid { grid-template-columns: 1fr; } .content-row-img { min-height: 280px; } .content-row-body { padding: 60px 40px; } }
-    @media (max-width: 600px) { .content-row-body { padding: 40px 24px; } }
+    /* CONTENT PANELS */
+    .content-panel { position: relative; width: 100%; min-height: 520px; overflow: hidden; display: flex; }
+    .content-panel-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .content-panel-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.92) 45%, rgba(17,17,17,0.4) 100%); }
+    .content-panel-inner { position: relative; z-index: 1; max-width: 1280px; width: 100%; margin: 0 auto; padding: 80px 40px; display: flex; align-items: center; }
+    .content-panel-body { max-width: 560px; }
+    .content-panel-body h2 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); font-weight: 400; color: var(--offwhite); line-height: 1.3; margin-bottom: 32px; }
+    .content-panel-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 22px; }
+    .content-panel-body p:last-child { margin-bottom: 0; }
+    .content-panel-body p strong { color: var(--offwhite); font-weight: 400; }
+    @media (max-width: 900px) { .content-panel-inner { padding: 60px 40px; } .content-panel { min-height: 400px; } }
+    @media (max-width: 600px) { .content-panel-inner { padding: 40px 24px; } }
 
     /* SERVICES */
     .services-section { padding: 120px 0; }
@@ -135,29 +136,31 @@
   </section>
 
   <!-- INTRO — with image -->
-  <section class="content-row" aria-label="Who we work with">
-    <div class="content-row-grid">
-      <div class="content-row-body">
+  <section class="content-panel" aria-label="Who we work with">
+    <img class="content-panel-bg"
+      src="/uk-founders-growth-businesses-prestige-co.png"
+      alt="Jonathan's Coffee House, the original home of the London Stock Exchange — where UK business finance has its roots"
+      loading="lazy">
+    <div class="content-panel-overlay" aria-hidden="true"></div>
+    <div class="content-panel-inner">
+      <div class="content-panel-body">
         <h2>We check the numbers before an investor does.</h2>
         <p>You've built something real — revenue, a team, a business that works. The next move is capital that takes it further, or getting it properly ready to sell for what it's actually worth.</p>
         <p><strong>20 of our 25 years have been spent founding, fundraising, and deal-making</strong> — we know exactly what gets picked apart, because we have been on both sides of that process. We have raised capital as founders and reviewed businesses as advisers. We have sat across the table from buyers and prepared vendors for that process.</p>
         <p>Nothing about your business goes further than it needs to. We operate on a strict need-to-know basis. The work we do for you stays between us.</p>
       </div>
-      <img class="content-row-img"
-        src="/uk-founders-growth-businesses-prestige-co.png"
-        alt="Jonathan's Coffee House, the original home of the London Stock Exchange — where UK business finance has its roots"
-        loading="lazy">
     </div>
   </section>
 
   <!-- SECONDARY IMAGE ROW -->
-  <section class="content-row" aria-label="Our advisory approach">
-    <div class="content-row-grid">
-      <img class="content-row-img"
-        src="/tech-startup-founder-dashboard.jpg"
-        alt="Modern business workspace representing the growth-stage founders Prestige &amp; Co works with"
-        loading="lazy">
-      <div class="content-row-body">
+  <section class="content-panel" aria-label="Our advisory approach">
+    <img class="content-panel-bg"
+      src="/tech-startup-founder-dashboard.jpg"
+      alt="Modern business workspace representing the growth-stage founders Prestige &amp; Co works with"
+      loading="lazy">
+    <div class="content-panel-overlay" aria-hidden="true"></div>
+    <div class="content-panel-inner">
+      <div class="content-panel-body">
         <h2>Built, raised, and sold — 25 years on every side of the table, not just advising from outside it.</h2>
         <p>The advisers who have only ever advised will tell you what it should look like in theory. We tell you what it actually looks like when the investor's team goes through the model, when the buyer's lawyers open the data room, when the deal is live and something comes up.</p>
         <p>We have been in those rooms. That is the difference.</p>
