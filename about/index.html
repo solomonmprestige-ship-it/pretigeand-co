@@ -26,15 +26,13 @@
     .section-rule { display: none; }
     .eyebrow { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); font-weight: 500; display: block; text-align: center; margin-bottom: 56px; }
 
-    /* OPENING */
-    .opening { padding: 0; max-width: none; margin: 0; }
-    .opening-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; max-width: 1280px; margin: 0 auto; }
-    .opening-img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; display: block; }
-    .opening-body { padding: 100px 80px; display: flex; flex-direction: column; justify-content: center; }
-    .opening-rule { margin: 0 0 56px; }
-    .opening-primary { font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 400; line-height: 1.2; color: var(--offwhite); letter-spacing: 0.01em; margin-bottom: 28px; }
-    .opening-secondary { font-size: clamp(0.9rem, 1.3vw, 1.1rem); font-weight: 400; line-height: 1.65; color: var(--muted); letter-spacing: 0.04em; }
-    @media (max-width: 900px) { .opening-grid { grid-template-columns: 1fr; } .opening-img { min-height: 320px; } .opening-body { padding: 60px 40px; } }
+    /* COVER */
+    .cover { position: relative; width: 100%; height: clamp(420px, 60vh, 700px); overflow: hidden; }
+    .cover-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .cover-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(17,17,17,0.35) 0%, rgba(17,17,17,0.6) 100%); }
+    .cover-inner { position: relative; z-index: 1; height: 100%; display: flex; align-items: flex-end; max-width: 1280px; margin: 0 auto; padding: 0 40px 80px; }
+    .cover-statement { font-size: clamp(2.2rem, 4.5vw, 4rem); font-weight: 400; line-height: 1.15; color: var(--offwhite); letter-spacing: 0.01em; max-width: 860px; }
+    @media (max-width: 600px) { .cover-statement { font-size: clamp(1.8rem, 7vw, 2.6rem); } .cover-inner { padding: 0 24px 60px; } }
 
     /* MOTTO — near top */
     .motto-top { padding: 100px 0; text-align: center; }
@@ -178,20 +176,15 @@
     </ul>
   </nav>
 
-  <!-- OPENING STATEMENT -->
-  <div class="opening" aria-label="Opening statement">
-    <div class="opening-grid">
-      <img class="opening-img"
-        src="/prestige-and-co.desk.jpeg"
-        alt="Prestige &amp; Co boutique corporate finance consultancy — desk with strategic review documents and merger feasibility analysis"
-        loading="eager">
-      <div class="opening-body">
-        <hr class="section-rule opening-rule" aria-hidden="true">
-        <p class="opening-primary">Prestige &amp; Co is a boutique, independent corporate finance consultancy.</p>
-        <p class="opening-secondary">We have been on every side of the table — as founder, fundraiser, and dealmaker — for 25 years.</p>
-      </div>
+  <section class="cover" aria-label="About Prestige &amp; Co">
+    <img class="cover-bg" src="/prestige-and-co.desk.jpeg"
+      alt="Prestige &amp; Co boutique corporate finance consultancy — strategic advisory office"
+      loading="eager">
+    <div class="cover-overlay" aria-hidden="true"></div>
+    <div class="cover-inner">
+      <h1 class="cover-statement">Prestige &amp; Co is a boutique, independent corporate finance consultancy.</h1>
     </div>
-  </div>
+  </section>
 
   <!-- MOTTO — near top, directly after opening -->
   <!-- PEDIGREE -->
