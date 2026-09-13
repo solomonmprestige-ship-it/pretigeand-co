@@ -110,15 +110,17 @@
     .tl-btn:disabled { opacity: 0.3; cursor: default; }
     .tl-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; vertical-align: middle; }
 
-    /* NARRATIVE — stacked (image top, text below) */
-    .narrative-section { padding: 0; }
-    .narrative-img { width: 100%; height: 560px; object-fit: cover; display: block; }
-    .narrative-body { max-width: 1100px; margin: 0 auto; padding: 80px 60px; }
-    .narrative-body h2 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); font-weight: 400; color: var(--offwhite); line-height: 1.3; margin-bottom: 32px; }
-    .narrative-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 22px; }
-    .narrative-body p:last-child { margin-bottom: 0; }
-    @media (max-width: 900px) { .narrative-img { height: 360px; } .narrative-body { padding: 60px 40px; } }
-    @media (max-width: 600px) { .narrative-img { height: 260px; } .narrative-body { padding: 40px 24px; } }
+    /* CONTENT PANELS */
+    .content-panel { position: relative; width: 100%; min-height: 560px; overflow: hidden; display: flex; }
+    .content-panel-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .content-panel-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.92) 45%, rgba(17,17,17,0.4) 100%); }
+    .content-panel-inner { position: relative; z-index: 1; max-width: 1280px; width: 100%; margin: 0 auto; padding: 80px 40px; display: flex; align-items: center; }
+    .content-panel-body { max-width: 560px; }
+    .content-panel-body h2 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); font-weight: 400; color: var(--offwhite); line-height: 1.3; margin-bottom: 32px; }
+    .content-panel-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 22px; }
+    .content-panel-body p:last-child { margin-bottom: 0; }
+    @media (max-width: 900px) { .content-panel-inner { padding: 60px 40px; } .content-panel { min-height: 400px; } }
+    @media (max-width: 600px) { .content-panel-inner { padding: 40px 24px; } }
 
     /* CONTENT ROWS (approach uses this) */
     .content-row { }
@@ -221,35 +223,45 @@
     </div>
   </section>
 
-  <!-- NARRATIVE — stacked layout: image on top, text below -->
-  <section class="narrative-section" aria-labelledby="narrative-label">
-    <img class="narrative-img"
+  <!-- NARRATIVE — castle door panel -->
+  <section class="content-panel" aria-labelledby="narrative-label">
+    <img class="content-panel-bg"
       src="/prestige-and-co-castle-door.jpg"
       alt="Stone castle door, representing the heritage and discretion underpinning Prestige &amp; Co"
       loading="lazy">
-    <div class="narrative-body">
-      <h2 id="narrative-label">Drawing on 25 years across banking, real estate, and business-building.</h2>
-      <p>A corporate finance boutique with an edge.</p>
-      <p>What do we have that many corporate finance companies don't?</p>
-      <p>Experience building a business as a founder.</p>
-      <p>Experience raising money to fund a startup venture, then selling the business.</p>
-      <p>Experience as an early employee taking a startup to market, from the inside.</p>
-      <p>Of course, many corporate finance consultants have sat on both sides of the table.</p>
-      <p>However...</p>
+    <div class="content-panel-overlay" aria-hidden="true"></div>
+    <div class="content-panel-inner">
+      <div class="content-panel-body">
+        <h2 id="narrative-label">Drawing on 25 years across banking, real estate, and business-building.</h2>
+        <p>A corporate finance boutique with an edge.</p>
+        <p>What do we have that many corporate finance companies don't?</p>
+        <p>Experience building a business as a founder.</p>
+        <p>Experience raising money to fund a startup venture, then selling the business.</p>
+        <p>Experience as an early employee taking a startup to market, from the inside.</p>
+        <p>Of course, many corporate finance consultants have sat on both sides of the table.</p>
+        <p>However...</p>
+      </div>
     </div>
-    <img class="narrative-img"
+  </section>
+
+  <!-- NARRATIVE — oak tree panel -->
+  <section class="content-panel" aria-label="Our real-world experience">
+    <img class="content-panel-bg"
       src="/prestige-and-co-oak-tree.jpg"
       alt="Oak tree, representing the depth of experience and long-term perspective Prestige &amp; Co brings to every engagement"
       loading="lazy">
-    <div class="narrative-body">
-      <p>How many in this industry have a grounding in business development? Have bootstrapped their way to revenue, pounding the streets to find customers? Have felt the pain of rejection, when an investor pitch doesn't go to plan? Or experienced a sales pitch fall apart in front of a crucial client that may be the difference between paying the mortgage this month or not?</p>
-      <p>How many advisors in this space have a foundation in financial planning? Have sat with individuals and applied the regulatory discipline of a deep fact-find: not just the hard facts — income, assets, liabilities — the soft facts too, the ones that actually determine whether an opportunity is right for someone. Attitude to risk. Tolerance of risk. Capacity for risk.</p>
-      <p>We have experience talking to an individual investor to position an opportunity correctly and in line with their goals.</p>
-      <p>Likewise at an institutional level — as a broker consultant in wealth management. Fact-finding to understand the investment needs of financial firms, before working with fund managers to create tailored investments for their clients. Raising millions in funds under management.</p>
-      <p>Being the early employee for an exciting startup. Working on a business with entrepreneurial founders. Monetising the model. Shaping and executing the go-to-market strategy. Securing new business contracts with global brands. Pitching some of the world's most iconic high-street names.</p>
-      <p>Real world experience.</p>
-      <p>Pitching investors. The feeling of rejection. Making 100 sales calls per day. Landing a deal, then it falling out. Months with no income. Building a reputation from scratch.</p>
-      <p>And all of this wrapped up in the technical studies: corporate finance, investment management, financial planning, and mortgage advice.</p>
+    <div class="content-panel-overlay" aria-hidden="true"></div>
+    <div class="content-panel-inner">
+      <div class="content-panel-body">
+        <p>How many in this industry have a grounding in business development? Have bootstrapped their way to revenue, pounding the streets to find customers? Have felt the pain of rejection, when an investor pitch doesn't go to plan? Or experienced a sales pitch fall apart in front of a crucial client that may be the difference between paying the mortgage this month or not?</p>
+        <p>How many advisors in this space have a foundation in financial planning? Have sat with individuals and applied the regulatory discipline of a deep fact-find: not just the hard facts — income, assets, liabilities — the soft facts too, the ones that actually determine whether an opportunity is right for someone. Attitude to risk. Tolerance of risk. Capacity for risk.</p>
+        <p>We have experience talking to an individual investor to position an opportunity correctly and in line with their goals.</p>
+        <p>Likewise at an institutional level — as a broker consultant in wealth management. Fact-finding to understand the investment needs of financial firms, before working with fund managers to create tailored investments for their clients. Raising millions in funds under management.</p>
+        <p>Being the early employee for an exciting startup. Working on a business with entrepreneurial founders. Monetising the model. Shaping and executing the go-to-market strategy. Securing new business contracts with global brands. Pitching some of the world's most iconic high-street names.</p>
+        <p>Real world experience.</p>
+        <p>Pitching investors. The feeling of rejection. Making 100 sales calls per day. Landing a deal, then it falling out. Months with no income. Building a reputation from scratch.</p>
+        <p>And all of this wrapped up in the technical studies: corporate finance, investment management, financial planning, and mortgage advice.</p>
+      </div>
     </div>
   </section>
 

@@ -309,39 +309,20 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 }
 
 /* ─── SECTION 5 · FOUNDER ────────────────────────────── */
-.founder {
- 
-}
-.founder-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  min-height: 640px;
-}
-.founder-img-wrap {
-  overflow: hidden;
-}
-.founder-img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center top;
-}
-.founder-text {
-  padding: 100px 80px;
-  display: flex; flex-direction: column; justify-content: center;
-}
 .founder-eyebrow {
   font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--brass); font-weight: 500; margin-bottom: 36px; display: block;
 }
-.founder-text h2 {
-  font-size: clamp(1.8rem, 2.8vw, 2.7rem);
-  font-weight: 400; line-height: 1.2;
-  color: var(--offwhite); margin-bottom: 36px;
-  letter-spacing: 0.005em;
-}
-.founder-text p {
-  font-size: 1.1rem; color: var(--muted);
-  line-height: 1.7; margin-bottom: 20px;
-}
-.founder-text p:last-of-type { margin-bottom: 36px; }
+
+/* ─── CONTENT PANEL ──────────────────────────────────── */
+.content-panel { position: relative; width: 100%; min-height: 640px; overflow: hidden; display: flex; }
+.content-panel-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.content-panel-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.92) 45%, rgba(17,17,17,0.4) 100%); }
+.content-panel-inner { position: relative; z-index: 1; max-width: 1280px; width: 100%; margin: 0 auto; padding: 100px 80px; display: flex; align-items: center; }
+.content-panel-body { max-width: 560px; display: flex; flex-direction: column; }
+.content-panel-body h2 { font-size: clamp(1.8rem, 2.8vw, 2.7rem); font-weight: 400; line-height: 1.2; color: var(--offwhite); margin-bottom: 36px; letter-spacing: 0.005em; }
+.content-panel-body p { font-size: 1.1rem; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+.content-panel-body p:last-of-type { margin-bottom: 36px; }
 .btn {
   display: inline-flex; align-items: center; gap: 12px;
   font-family: 'EB Garamond', Georgia, serif;
@@ -353,9 +334,11 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 }
 .btn:hover { background: var(--brass); color: var(--bg); }
 @media (max-width: 860px) {
-  .founder-grid { grid-template-columns: 1fr; }
-  .founder-img-wrap { min-height: 400px; max-height: 480px; }
-  .founder-text { padding: 64px 40px; }
+  .content-panel { min-height: 480px; }
+  .content-panel-inner { padding: 64px 40px; }
+}
+@media (max-width: 600px) {
+  .content-panel-inner { padding: 48px 24px; }
 }
 
 /* ─── SECTION 6 · SERVICES ───────────────────────────── */
@@ -612,19 +595,14 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   </section>
 
   <!-- ── SECTION 5 · FOUNDER ───────────────────────────────── -->
-  <section class="founder" id="founder" aria-labelledby="founder-heading">
-    <div class="founder-grid">
-      <div class="founder-img-wrap">
-        <!--
-          IMAGE PLACEHOLDER: replace src with /founder-silhouette-office.jpg once uploaded to repo root.
-          Current src: /corporate-advisory-london-prestige-co.png (existing file)
-        -->
-        <img class="founder-img"
-          src="/founder-silhouette-office%20%281%29.jpg"
-          alt="Silhouette of the founder of Prestige &amp; Co, a UK corporate finance consultancy"
-          loading="lazy">
-      </div>
-      <div class="founder-text">
+  <section class="content-panel" id="founder" aria-labelledby="founder-heading">
+    <img class="content-panel-bg"
+      src="/founder-silhouette-office%20%281%29.jpg"
+      alt="Silhouette of the founder of Prestige &amp; Co, a UK corporate finance consultancy"
+      loading="lazy">
+    <div class="content-panel-overlay" aria-hidden="true"></div>
+    <div class="content-panel-inner">
+      <div class="content-panel-body">
         <span class="founder-eyebrow">The Founder</span>
         <h2 id="founder-heading">A corporate financier who has built, raised, and sold.</h2>
         <p>25 years commercial experience across financial advisory, equities broking, and real estate. Exited founder. Raised money to fund a startup, then sold the business.</p>
