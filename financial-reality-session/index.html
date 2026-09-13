@@ -63,6 +63,36 @@
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--muted); letter-spacing: 0.06em; }
     @media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; gap: 12px; text-align: center; } }
+
+    /* APPLICATION FORM */
+    .apply-section { padding: 100px 0; border-top: 1px solid var(--rule); }
+    .apply-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .apply-lbl { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 40px; }
+    .apply-form { display: flex; flex-direction: column; gap: 32px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    .form-field { display: flex; flex-direction: column; gap: 10px; }
+    .form-flbl { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+    .form-flbl .req { color: var(--brass); }
+    .form-input, .form-select, .form-textarea { background: transparent; border: none; border-bottom: 1px solid rgba(240,237,230,0.2); color: var(--offwhite); font-family: 'EB Garamond', Georgia, serif; font-size: 1rem; padding: 12px 0; outline: none; transition: border-color 0.2s; width: 100%; -webkit-appearance: none; appearance: none; box-sizing: border-box; }
+    .form-input:focus, .form-select:focus { border-bottom-color: var(--brass); }
+    .form-input::placeholder { color: rgba(136,136,128,0.5); }
+    .form-select { cursor: pointer; color: var(--muted); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888880' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 4px center; padding-right: 24px; }
+    .form-select.has-value { color: var(--offwhite); }
+    .form-select option { background: #1a1a1a; color: var(--offwhite); }
+    .form-textarea { resize: vertical; min-height: 120px; border: 1px solid rgba(240,237,230,0.2); padding: 14px; }
+    .form-textarea:focus { border-color: var(--brass); }
+    .form-file-desc { font-size: 0.78rem; color: var(--muted); margin-top: -4px; }
+    .form-file-input { color: var(--muted); font-family: 'EB Garamond', Georgia, serif; font-size: 0.9rem; cursor: pointer; }
+    .form-file-input::file-selector-button { font-family: 'EB Garamond', Georgia, serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass); background: transparent; border: 1px solid rgba(184,147,90,0.5); padding: 10px 22px; margin-right: 16px; cursor: pointer; transition: background 0.2s, color 0.2s; }
+    .form-file-input::file-selector-button:hover { background: var(--brass); color: var(--bg); }
+    .form-submit { display: inline-flex; align-items: center; font-family: 'EB Garamond', Georgia, serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); border: 1px solid var(--brass); padding: 18px 36px; background: transparent; cursor: pointer; transition: background 0.25s, color 0.25s; align-self: flex-start; }
+    .form-submit:hover { background: var(--brass); color: var(--bg); }
+    .form-confirm { display: none; padding: 48px 40px; border: 1px solid rgba(184,147,90,0.25); }
+    .form-confirm p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 16px; }
+    .form-confirm p:last-child { margin-bottom: 0; }
+    .form-confirm a { color: var(--brass); }
+    .form-confirm a:hover { text-decoration: underline; text-underline-offset: 3px; }
   </style>
 </head>
 <body>
@@ -118,6 +148,85 @@
     <p>Everything discussed is held in strict confidence.</p>
   </div>
 
+
+  <section class="apply-section" aria-labelledby="apply-heading">
+    <div class="apply-inner">
+      <span class="apply-lbl" id="apply-heading">Apply</span>
+      <form class="apply-form" id="apply-form" name="application-financial-reality-session" method="POST"
+        action="?success=1" data-netlify="true" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="application-financial-reality-session">
+        <input type="hidden" name="service" value="Financial Reality Session">
+        <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+        <div class="form-row">
+          <div class="form-field">
+            <label class="form-flbl" for="f-name">Name <span class="req">*</span></label>
+            <input class="form-input" type="text" id="f-name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label class="form-flbl" for="f-company">Company name <span class="req">*</span></label>
+            <input class="form-input" type="text" id="f-company" name="company" required autocomplete="organization">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label class="form-flbl" for="f-email">Email <span class="req">*</span></label>
+            <input class="form-input" type="email" id="f-email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label class="form-flbl" for="f-phone">Phone</label>
+            <input class="form-input" type="tel" id="f-phone" name="phone" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-flbl" for="f-status">Company status <span class="req">*</span></label>
+          <select class="form-select" id="f-status" name="company-status" required>
+            <option value="" disabled selected></option>
+            <option value="Concept stage">Concept stage</option>
+            <option value="Pre-revenue">Pre-revenue</option>
+            <option value="Established — 1–3 years">Established — 1–3 years</option>
+            <option value="Established — 3–5 years">Established — 3–5 years</option>
+            <option value="Established — 5–10 years">Established — 5–10 years</option>
+            <option value="Established — 10+ years">Established — 10+ years</option>
+            <option value="Preparing for sale/exit">Preparing for sale/exit</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label class="form-flbl" for="f-capital">Capital needed</label>
+          <input class="form-input" type="text" id="f-capital" name="capital-needed" placeholder="e.g. £250,000">
+        </div>
+        <div class="form-field">
+          <label class="form-flbl" for="f-situation">Why — brief description of your situation <span class="req">*</span></label>
+          <textarea class="form-textarea" id="f-situation" name="situation" required></textarea>
+        </div>
+        <div class="form-field">
+          <label class="form-flbl" for="f-attachment">Business plan or pitch deck</label>
+          <span class="form-file-desc">PDF, PPT, PPTX, DOC or DOCX</span>
+          <input class="form-file-input" type="file" id="f-attachment" name="attachment" accept=".pdf,.ppt,.pptx,.doc,.docx">
+        </div>
+        <button type="submit" class="form-submit">Submit application</button>
+      </form>
+      <div class="form-confirm" id="apply-confirm" aria-live="polite">
+        <p>Thank you — this is the first step in our process. We’ll review what you’ve shared and be in touch shortly to arrange the next stage.</p>
+        <p>In the meantime, connect with us on <a href="https://www.linkedin.com/company/prestige-and-co" target="_blank" rel="noopener noreferrer">LinkedIn</a> or <a href="https://x.com/PrestigeCoUK" target="_blank" rel="noopener noreferrer">X</a>.</p>
+      </div>
+    </div>
+    <script>
+      (function(){
+        if (window.location.search.indexOf('success') > -1) {
+          var f = document.getElementById('apply-form');
+          var c = document.getElementById('apply-confirm');
+          var h = document.getElementById('apply-heading');
+          if (f) f.style.display = 'none';
+          if (c) c.style.display = 'block';
+          if (h) window.scrollTo(0, h.getBoundingClientRect().top + window.scrollY - 80);
+        }
+        var sel = document.getElementById('f-status');
+        if (sel) sel.addEventListener('change', function() {
+          this.classList.toggle('has-value', this.value !== '');
+        });
+      })();
+    </script>
+  </section>
   <section class="motto-section" aria-label="Our motto">
     <div class="motto-inner">
       <hr class="section-rule" aria-hidden="true">
