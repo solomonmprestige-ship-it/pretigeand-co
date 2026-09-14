@@ -405,6 +405,59 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   .service-price { text-align: left; }
 }
 
+/* ─── COVER SUB ──────────────────────────────────────── */
+.cover-sub {
+  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+  color: rgba(240, 237, 230, 0.65);
+  line-height: 1.65;
+  margin-top: 28px;
+  letter-spacing: 0.01em;
+}
+
+/* ─── STATS FOOTNOTE ─────────────────────────────────── */
+.stats-footnote {
+  text-align: center;
+  margin-top: 56px;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ─── TESTIMONIALS ───────────────────────────────────── */
+.testimonials { padding: 120px 0; }
+.testimonials-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+.testimonial {
+  padding: 56px 48px;
+  border: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 40px;
+}
+.testimonial-quote {
+  font-size: 1.15rem; color: var(--offwhite);
+  line-height: 1.75; font-style: italic; flex: 1; margin: 0;
+}
+.testimonial-attr { display: flex; align-items: center; gap: 20px; }
+.testimonial-avatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--brass); color: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; letter-spacing: 0.08em; font-style: normal;
+  flex-shrink: 0; font-weight: 500;
+}
+.testimonial-name {
+  display: block; font-size: 1rem; color: var(--offwhite);
+  font-style: normal; letter-spacing: 0.02em; margin-bottom: 4px;
+}
+.testimonial-role { display: block; font-size: 0.85rem; color: var(--muted); letter-spacing: 0.04em; }
+@media (max-width: 860px) { .testimonials-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .testimonial { padding: 40px 28px; } }
+
+/* ─── APPLICATION / CTA ──────────────────────────────── */
+.apply { padding: 120px 0; text-align: center; }
+.apply-inner { max-width: 680px; margin: 0 auto; padding: 0 40px; }
+.apply-intro { font-size: 1.15rem; color: var(--muted); line-height: 1.75; margin-bottom: 48px; }
+
 /* ─── FOOTER ─────────────────────────────────────────── */
 .footer {
   padding: 80px 0 48px;
@@ -490,7 +543,8 @@ section[id], footer[id] { scroll-margin-top: 72px; }
       loading="eager" fetchpriority="high">
     <div class="cover-overlay" aria-hidden="true"></div>
     <div class="cover-inner">
-      <p class="cover-statement">A boutique UK corporate finance consultancy, with an edge.</p>
+      <h1 class="cover-statement">UK Corporate Finance Consultant</h1>
+      <p class="cover-sub">Money was the means. It was never the meaning.<br>People build for freedom. Impact. Legacy.<br>That's what we're here to protect.</p>
     </div>
   </section>
 
@@ -498,7 +552,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   <section class="pedigree" id="pedigree" aria-label="Our pedigree">
     <div class="pedigree-inner">
       <hr class="pedigree-rule" aria-hidden="true">
-      <p class="pedigree-statement">25 years commercial experience. A corporate financier who has taken startups to market, built and sold a business, and worked across financial advisory, equities broking, and real estate.</p>
+      <p class="pedigree-statement">25 years across corporate finance, banking, wealth management, real estate and business-building. Built, raised, and sold.</p>
     </div>
   </section>
 
@@ -527,7 +581,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
               loading="lazy">
           </div>
           <h3>Business Leaders</h3>
-          <p>You've built something real — revenue, a team, a business that works. The next move is capital that takes it further, or getting it properly ready to sell for what it's actually worth. We check the numbers before an investor does — 20 of our 25 years spent founding, fundraising, and deal-making means we know exactly what gets picked apart. Nothing about your business goes further than it needs to.</p>
+          <p>You know what you want from the business — investment, a sale, or simply to run it better. We start by asking, then work out what has to happen to get you there.</p>
           <a class="market-link" href="/founders" aria-label="Prestige and Co services for Business Leaders">Read more</a>
         </article>
 
@@ -543,7 +597,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
               loading="lazy">
           </div>
           <h3>Investors</h3>
-          <p>You see more deals than you have time to check properly. We check the deal before it reaches you — the numbers, the story, the parts a founder hopes won't come up. Fewer introductions, each one already vetted, every conversation held in confidence.</p>
+          <p>You know what you are looking for. We find out exactly what that is — the sector, the size, the risk — before we bring you anything.</p>
           <a class="market-link" href="/investors" aria-label="Prestige and Co services for Investors">Read more</a>
         </article>
 
@@ -559,7 +613,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
               loading="lazy">
           </div>
           <h3>Property</h3>
-          <p>Developing a site, holding a portfolio, or looking to invest in real estate — the work is the same: we check it properly before anyone puts money behind it. We've placed real estate opportunities with family offices and institutional desks, and we check a project's ready before they see it — and tell you the truth about it either way.</p>
+          <p>You know what you want — to develop a new project, add to your portfolio, or get the best value for what you already hold. We start with your goal, then tell you honestly what it takes to get there.</p>
           <a class="market-link" href="/property" aria-label="Prestige and Co services for Property">Read more</a>
         </article>
 
@@ -579,18 +633,19 @@ section[id], footer[id] { scroll-margin-top: 72px; }
         </div>
 
         <div class="stat">
-          <span class="stat-label">Client Assets</span>
+          <span class="stat-label">Funds Under Management</span>
           <span class="stat-number">£90m+</span>
-          <span class="stat-caption">placed</span>
+          <span class="stat-caption">raised</span>
         </div>
 
         <div class="stat">
-          <span class="stat-label">Real Estate</span>
-          <span class="stat-number">€400m</span>
-          <span class="stat-caption">reach</span>
+          <span class="stat-label">Real Estate Network</span>
+          <span class="stat-number">£500m+</span>
+          <span class="stat-caption">global reach</span>
         </div>
 
       </div>
+      <p class="stats-footnote">Career track record.</p>
     </div>
   </section>
 
@@ -605,9 +660,40 @@ section[id], footer[id] { scroll-margin-top: 72px; }
       <div class="content-panel-body">
         <span class="founder-eyebrow">The Founder</span>
         <h2 id="founder-heading">A corporate financier who has built, raised, and sold.</h2>
-        <p>25 years commercial experience across financial advisory, equities broking, and real estate. Exited founder. Raised money to fund a startup, then sold the business.</p>
-        <p>It's the difference between advice and empathy backed by proof.</p>
+        <p>25 years across corporate finance, banking, wealth management, real estate and business-building. Raised money for our own startup, then sold it. Took another to market — landing Bristol Airport and SSP as launch partners.</p>
+        <p>We have sat where you are sitting.</p>
         <a class="btn" href="/about" aria-label="Learn more about Solomon Prestige and Prestige and Co">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ─────────────────────────────────────── -->
+  <section class="testimonials" id="testimonials" aria-label="Client testimonials">
+    <div class="testimonials-inner">
+      <div class="testimonials-grid">
+
+        <blockquote class="testimonial">
+          <p class="testimonial-quote">"Solomon has been thorough in our investor readiness preparation. His document review caught inconsistencies before investors did. Direct, fast, worth it."</p>
+          <footer class="testimonial-attr">
+            <div class="testimonial-avatar" aria-hidden="true">ADC</div>
+            <div>
+              <cite class="testimonial-name">Allen DC</cite>
+              <span class="testimonial-role">Co-Founder, Cloudbox Studio</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p class="testimonial-quote">"Solomon knows his stuff inside out! He's been a fantastic advisor for my business, helping it grow and prosper. Working with him has been a real game-changer. I highly recommend him."</p>
+          <footer class="testimonial-attr">
+            <div class="testimonial-avatar" aria-hidden="true">RG</div>
+            <div>
+              <cite class="testimonial-name">Ray Gudrups</cite>
+              <span class="testimonial-role">Owner, Explorite</span>
+            </div>
+          </footer>
+        </blockquote>
+
       </div>
     </div>
   </section>
@@ -622,7 +708,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 
       <a class="service-row" href="/investability-assessment" aria-label="Investability Assessment: Fact Find — £300">
         <span class="service-name">Investability Assessment: Fact Find</span>
-        <span class="service-price">£300</span>
+        <span class="service-price"></span>
         <p class="service-desc">The due diligence questionnaire that checks whether a deal is actually ready — before an investor ever sees it.</p>
         <span class="service-arrow">View →</span>
       </a>
@@ -662,6 +748,14 @@ section[id], footer[id] { scroll-margin-top: 72px; }
         <span class="service-arrow">View →</span>
       </a>
 
+    </div>
+  </section>
+
+  <!-- ── APPLICATION / CTA ─────────────────────────────────── -->
+  <section class="apply" id="apply" aria-label="Apply to work with Prestige and Co">
+    <div class="apply-inner">
+      <p class="apply-intro">Every potential engagement starts with an application. It tells us whether we can actually help — and sometimes the answer is no.</p>
+      <a class="btn" href="/investability-assessment" aria-label="Apply to work with Prestige and Co">Apply to work with us</a>
     </div>
   </section>
 
