@@ -12,21 +12,19 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --bg: #111111; --brass: #B8935A; --offwhite: #F0EDE6; --muted: #888880; --rule: rgba(240, 237, 230, 0.1); }
     html { background: var(--bg); color: var(--offwhite); font-family: 'EB Garamond', Georgia, serif; }
-    body { background: var(--bg); padding: 0 16px; }
+    body { background: var(--bg); padding: 0; }
     a { color: inherit; text-decoration: none; }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 32px 0; max-width: 1280px; margin: 0 auto; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 32px 40px; max-width: 1280px; margin: 0 auto; }
     .nav-logo { font-size: 1.05rem; letter-spacing: 0.08em; color: var(--offwhite); }
     .nav-links { display: flex; gap: 40px; list-style: none; }
     .nav-links a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
     .nav-links a:hover { color: var(--offwhite); }
-    @media (max-width: 640px) { .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } }
-    /* COVER */
-    .cover { position: relative; width: 100%; height: clamp(420px, 60vh, 700px); overflow: hidden; }
-    .cover-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-    .cover-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(17,17,17,0.35) 0%, rgba(17,17,17,0.6) 100%); }
-    .cover-inner { position: relative; z-index: 1; height: 100%; display: flex; align-items: flex-end; max-width: 1280px; margin: 0 auto; padding: 0 40px 80px; }
-    .cover-statement { font-size: clamp(2.2rem, 4.5vw, 4rem); font-weight: 400; line-height: 1.15; color: var(--offwhite); letter-spacing: 0.01em; max-width: 860px; }
-    @media (max-width: 600px) { .cover-statement { font-size: clamp(1.8rem, 7vw, 2.6rem); } .cover-inner { padding: 0 24px 60px; } }
+    @media (max-width: 640px) { .nav { padding: 24px; } .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } }
+    /* PAGE TITLE */
+    .page-title { padding: 120px 0 60px; text-align: center; }
+    .page-title-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+    .page-title-h1 { font-size: clamp(2.2rem, 4.5vw, 4rem); font-weight: 400; color: var(--offwhite); letter-spacing: 0.01em; line-height: 1.2; margin: 0; }
+    @media (max-width: 600px) { .page-title-h1 { font-size: clamp(1.8rem, 7vw, 2.6rem); } .page-title { padding: 80px 0 40px; } }
 
     /* MOTTO — near top */
     .motto-top { padding: 56px 0; text-align: center; }
@@ -41,10 +39,6 @@
     .page-body ul { list-style: none; margin-bottom: 28px; }
     .page-body ul li { font-size: 1.05rem; line-height: 1.7; color: var(--muted); padding: 12px 0; padding-left: 20px; position: relative; }
     .page-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--brass); }
-
-    .body-image { margin: 48px 0; }
-    .body-image img { width: 100%; height: 320px; object-fit: cover; display: block; }
-    @media (max-width: 600px) { .body-image img { height: 200px; } }
 
     .motto-section { padding: 100px 0; text-align: center; }
     .motto-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
@@ -75,10 +69,16 @@
 
 
     /* APPLY CTA */
-    .apply-cta-section { padding: 80px 0; text-align: center; border-top: 1px solid var(--rule); }
-    .apply-cta-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
-    .apply-cta-btn { display: inline-flex; align-items: center; font-family: 'EB Garamond', Georgia, serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); border: 1px solid var(--brass); padding: 18px 36px; transition: background 0.25s, color 0.25s; }
+    .apply-cta-section { padding: 32px 0; border-top: 1px solid var(--rule); }
+    .apply-cta-inner { max-width: 1280px; margin: 0 auto; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; gap: 64px; }
+    .apply-cta-text { max-width: 600px; }
+    .apply-cta-heading { font-size: clamp(1.8rem, 2.5vw, 2.5rem); font-weight: 400; color: var(--brass); line-height: 1.25; letter-spacing: 0.005em; margin: 0 0 14px; }
+    .apply-cta-sub { font-size: 1rem; color: var(--offwhite); line-height: 1.65; margin: 0; }
+    .apply-cta-btn { display: inline-flex; align-items: center; flex-shrink: 0; font-family: 'EB Garamond', Georgia, serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); border: 1px solid var(--brass); padding: 18px 36px; transition: background 0.25s, color 0.25s; }
     .apply-cta-btn:hover { background: var(--brass); color: var(--bg); }
+    @media (max-width: 1060px) { .apply-cta-inner { padding: 0 40px; } }
+    @media (max-width: 768px) { .apply-cta-section { padding: 28px 0; } .apply-cta-inner { flex-direction: column; align-items: flex-start; gap: 36px; } }
+    @media (max-width: 600px) { .apply-cta-inner { padding: 0 24px; } }
     /* PEDIGREE */
     .pedigree { padding: 80px 0; }
     .pedigree-inner { max-width: 800px; margin: 0 auto; padding: 0 40px; text-align: center; }
@@ -99,15 +99,11 @@
     </ul>
   </nav>
 
-  <section class="cover" aria-label="Commercial Direction">
-    <img class="cover-bg" src="/solomon-prestige-corporate-finance-london.png"
-      alt="Senior commercial advisory — Commercial Direction, Prestige &amp; Co London"
-      loading="eager">
-    <div class="cover-overlay" aria-hidden="true"></div>
-    <div class="cover-inner">
-      <h1 class="cover-statement">Commercial Direction</h1>
+  <div class="page-title">
+    <div class="page-title-inner">
+      <h1 class="page-title-h1">Commercial Direction</h1>
     </div>
-  </section>
+  </div>
 
   <!-- MOTTO — near top, directly after H1 -->
   <!-- PEDIGREE -->
@@ -130,12 +126,6 @@
     <p>Commercial Direction provides exactly that — direct, senior commercial involvement at the moments when it counts. We work alongside founders and business leaders during live transactions and critical commercial decisions, providing experienced counsel and guidance throughout.</p>
     <p>The engagement is focused and ongoing for the duration of the situation — dedicated attention on the specific matter as it develops, not a periodic review from a distance.</p>
 
-    <div class="body-image" aria-hidden="true">
-      <img src="/uk-corporate-finance-consultant-london-prestige-co.png"
-        alt="Professional meeting in a London office, representing the active participation Prestige &amp; Co brings to commercial direction engagements"
-        loading="lazy">
-    </div>
-
     <h2>When we are typically engaged</h2>
     <ul>
       <li>During active fundraising processes — from first investor conversations through to term sheet and close</li>
@@ -153,6 +143,10 @@
 
   <div class="apply-cta-section">
     <div class="apply-cta-inner">
+      <div class="apply-cta-text">
+        <p class="apply-cta-heading">Every potential engagement starts with an application.</p>
+        <p class="apply-cta-sub">It tells us whether we can actually help — and sometimes the answer is no.</p>
+      </div>
       <a href="/apply?type=business-owner&amp;service=Commercial%20Direction" class="apply-cta-btn">Apply for this service</a>
     </div>
   </div>
