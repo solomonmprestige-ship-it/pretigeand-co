@@ -454,9 +454,19 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 @media (max-width: 600px) { .testimonial { padding: 40px 28px; } }
 
 /* ─── APPLICATION / CTA ──────────────────────────────── */
-.apply { padding: 120px 0; text-align: center; }
-.apply-inner { max-width: 680px; margin: 0 auto; padding: 0 40px; }
-.apply-intro { font-size: 1.15rem; color: var(--muted); line-height: 1.75; margin-bottom: 48px; }
+.apply { padding: 120px 0; }
+.apply-inner {
+  max-width: 1280px; margin: 0 auto; padding: 0 80px;
+  display: flex; align-items: center; justify-content: space-between; gap: 64px;
+}
+.apply-intro { font-size: 1.15rem; color: var(--muted); line-height: 1.75; margin: 0; max-width: 620px; }
+.apply-inner .btn { flex-shrink: 0; }
+@media (max-width: 1060px) { .apply-inner { padding: 0 40px; } }
+@media (max-width: 768px) {
+  .apply { padding: 80px 0; }
+  .apply-inner { flex-direction: column; align-items: flex-start; gap: 40px; }
+}
+@media (max-width: 600px) { .apply-inner { padding: 0 24px; } }
 
 /* ─── FOOTER ─────────────────────────────────────────── */
 .footer {
