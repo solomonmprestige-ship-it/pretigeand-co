@@ -19,7 +19,7 @@
     .nav-links { display: flex; gap: 40px; list-style: none; }
     .nav-links a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
     .nav-links a:hover, .nav-links a[aria-current] { color: var(--offwhite); }
-    @media (max-width: 640px) { .nav { padding: 24px; } .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } }
+    @media (max-width: 640px) { .nav { padding: 24px; } .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } .case-study-inner { padding-inline: 24px; } .forthcoming-inner { padding-inline: 24px; } }
     /* COVER */
     .cover { position: relative; width: 100%; height: clamp(420px, 60vh, 700px); overflow: hidden; }
     .cover-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
@@ -45,7 +45,7 @@
     .case-study-hook { max-width: 860px; margin: 0 auto 60px; text-align: center; }
     .case-study-hook p { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; line-height: 1.55; color: var(--brass); font-style: italic; }
     .case-study-img { width: 100%; max-width: 1280px; height: 480px; object-fit: cover; display: block; margin: 0 auto 60px; }
-    .case-study-content { max-width: 860px; margin: 0 auto; padding-bottom: 120px; }
+    .case-study-content { max-width: 1280px; margin: 0 auto; padding-bottom: 120px; }
     .case-study-meta { display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 56px; padding-bottom: 40px; }
     .meta-item { display: flex; flex-direction: column; gap: 8px; }
     .meta-label { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass); }
@@ -60,7 +60,7 @@
 
     /* FORTHCOMING */
     .forthcoming-section { padding: 80px 0 120px; }
-    .forthcoming-inner { max-width: 860px; margin: 0 auto; padding: 0 40px; }
+    .forthcoming-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
     .forthcoming-heading { font-size: 1.2rem; font-weight: 400; color: var(--offwhite); letter-spacing: 0.06em; margin-bottom: 48px; }
     .forthcoming-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); }
     .forthcoming-item { background: var(--bg); padding: 40px 32px; }
