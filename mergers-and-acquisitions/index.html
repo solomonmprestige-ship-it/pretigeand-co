@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mergers &amp; Acquisitions — Prestige &amp; Co</title>
+  <meta name="description" content="Structuring and preparing the deal itself. Prestige &amp; Co corporate finance, London.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #111111; --brass: #B8935A; --offwhite: #F0EDE6; --muted: #888880; --rule: rgba(240, 237, 230, 0.1); }
+    html { background: var(--bg); color: var(--offwhite); font-family: 'EB Garamond', Georgia, serif; }
+    body { background: var(--bg); padding: 0; }
+    a { color: inherit; text-decoration: none; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 32px 40px; max-width: 1280px; margin: 0 auto; }
+    .nav-logo { font-size: 1.05rem; letter-spacing: 0.08em; color: var(--offwhite); }
+    .nav-links { display: flex; gap: 40px; list-style: none; }
+    .nav-links a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--offwhite); }
+    @media (max-width: 640px) { .nav { padding: 24px; } .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } .page-body { padding-inline: 24px; } }
+    /* PAGE TITLE */
+    .page-title { padding: 120px 0 60px; text-align: center; }
+    .page-title-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+    .page-title-h1 { font-size: clamp(2.2rem, 4.5vw, 4rem); font-weight: 400; color: var(--offwhite); letter-spacing: 0.01em; line-height: 1.2; margin: 0; }
+    @media (max-width: 600px) { .page-title-h1 { font-size: clamp(1.8rem, 7vw, 2.6rem); } .page-title { padding: 80px 0 40px; } }
+
+    /* MOTTO — near top */
+    .motto-top { padding: 56px 0; text-align: center; }
+    .motto-top-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
+    .motto-line { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.06em; font-style: italic; }
+
+    .page-body { padding: 80px 40px 120px; max-width: 1280px; margin: 0 auto; }
+    .page-body p { font-size: 1.1rem; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
+    .page-body p:last-child { margin-bottom: 0; }
+    .page-body p strong { color: var(--offwhite); font-weight: 400; }
+    .page-body h2 { font-size: 1.2rem; font-weight: 400; color: var(--offwhite); letter-spacing: 0.06em; margin: 56px 0 24px; }
+    .page-body ul { list-style: none; margin-bottom: 28px; }
+    .page-body ul li { font-size: 1.05rem; line-height: 1.7; color: var(--muted); padding: 12px 0; padding-left: 20px; position: relative; }
+    .page-body ul li::before { content: '—'; position: absolute; left: 0; color: var(--brass); }
+
+    .motto-section { padding: 100px 0; text-align: center; }
+    .motto-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; }
+    .motto-statement { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; line-height: 1.3; color: var(--brass); letter-spacing: 0.04em; font-style: italic; }
+    .usp-section { padding: 100px 0; text-align: center; }
+    .usp-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .usp-statement { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 400; line-height: 1.5; color: var(--brass); font-style: italic; }
+    /* FOOTER */
+    .footer { padding: 80px 0 48px; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+    .footer-cols { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; margin-bottom: 72px; }
+    .footer-col-head { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); font-weight: 500; margin-bottom: 20px; display: block; min-height: 1em; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .footer-col ul a { font-size: 0.9rem; color: var(--muted); line-height: 1.45; transition: color 0.2s ease; }
+    .footer-col ul a:hover { color: var(--offwhite); }
+    .footer-bottom { padding-top: 36px; display: flex; flex-wrap: wrap; gap: 20px 48px; align-items: flex-start; }
+    .footer-copy { font-size: 0.82rem; color: var(--muted); }
+    .footer-legal { font-size: 0.78rem; color: var(--muted); line-height: 1.65; max-width: 580px; flex: 1 1 300px; }
+    .footer-social { display: flex; gap: 20px; align-items: center; margin-left: auto; }
+    .footer-social a { color: var(--muted); transition: color 0.2s ease; display: flex; align-items: center; }
+    .footer-social a:hover { color: var(--offwhite); }
+    .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+    .footer-top { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); transition: color 0.2s ease; align-self: center; }
+    .footer-top:hover { color: var(--offwhite); }
+    @media (max-width: 1060px) { .footer-cols { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 640px) { .footer-cols { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 420px) { .footer-cols { grid-template-columns: 1fr; } .footer-social { margin-left: 0; } }
+
+
+    /* APPLY CTA */
+    .apply-cta-section { padding: 32px 0; border-top: 1px solid var(--rule); }
+    .apply-cta-inner { max-width: 1280px; margin: 0 auto; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; gap: 64px; }
+    .apply-cta-text { max-width: 600px; }
+    .apply-cta-heading { font-size: clamp(1.8rem, 2.5vw, 2.5rem); font-weight: 400; color: var(--brass); line-height: 1.25; letter-spacing: 0.005em; margin: 0 0 14px; }
+    .apply-cta-sub { font-size: 1rem; color: var(--offwhite); line-height: 1.65; margin: 0; }
+    .apply-cta-btn { display: inline-flex; align-items: center; flex-shrink: 0; font-family: 'EB Garamond', Georgia, serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); border: 1px solid var(--brass); padding: 18px 36px; transition: background 0.25s, color 0.25s; }
+    .apply-cta-btn:hover { background: var(--brass); color: var(--bg); }
+    @media (max-width: 1060px) { .apply-cta-inner { padding: 0 40px; } }
+    @media (max-width: 768px) { .apply-cta-section { padding: 28px 0; } .apply-cta-inner { flex-direction: column; align-items: flex-start; gap: 36px; } }
+    @media (max-width: 600px) { .apply-cta-inner { padding: 0 24px; } }
+    /* PEDIGREE */
+    .pedigree { padding: 80px 0; }
+    .pedigree-inner { max-width: 800px; margin: 0 auto; padding: 0 40px; text-align: center; }
+    .pedigree-rule { width: 40px; height: 1px; background: var(--brass); margin: 0 auto 56px; border: none; }
+    .pedigree-statement { font-size: clamp(1.3rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.42; color: var(--offwhite); letter-spacing: 0.01em; margin: 0; }
+  </style>
+</head>
+<body id="top">
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="/" class="nav-logo">Prestige &amp; Co</a>
+    <ul class="nav-links">
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/founders">Business Leaders</a></li>
+      <li><a href="/investors">Investors</a></li>
+      <li><a href="/property">Property</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-title">
+    <div class="page-title-inner">
+      <h1 class="page-title-h1">Mergers &amp; Acquisitions</h1>
+    </div>
+  </div>
+
+  <!-- MOTTO — near top, directly after H1 -->
+  <!-- PEDIGREE -->
+  <section class="pedigree" aria-label="Our pedigree">
+    <div class="pedigree-inner">
+      <hr class="pedigree-rule" aria-hidden="true">
+      <p class="pedigree-statement">Preparing the business and the deal itself — from the information memorandum to the sale and purchase agreement — so it holds up under real scrutiny.</p>
+    </div>
+  </section>
+
+    <section class="motto-top" aria-label="Our motto">
+    <div class="motto-top-inner">
+      <p class="motto-line">Discretion. Integrity. Diligence.</p>
+    </div>
+  </section>
+
+  <div class="page-body">
+    <p><strong>Structuring and preparing the deal itself.</strong></p>
+    <p>An M&amp;A transaction is not a single event — it is a process that begins long before the first conversation with a buyer or target, and ends long after heads of terms are signed. The quality of the preparation, the structure of the deal, and the management of the process from start to finish determines the outcome as much as any individual negotiation.</p>
+    <p>We provide advisory support across M&amp;A transactions on both the buy side and sell side, for business acquisitions and real estate transactions. The approach is the same in each case: thorough preparation, clear advice on positioning and process, and direct senior involvement throughout.</p>
+    <p>We have 25 years of experience across M&amp;A transactions in various capacities — as a founder selling a business, as an adviser to vendors and acquirers, and as a professional reviewing deals on behalf of investors. That breadth of perspective shapes how we approach every mandate.</p>
+
+    <h2>What we manage</h2>
+    <ul>
+      <li>Pre-process preparation — ensuring the business or asset is in the best possible condition before any buyer contact begins</li>
+      <li>Valuation and positioning — determining the right asking price, the right structure, and the right narrative for the market</li>
+      <li>Buyer or target identification — identifying the right counterparties for the transaction and managing the outreach process</li>
+      <li>Information management — structuring the release of information through the process to maintain leverage and confidentiality</li>
+      <li>Negotiation support — advising on negotiation strategy and the terms from indicative offer through to final heads of terms</li>
+      <li>Due diligence management — coordinating the due diligence process and managing the issues that arise within it</li>
+      <li>Completion — working with legal and other advisers to bring the process to a successful close</li>
+    </ul>
+
+    <p>M&amp;A engagements are undertaken on a retainer basis. The scope and fee structure are agreed at the outset based on the nature and complexity of the transaction.</p>
+    <p>Confidentiality is a fundamental requirement of M&amp;A work. All aspects of our involvement and all information shared with us are handled on a strict need-to-know basis throughout the process.</p>
+  </div>
+
+
+
+  <div class="apply-cta-section">
+    <div class="apply-cta-inner">
+      <div class="apply-cta-text">
+        <p class="apply-cta-heading">Every potential engagement starts with an application.</p>
+        <p class="apply-cta-sub">It tells us whether we can actually help — and sometimes the answer is no.</p>
+      </div>
+      <a href="/apply?type=business-owner&amp;service=Mergers%20%26%20Acquisitions" class="apply-cta-btn">Apply for this service</a>
+    </div>
+  </div>
+  <section class="motto-section" aria-label="Our motto">
+    <div class="motto-inner">
+      <hr class="section-rule" aria-hidden="true">
+      <p class="motto-statement">Discretion. Integrity. Diligence.</p>
+    </div>
+  </section>
+
+  <section class="usp-section" aria-label="Our experience">
+    <div class="usp-inner">
+      <p class="usp-statement">Built, raised, and sold — 25 years on every side of the table, not just advising from outside it.</p>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <span class="footer-col-head">Services</span>
+          <ul>
+            <li><a href="/investability-assessment">Investability Assessment</a></li>
+            <li><a href="/sale-readiness-assessment">Sale-Readiness Assessment</a></li>
+            <li><a href="/financial-reality-session">Financial Reality Session</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-col-head" aria-hidden="true">&nbsp;</span>
+          <ul>
+            <li><a href="/commercial-direction">Commercial Direction</a></li>
+            <li><a href="/operating-partner">Operating Partner</a></li>
+            <li><a href="/mergers-and-acquisitions">Mergers &amp; Acquisitions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-col-head">Who We Work With</span>
+          <ul>
+            <li><a href="/founders">Business Leaders</a></li>
+            <li><a href="/investors">Investors</a></li>
+            <li><a href="/property">Property</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-col-head">Company</span>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/questions">Questions</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-col-head">More</span>
+          <ul>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="https://soldwithprestige.com" target="_blank" rel="noopener">Sold With Prestige</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Prestige &amp; Co</span>
+        <p class="footer-legal">Prestige &amp; Co is the trading name of Solomon Prestige Group Ltd &mdash; a commercial advisory consultancy. Not authorised or regulated by the Financial Conduct Authority. Where regulated advice is required, we refer to appropriately authorised partners. Company No. 17189399, 71&ndash;75 Shelton Street, Covent Garden, London WC2H 9JQ.</p>
+        <div class="footer-social" aria-label="Social links">
+          <a href="https://www.linkedin.com/company/prestige-and-co" target="_blank" rel="noopener noreferrer" aria-label="Prestige and Co on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          </a>
+          <a href="https://x.com/PrestigeCoUK" target="_blank" rel="noopener noreferrer" aria-label="Prestige and Co on X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+        <a class="footer-top" href="#top" aria-label="Back to top">Back to top ↑</a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
