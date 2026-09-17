@@ -188,8 +188,8 @@
 
   /* ═══ ABOUT-PAGE EXTRAS ══════════════════════════════ */
 
-  /* Values 3-column — no bottom padding so timeline sits close */
-  .values { padding: 60px 0 0; }
+  /* Values 3-column */
+  .values { padding: 60px 0 100px; }
   .values-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
   .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
   .values-item h3 {
@@ -210,8 +210,41 @@
   .narrative-inner p:last-child { margin-bottom: 0; }
   @media (max-width: 600px) { .narrative-inner { padding: 0 24px; } .narrative { padding: 72px 0; } }
 
+  /* Content panel (founder-style full-width tile) */
+  .content-panel { position: relative; width: 100%; min-height: 640px; overflow: hidden; display: flex; }
+  .content-panel-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .content-panel-overlay { position: absolute; inset: 0; }
+  .content-panel-inner { position: relative; z-index: 1; max-width: 1280px; width: 100%; margin: 0 auto; padding: 100px 80px; display: flex; align-items: center; }
+  .content-panel-body { max-width: 560px; display: flex; flex-direction: column; }
+  .content-panel-body h2 { font-size: clamp(1.8rem, 2.8vw, 2.7rem); font-weight: 400; line-height: 1.2; color: var(--offwhite); margin-bottom: 24px; letter-spacing: 0.005em; }
+  .content-panel-body p { font-size: 1.05rem; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
+  .content-panel-body p:last-child { margin-bottom: 0; }
+  .cp-subtitle { color: var(--offwhite) !important; margin-bottom: 24px !important; }
+
+  /* About variant: photo left, dark right, text right */
+  .cp-about .content-panel-bg { object-position: left center; }
+  .cp-about .content-panel-overlay {
+    background: linear-gradient(to left, rgba(17,17,17,0.97) 0%, rgba(17,17,17,0.97) 42%, rgba(17,17,17,0.15) 100%);
+  }
+  .cp-about .content-panel-inner { justify-content: flex-end; }
+
+  @media (max-width: 860px) {
+    .content-panel { min-height: 480px; }
+    .content-panel-inner { padding: 64px 40px; }
+  }
+  @media (max-width: 700px) {
+    .cp-about { flex-direction: column; min-height: unset; }
+    .cp-about .content-panel-bg { position: static; height: 280px; object-position: left top; }
+    .cp-about .content-panel-overlay { display: none; }
+    .cp-about .content-panel-inner { position: static; background: var(--bg); justify-content: flex-start; padding: 48px 24px; }
+    .cp-about .content-panel-body { max-width: 100%; }
+  }
+  @media (max-width: 600px) {
+    .content-panel-inner { padding: 48px 24px; }
+  }
+
   /* Timeline tile carousel */
-  .tl-section { padding: 60px 0 40px; }
+  .tl-section { padding: 120px 0 40px; }
   .tl-section .markets-label { margin-bottom: 40px; }
 
   .tl-carousel { display: flex; align-items: center; gap: 16px; }
@@ -369,7 +402,7 @@
 
             <article class="market-card tl-card">
               <div class="market-img-wrap" style="background:#ffffff">
-                <img class="tl-logo-img" src="/Nomensa-lgo.jpg" alt="Nomensa"
+                <img class="tl-logo-img" src="/Nomensa-lgo.jpg" alt="Nomensa" style="object-fit:cover"
                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
                 <span class="tl-year-num" style="display:none">2012</span>
               </div>
@@ -379,7 +412,7 @@
 
             <article class="market-card tl-card">
               <div class="market-img-wrap" style="background:#ffffff">
-                <img class="tl-logo-img" src="/Beep-Treat.jpeg" alt="Beep Treat"
+                <img class="tl-logo-img" src="/Beep-Treat.jpeg" alt="Beep Treat" style="object-fit:cover"
                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
                 <span class="tl-year-num" style="display:none">2012</span>
               </div>
@@ -439,17 +472,23 @@
     </div>
   </section>
 
-  <!-- NARRATIVE 1 — castle door content, image removed -->
-  <section class="narrative" aria-labelledby="narrative-label">
-    <div class="narrative-inner">
-      <h2 id="narrative-label">Drawing on 25 years across banking, real estate, and business-building.</h2>
-      <p>A corporate finance boutique with an edge.</p>
-      <p>What do we have that many corporate finance companies don't?</p>
-      <p>Experience building a business as a founder.</p>
-      <p>Experience raising money to fund a startup venture, then selling the business.</p>
-      <p>Experience as an early employee taking a startup to market, from the inside.</p>
-      <p>Of course, many corporate finance consultants have sat on both sides of the table.</p>
-      <p>However...</p>
+  <!-- FOUNDER-STYLE TILE -->
+  <section class="content-panel cp-about" aria-labelledby="cp-about-heading">
+    <img class="content-panel-bg" src="/solomon-prestige-corporate-finance-london.png"
+      alt="Solomon Prestige, founder of Prestige &amp; Co, boutique corporate finance London"
+      loading="lazy">
+    <div class="content-panel-overlay" aria-hidden="true"></div>
+    <div class="content-panel-inner">
+      <div class="content-panel-body">
+        <h2 id="cp-about-heading">Drawing on 25 years across banking, real estate, and business-building.</h2>
+        <p class="cp-subtitle">A corporate finance boutique with an edge.</p>
+        <p>What do we have that many corporate finance companies don't?</p>
+        <p>Experience building a business as a founder. Raising money to fund a startup, then selling the business. Taking a startup to market as an early employee.</p>
+        <p>A grounding in business development. Bootstrapping to revenue. Making 100 sales calls a day. Pitching investors, and feeling the rejection when it doesn't go to plan.</p>
+        <p>A foundation in financial planning. The discipline of a deep fact-find: the hard facts (income, assets, liabilities) and the soft facts that decide whether an opportunity is right for someone. Attitude to risk. Tolerance of risk. Capacity for risk.</p>
+        <p>The same discipline at institutional level, as a broker consultant in wealth management, raising millions in funds under management.</p>
+        <p>All of this backed by technical study in corporate finance, investment management, financial planning and mortgage advice.</p>
+      </div>
     </div>
   </section>
 
