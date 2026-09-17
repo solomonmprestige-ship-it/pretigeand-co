@@ -221,12 +221,10 @@
   .content-panel-body p:last-child { margin-bottom: 0; }
   .cp-subtitle { color: var(--offwhite) !important; margin-bottom: 24px !important; }
 
-  /* About variant: photo left, dark right, text right */
-  .cp-about .content-panel-bg { object-position: left center; }
+  /* About founder tile: matches homepage (dark left, text left, image right) */
   .cp-about .content-panel-overlay {
-    background: linear-gradient(to left, rgba(17,17,17,0.97) 0%, rgba(17,17,17,0.97) 42%, rgba(17,17,17,0.15) 100%);
+    background: linear-gradient(to right, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.92) 45%, rgba(17,17,17,0.4) 100%);
   }
-  .cp-about .content-panel-inner { justify-content: flex-end; }
 
   @media (max-width: 860px) {
     .content-panel { min-height: 480px; }
@@ -234,9 +232,9 @@
   }
   @media (max-width: 700px) {
     .cp-about { flex-direction: column; min-height: unset; }
-    .cp-about .content-panel-bg { position: static; height: 280px; object-position: left top; }
+    .cp-about .content-panel-bg { position: static; height: 280px; object-position: center top; }
     .cp-about .content-panel-overlay { display: none; }
-    .cp-about .content-panel-inner { position: static; background: var(--bg); justify-content: flex-start; padding: 48px 24px; }
+    .cp-about .content-panel-inner { position: static; background: var(--bg); padding: 48px 24px; }
     .cp-about .content-panel-body { max-width: 100%; }
   }
   @media (max-width: 600px) {
@@ -489,20 +487,6 @@
         <p>The same discipline at institutional level, as a broker consultant in wealth management, raising millions in funds under management.</p>
         <p>All of this backed by technical study in corporate finance, investment management, financial planning and mortgage advice.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- NARRATIVE 2 — oak tree content, image removed -->
-  <section class="narrative" aria-label="Our real-world experience">
-    <div class="narrative-inner">
-      <p>How many in this industry have a grounding in business development? Have bootstrapped their way to revenue, pounding the streets to find customers? Have felt the pain of rejection, when an investor pitch doesn't go to plan? Or experienced a sales pitch fall apart in front of a crucial client that may be the difference between paying the mortgage this month or not?</p>
-      <p>How many advisors in this space have a foundation in financial planning? Have sat with individuals and applied the regulatory discipline of a deep fact-find: not just the hard facts — income, assets, liabilities — the soft facts too, the ones that actually determine whether an opportunity is right for someone. Attitude to risk. Tolerance of risk. Capacity for risk.</p>
-      <p>We have experience talking to an individual investor to position an opportunity correctly and in line with their goals.</p>
-      <p>Likewise at an institutional level — as a broker consultant in wealth management. Fact-finding to understand the investment needs of financial firms, before working with fund managers to create tailored investments for their clients. Raising millions in funds under management.</p>
-      <p>Being the early employee for an exciting startup. Working on a business with entrepreneurial founders. Monetising the model. Shaping and executing the go-to-market strategy. Securing new business contracts with global brands. Pitching some of the world's most iconic high-street names.</p>
-      <p>Real world experience.</p>
-      <p>Pitching investors. The feeling of rejection. Making 100 sales calls per day. Landing a deal, then it falling out. Months with no income. Building a reputation from scratch.</p>
-      <p>And all of this wrapped up in the technical studies: corporate finance, investment management, financial planning, and mortgage advice.</p>
     </div>
   </section>
 
