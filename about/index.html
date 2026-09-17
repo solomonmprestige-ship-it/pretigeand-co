@@ -283,6 +283,35 @@
     .tl-grid { grid-template-columns: 1fr; gap: 0; }
     .tl-arrow { width: 36px; height: 36px; font-size: 1rem; }
   }
+
+  /* Testimonials */
+  .testimonials { padding: 120px 0; }
+  .testimonials-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+  .testimonial { padding: 56px 48px; border: 1px solid var(--rule); display: flex; flex-direction: column; gap: 40px; }
+  .testimonial-quote { font-size: 1.15rem; color: var(--offwhite); line-height: 1.75; font-style: italic; flex: 1; margin: 0; }
+  .testimonial-attr { display: flex; align-items: center; gap: 20px; }
+  .testimonial-avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--brass); color: var(--bg); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; letter-spacing: 0.08em; font-style: normal; flex-shrink: 0; font-weight: 500; }
+  .testimonial-name { display: block; font-size: 1rem; color: var(--offwhite); font-style: normal; letter-spacing: 0.02em; margin-bottom: 4px; }
+  .testimonial-role { display: block; font-size: 0.85rem; color: var(--muted); letter-spacing: 0.04em; }
+  @media (max-width: 860px) { .testimonials-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) { .testimonial { padding: 40px 28px; } }
+
+  /* CTA / Apply */
+  .btn { display: inline-flex; align-items: center; gap: 12px; font-family: 'EB Garamond', Georgia, serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); font-weight: 500; border: 1px solid var(--brass); padding: 18px 36px; transition: background 0.25s ease, color 0.25s ease; cursor: pointer; background: transparent; width: fit-content; }
+  .btn:hover { background: var(--brass); color: var(--bg); }
+  .apply { padding: 32px 0; }
+  .apply-inner { max-width: 1280px; margin: 0 auto; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; gap: 64px; }
+  .apply-text { max-width: 600px; }
+  .apply-heading { font-size: clamp(1.8rem, 2.5vw, 2.5rem); font-weight: 400; color: var(--brass); line-height: 1.25; letter-spacing: 0.005em; margin: 0 0 14px; }
+  .apply-sub { font-size: 1rem; color: var(--offwhite); line-height: 1.65; margin: 0; }
+  .apply-inner .btn { flex-shrink: 0; }
+  @media (max-width: 1060px) { .apply-inner { padding: 0 40px; } }
+  @media (max-width: 768px) { .apply { padding: 28px 0; } .apply-inner { flex-direction: column; align-items: flex-start; gap: 36px; } }
+  @media (max-width: 600px) { .apply-inner { padding: 0 24px; } }
+
+  /* Pedigree secondary line */
+  .pedigree-secondary { font-size: clamp(0.95rem, 1.4vw, 1.1rem); font-weight: 400; line-height: 1.65; color: var(--muted); letter-spacing: 0.01em; margin: 24px 0 0; }
   </style>
 </head>
 <body>
@@ -312,7 +341,7 @@
       loading="eager" fetchpriority="high">
     <div class="cover-overlay" aria-hidden="true"></div>
     <div class="cover-inner">
-      <h1 class="cover-statement">Prestige &amp; Co is a boutique, independent corporate finance consultancy.</h1>
+      <h1 class="cover-statement">Prestige &amp; Co is a boutique, independent corporate finance firm.</h1>
     </div>
   </section>
 
@@ -321,6 +350,7 @@
     <div class="pedigree-inner">
       <hr class="pedigree-rule" aria-hidden="true">
       <p class="pedigree-statement">We have been on every side of the table — as founder, fundraiser, and dealmaker — for 25 years.</p>
+      <p class="pedigree-secondary">Founded by Solomon Prestige. Chartered Insurance Institute (CII) qualified in Discretionary Investment Management, Financial Planning and Mortgage Advice. Currently studying Corporate Finance with the Chartered Institute for Securities &amp; Investment (CISI).</p>
     </div>
   </section>
 
@@ -351,6 +381,37 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" aria-label="Client testimonials">
+    <div class="testimonials-inner">
+      <div class="testimonials-grid">
+
+        <blockquote class="testimonial">
+          <p class="testimonial-quote">"Solomon has been thorough in our investor readiness preparation. His document review caught inconsistencies before investors did. Direct, fast, worth it."</p>
+          <footer class="testimonial-attr">
+            <div class="testimonial-avatar" aria-hidden="true">ADC</div>
+            <div>
+              <cite class="testimonial-name">Allen DC</cite>
+              <span class="testimonial-role">Co-Founder, Cloudbox Studio</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p class="testimonial-quote">"Solomon knows his stuff inside out! He's been a fantastic advisor for my business, helping it grow and prosper. Working with him has been a real game-changer. I highly recommend him."</p>
+          <footer class="testimonial-attr">
+            <div class="testimonial-avatar" aria-hidden="true">RG</div>
+            <div>
+              <cite class="testimonial-name">Ray Gudrups</cite>
+              <span class="testimonial-role">Owner, Explorite</span>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
   <!-- TIMELINE AS TILES — directly after values, mirrors Three Markets position -->
   <section class="tl-section" aria-label="Career timeline" id="timeline">
     <div class="markets-inner">
@@ -369,7 +430,7 @@
                 <span class="tl-year-num" style="display:none">2001</span>
               </div>
               <h3>2001</h3>
-              <p>Joined a traditional 176-year-old retail bank. Learned the importance of customer service. Fact-finding to understand clients' needs. To listen to their financial objectives and tailor the appropriate solution.</p>
+              <p>Joined a traditional retail bank. Learned the importance of customer service. Fact-finding to understand clients' needs. To listen to their financial objectives and tailor the appropriate solution.</p>
             </article>
 
             <article class="market-card tl-card">
@@ -379,7 +440,7 @@
                 <span class="tl-year-num" style="display:none">2005</span>
               </div>
               <h3>2005</h3>
-              <p>Joined a wealth and investment management firm founded in 1872. Fact-finding to understand client needs at institutional level. Built £90+ million FUM.</p>
+              <p>Joined a wealth and investment management firm founded in 1872. Fact-finding to understand client needs at institutional level. Built £92 million in funds under management.</p>
             </article>
 
             <article class="market-card tl-card">
@@ -387,7 +448,7 @@
                 <span class="tl-year-num">2009</span>
               </div>
               <h3>2009</h3>
-              <p>Mergers &amp; Acquisitions and client book sales of retiring IFAs post-RDR. The grounding in corporate finance principles. Due diligence — financial, legal, commercial, and operational verification before a deal completes.</p>
+              <p>Mergers &amp; Acquisitions and client book sales of retiring independent financial advisers (IFAs), ahead of the Retail Distribution Review (RDR). The grounding in corporate finance principles. Due diligence — financial, legal, commercial, and operational verification before a deal completes.</p>
             </article>
 
             <article class="market-card tl-card">
@@ -463,13 +524,6 @@
     </div>
   </section>
 
-  <!-- PULL QUOTE — directly below timeline -->
-  <section class="motto" aria-label="Our experience">
-    <div class="motto-inner">
-      <p class="motto-statement">Built, raised, and sold — 25 years on every side of the table, not just advising from outside it.</p>
-    </div>
-  </section>
-
   <!-- FOUNDER-STYLE TILE -->
   <section class="content-panel cp-about" aria-labelledby="cp-about-heading">
     <img class="content-panel-bg" src="/solomon-prestige-corporate-finance-london.png"
@@ -478,9 +532,9 @@
     <div class="content-panel-overlay" aria-hidden="true"></div>
     <div class="content-panel-inner">
       <div class="content-panel-body">
-        <h2 id="cp-about-heading">Drawing on 25 years across banking, real estate, and business-building.</h2>
+        <h2 id="cp-about-heading">A boutique corporate finance firm drawing on 25 years across banking, real estate and business-building.</h2>
         <p class="cp-subtitle">A corporate finance boutique with an edge.</p>
-        <p>What do we have that many corporate finance companies don't?</p>
+        <p>What do we have that many corporate finance firms don't?</p>
         <p>Experience building a business as a founder. Raising money to fund a startup, then selling the business. Taking a startup to market as an early employee.</p>
         <p>A grounding in business development. Bootstrapping to revenue. Making 100 sales calls a day. Pitching investors, and feeling the rejection when it doesn't go to plan.</p>
         <p>A foundation in financial planning. The discipline of a deep fact-find: the hard facts (income, assets, liabilities) and the soft facts that decide whether an opportunity is right for someone. Attitude to risk. Tolerance of risk. Capacity for risk.</p>
@@ -495,6 +549,17 @@
     <div class="narrative-inner">
       <h2 id="approach-label">Our approach to corporate finance advisory.</h2>
       <p>Every business we work with goes through the same process before it ever reaches investors: an application form, a screening stage, and an Investability Assessment. On the investor side, the same discipline applies — proof of funds, and fact-finding to understand exactly what they're looking for before any introduction is made. This means investors only see opportunities that have already been checked, and businesses are only introduced to investors who actually fit what they're looking for — saving time on both sides.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="apply" id="apply" aria-label="Apply to work with Prestige and Co">
+    <div class="apply-inner">
+      <div class="apply-text">
+        <p class="apply-heading">Every potential engagement starts with an application.</p>
+        <p class="apply-sub">It tells us whether we can actually help — and sometimes the answer is no.</p>
+      </div>
+      <a class="btn" href="/investability-assessment" aria-label="Apply to work with Prestige and Co">Apply to work with us</a>
     </div>
   </section>
 
