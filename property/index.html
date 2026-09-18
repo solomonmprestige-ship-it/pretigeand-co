@@ -75,12 +75,12 @@
     /* GLOBE SECTION */
     .globe-section { padding: 100px 0; border-top: 1px solid var(--rule); }
     .globe-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .globe-img { width: 100%; max-width: 460px; display: block; }
+    .globe-img { width: 100%; height: auto; display: block; }
     .globe-body h2 { font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 400; color: var(--offwhite); line-height: 1.2; margin-bottom: 28px; letter-spacing: 0.01em; }
     .globe-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
     .globe-body p:last-child { margin-bottom: 0; }
     .globe-markets { color: var(--brass); font-size: 0.9rem; line-height: 2; letter-spacing: 0.04em; }
-    @media (max-width: 800px) { .globe-inner { grid-template-columns: 1fr; gap: 48px; } .globe-img { max-width: 280px; margin: 0 auto; } }
+    @media (max-width: 800px) { .globe-inner { grid-template-columns: 1fr; gap: 48px; } .globe-img { max-width: 360px; margin: 0 auto; } }
 
     /* REFERRAL SERVICES — more prominent */
     .referral-section { padding: 80px 0 120px; }
@@ -121,10 +121,14 @@
     @media (max-width: 420px) { .footer-cols { grid-template-columns: 1fr; } .footer-social { margin-left: 0; } }
 
     /* APPLY CTA */
-    .apply-cta-section { padding: 80px 0; text-align: center; border-top: 1px solid var(--rule); }
-    .apply-cta-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .apply-cta-section { padding: 80px 0; border-top: 1px solid var(--rule); }
+    .apply-cta-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; }
+    .apply-cta-text { display: flex; flex-direction: column; gap: 12px; }
+    .apply-cta-heading { font-size: clamp(1.8rem, 2.5vw, 2.5rem); font-weight: 400; color: var(--brass); line-height: 1.25; letter-spacing: 0.005em; margin: 0; }
+    .apply-cta-sub { font-size: 1rem; color: var(--offwhite); line-height: 1.65; margin: 0; }
     .apply-cta-btn { display: inline-flex; align-items: center; font-family: 'EB Garamond', Georgia, serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); border: 1px solid var(--brass); padding: 18px 36px; transition: background 0.25s, color 0.25s; }
     .apply-cta-btn:hover { background: var(--brass); color: var(--bg); }
+    @media (max-width: 768px) { .apply-cta-section { padding: 56px 0; } }
     /* PEDIGREE / OPENING */
     .pedigree { padding: 80px 0; }
     .pedigree-inner { max-width: 800px; margin: 0 auto; padding: 0 40px; text-align: center; }

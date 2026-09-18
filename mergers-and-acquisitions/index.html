@@ -70,16 +70,14 @@
 
 
     /* APPLY CTA */
-    .apply-cta-section { padding: 32px 0; border-top: 1px solid var(--rule); }
-    .apply-cta-inner { max-width: 1280px; margin: 0 auto; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; gap: 64px; }
-    .apply-cta-text { max-width: 600px; }
-    .apply-cta-heading { font-size: clamp(1.8rem, 2.5vw, 2.5rem); font-weight: 400; color: var(--brass); line-height: 1.25; letter-spacing: 0.005em; margin: 0 0 14px; }
+    .apply-cta-section { padding: 80px 0; border-top: 1px solid var(--rule); }
+    .apply-cta-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; }
+    .apply-cta-text { display: flex; flex-direction: column; gap: 12px; }
+    .apply-cta-heading { font-size: clamp(1.8rem, 2.5vw, 2.5rem); font-weight: 400; color: var(--brass); line-height: 1.25; letter-spacing: 0.005em; margin: 0; }
     .apply-cta-sub { font-size: 1rem; color: var(--offwhite); line-height: 1.65; margin: 0; }
-    .apply-cta-btn { display: inline-flex; align-items: center; flex-shrink: 0; font-family: 'EB Garamond', Georgia, serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); border: 1px solid var(--brass); padding: 18px 36px; transition: background 0.25s, color 0.25s; }
+    .apply-cta-btn { display: inline-flex; align-items: center; font-family: 'EB Garamond', Georgia, serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); border: 1px solid var(--brass); padding: 18px 36px; transition: background 0.25s, color 0.25s; }
     .apply-cta-btn:hover { background: var(--brass); color: var(--bg); }
-    @media (max-width: 1060px) { .apply-cta-inner { padding: 0 40px; } }
-    @media (max-width: 768px) { .apply-cta-section { padding: 28px 0; } .apply-cta-inner { flex-direction: column; align-items: flex-start; gap: 36px; } }
-    @media (max-width: 600px) { .apply-cta-inner { padding: 0 24px; } }
+    @media (max-width: 768px) { .apply-cta-section { padding: 56px 0; } }
     /* PEDIGREE */
     .pedigree { padding: 80px 0; }
     .pedigree-inner { max-width: 800px; margin: 0 auto; padding: 0 40px; text-align: center; }
