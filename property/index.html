@@ -64,14 +64,23 @@
     /* SERVICES */
     .services-section { padding: 80px 0 60px; }
     .services-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
-    .services-heading { font-size: clamp(1.1rem, 1.8vw, 1.5rem); font-weight: 400; color: var(--offwhite); text-align: center; margin-bottom: 56px; }
+    .services-heading { font-size: clamp(1.1rem, 1.8vw, 1.5rem); font-weight: 400; color: var(--offwhite); text-align: center; margin-bottom: 32px; }
+    .services-intro { font-size: 0.95rem; line-height: 1.75; color: var(--muted); max-width: 640px; margin: 0 auto 52px; text-align: center; }
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); margin-bottom: 80px; }
     .service-item { background: var(--bg); padding: 40px 36px; }
     .service-item h3 { font-size: 1rem; letter-spacing: 0.08em; color: var(--offwhite); font-weight: 400; margin-bottom: 14px; }
-    .service-item p { font-size: 0.92rem; line-height: 1.65; color: var(--muted); margin-bottom: 20px; }
-    .service-link { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); border-bottom: 1px solid var(--brass); padding-bottom: 2px; transition: opacity 0.2s; }
-    .service-link:hover { opacity: 0.7; }
+    .service-item p { font-size: 0.92rem; line-height: 1.65; color: var(--muted); }
     @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* GLOBE SECTION */
+    .globe-section { padding: 100px 0; border-top: 1px solid var(--rule); }
+    .globe-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .globe-img { width: 100%; max-width: 460px; display: block; }
+    .globe-body h2 { font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 400; color: var(--offwhite); line-height: 1.2; margin-bottom: 28px; letter-spacing: 0.01em; }
+    .globe-body p { font-size: 1.05rem; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
+    .globe-body p:last-child { margin-bottom: 0; }
+    .globe-markets { color: var(--brass); font-size: 0.9rem; line-height: 2; letter-spacing: 0.04em; }
+    @media (max-width: 800px) { .globe-inner { grid-template-columns: 1fr; gap: 48px; } .globe-img { max-width: 280px; margin: 0 auto; } }
 
     /* REFERRAL SERVICES — more prominent */
     .referral-section { padding: 80px 0 120px; }
@@ -228,6 +237,21 @@
     </div>
   </section>
 
+  <!-- GLOBE / WHERE WE WORK -->
+  <section class="globe-section" aria-labelledby="globe-heading">
+    <div class="globe-inner">
+      <img class="globe-img"
+        src="/prestige-and-co-global-property-markets.svg"
+        alt="Globe showing the markets where Prestige &amp; Co holds real estate relationships."
+        loading="lazy">
+      <div class="globe-body">
+        <h2 id="globe-heading">Where we work.</h2>
+        <p>We hold relationships with real estate specialists in fifteen markets. That is what makes the work possible: the agent, the valuer, the broker and the lawyer are local to the transaction, not to us.</p>
+        <p class="globe-markets">United Kingdom · Spain · Portugal · France · Italy · Germany · Poland · Czech Republic · Albania · Sweden · Norway · Denmark · United States · Mexico · Dubai, UAE</p>
+      </div>
+    </div>
+  </section>
+
   <div class="apply-cta-section">
     <div class="apply-cta-inner">
       <div class="apply-cta-text">
@@ -242,42 +266,37 @@
   <section class="services-section" aria-labelledby="services-label">
     <div class="services-inner">
       <p class="services-heading" id="services-label">Six direct services.</p>
+      <p class="services-intro">Finance for property development, bridging, and commercial mortgages: we prepare the case and introduce you to an authorised broker. The arranging is theirs. The preparation is ours.</p>
       <div class="services-grid">
 
         <div class="service-item">
-          <h3>Investability Assessment</h3>
-          <p>A rigorous review of the project or portfolio through the lens of an institutional or family office investor. We identify what will be questioned and address it before anyone else sees it.</p>
-          <a class="service-link" href="/investability-assessment">Investability Assessment</a>
+          <h3>Property Sourcing</h3>
+          <p>Tell us what you are looking for — a development site, a building to convert, a property to add to the portfolio — and we go to the people who already have it. Sourced through the network, often before it reaches the open market.</p>
         </div>
 
         <div class="service-item">
-          <h3>Sale Readiness Assessment</h3>
-          <p>Find what a buyer's advisers would find, before they find it. We review the asset, the numbers, and the documentation with buyer-side diligence in mind.</p>
-          <a class="service-link" href="/sale-readiness-assessment">Sale-Readiness Assessment</a>
+          <h3>Capital Verification &amp; Deal Assessments</h3>
+          <p>Before anyone commits time to a deal, we check it stands up: the numbers, the ownership, the planning position, and whether the money behind it is real. Fewer wasted weeks on deals that were never going to complete.</p>
         </div>
 
         <div class="service-item">
-          <h3>Financial Reality Session</h3>
-          <p>An honest assessment of what the asset or project is actually worth today — informed by current market conditions and how comparable assets are being valued by active investors.</p>
-          <a class="service-link" href="/financial-reality-session">Financial Reality Session</a>
+          <h3>Finance for Property Development — Lender Intelligence</h3>
+          <p>Which lenders are active in that market, on what terms, and what they are declining. We prepare the borrowing case — the numbers, the costs, the exit — then introduce you to an FCA-authorised broker who arranges the finance itself. Development finance, bridging and commercial mortgages.</p>
         </div>
 
         <div class="service-item">
-          <h3>Commercial Direction</h3>
-          <p>Senior counsel for the conversations that matter — investor negotiations, deal structuring, JV discussions, and the decisions that determine how a project gets funded.</p>
-          <a class="service-link" href="/commercial-direction">Commercial Direction</a>
+          <h3>Portfolio Exit Planning</h3>
+          <p>Planning how and when a property portfolio is sold — whole, in parts, or over time — and what needs to be in order before a buyer's team starts asking.</p>
         </div>
 
         <div class="service-item">
-          <h3>Operating Partner</h3>
-          <p>Senior involvement in a project or portfolio for a defined period — working alongside the development or investment team on the commercial and financial aspects of the work.</p>
-          <a class="service-link" href="/operating-partner">Operating Partner</a>
+          <h3>Deal Support</h3>
+          <p>Coordinating the transaction from agreement to completion, keeping the parties moving and the paperwork in sequence. The legal work is done by the appointed solicitor or local lawyer.</p>
         </div>
 
         <div class="service-item">
-          <h3>Mergers &amp; Acquisitions</h3>
-          <p>Structuring and executing real estate transactions — acquisitions, disposals, and portfolio restructurings — on the buy side or the sell side.</p>
-          <a class="service-link" href="/mergers-and-acquisitions">Mergers &amp; Acquisitions</a>
+          <h3>Market Intelligence Reports</h3>
+          <p>Written reports on a specific market: what property is actually selling for, rental yields, the planning environment, and lender appetite. Prepared for the decision you are making, not a general market update.</p>
         </div>
 
       </div>
@@ -308,7 +327,7 @@
         <div class="referral-item">
           <span class="ref-label">Referred · Regulated activity</span>
           <h3>Legal &amp; Contracts</h3>
-          <p>Where transaction legal work is required, we introduce clients to specialist property solicitors. Legal advice requires SRA authorisation — our role is commercial coordination; the solicitor handles the legal work. We ensure the commercial and legal workstreams are aligned.</p>
+          <p>Where transaction legal work is required, we introduce clients to specialist property solicitors. Legal advice is regulated in every country — in England and Wales through the Solicitors Regulation Authority (SRA), and through the equivalent body in each other jurisdiction — our role is commercial coordination; the solicitor handles the legal work. We ensure the commercial and legal workstreams are aligned.</p>
         </div>
 
       </div>
