@@ -31,7 +31,7 @@
     .cover { position: relative; width: 100%; height: clamp(420px, 60vh, 700px); overflow: hidden; }
     .cover-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .cover-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(17,17,17,0.35) 0%, rgba(17,17,17,0.6) 100%); }
-    .cover-inner { position: relative; z-index: 1; height: 100%; display: flex; align-items: flex-end; max-width: 1280px; margin: 0 auto; padding: 0 40px 80px; }
+    .cover-inner { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; gap: 32px; max-width: 1280px; margin: 0 auto; padding: 0 40px 80px; }
     .cover-statement { font-size: clamp(2.2rem, 4.5vw, 4rem); font-weight: 400; line-height: 1.15; color: var(--offwhite); letter-spacing: 0.01em; max-width: 860px; }
     @media (max-width: 600px) { .cover-statement { font-size: clamp(1.8rem, 7vw, 2.6rem); } .cover-inner { padding: 0 24px 60px; } }
 
@@ -121,6 +121,7 @@
     <div class="cover-overlay" aria-hidden="true"></div>
     <div class="cover-inner">
       <h1 class="cover-statement">We Run Due Diligence for Investors Before the Deal Reaches You.</h1>
+      <a href="/apply?type=investor" class="apply-cta-btn">Register as an investor</a>
     </div>
   </section>
 
@@ -148,8 +149,8 @@
     <div class="content-panel-overlay" aria-hidden="true"></div>
     <div class="content-panel-inner">
       <div class="content-panel-body">
-        <h2>We check the deal before it reaches you.</h2>
-        <p>You see more deals than you have time to check properly. We check the deal before it reaches you — the numbers, the story, the parts a founder hopes won't come up. Fewer introductions, each one already vetted, every conversation held in confidence.</p>
+        <h2>What we check before an introduction is made.</h2>
+        <p>You see more deals than you have time to check properly. We look at the numbers, the story, and the parts a founder hopes won't come up. Fewer introductions, each one already vetted, every conversation held in confidence.</p>
         <p>We have experience on both sides of the investment process — as founders raising capital, and as advisers reviewing businesses on behalf of investors. That means we know what to look for and where the problems usually are.</p>
         <h2>Experience on both sides of the investment process — as founders raising capital and as advisers reviewing deals.</h2>
         <p>We work with a defined group of investors. We do not broadcast opportunities. When we make an introduction, it is because we believe the match is right and the business is ready. The introductions are fewer; the conversations are better.</p>
