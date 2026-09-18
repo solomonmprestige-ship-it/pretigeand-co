@@ -159,6 +159,14 @@ footer{background:var(--charcoal);border-top:2px solid var(--brass);padding:2.75
 @media(max-width:639px){
   .blog-sidebar{position:static;}
 }
+/* CTA */
+.blog-cta{padding:3rem 0;border-top:1px solid var(--border);}
+.blog-cta-inner{max-width:var(--max);margin:0 auto;padding:0 var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:3rem;}
+.blog-cta-heading{font-size:clamp(1.8rem,2.5vw,2.5rem);font-weight:400;color:var(--brass);line-height:1.25;letter-spacing:0.005em;margin:0 0 0.75rem;}
+.blog-cta-sub{font-size:1rem;color:var(--slate);line-height:1.65;margin:0;}
+.blog-cta-btn{display:inline-flex;align-items:center;flex-shrink:0;font-family:var(--serif);font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass);border:1px solid var(--brass);padding:18px 36px;transition:background 0.25s,color 0.25s;white-space:nowrap;}
+.blog-cta-btn:hover{background:var(--brass);color:var(--offwhite);}
+@media(max-width:640px){.blog-cta-inner{flex-direction:column;align-items:flex-start;gap:1.5rem;}}
 </style>
 </head>
 <body>
@@ -303,6 +311,16 @@ footer{background:var(--charcoal);border-top:2px solid var(--brass);padding:2.75
   </section>
 
 </main>
+
+<section class="blog-cta" aria-label="Work with Prestige and Co">
+  <div class="blog-cta-inner">
+    <div>
+      <p class="blog-cta-heading">Every potential engagement starts with an application.</p>
+      <p class="blog-cta-sub">It tells us whether we can actually help — and sometimes the answer is no.</p>
+    </div>
+    <a href="/investability-assessment" class="blog-cta-btn">Apply to work with us</a>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer role="contentinfo">
