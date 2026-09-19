@@ -133,7 +133,7 @@
 
         <!-- FORM 1: BUSINESS OWNER -->
         <form id="form-bo" name="application-business-owner" method="POST"
-          action="?success=1" data-netlify="true" enctype="multipart/form-data"
+          action="/apply/?success=1" data-netlify="true" enctype="multipart/form-data"
           style="display:none; flex-direction:column; gap:28px">
           <input type="hidden" name="form-name" value="application-business-owner">
           <input type="hidden" name="service" id="f-service" value="">
@@ -190,7 +190,7 @@
 
         <!-- FORM 2: INVESTOR -->
         <form id="form-inv" name="application-investor" method="POST"
-          action="?success=1" data-netlify="true" enctype="multipart/form-data"
+          action="/apply/?success=1" data-netlify="true" enctype="multipart/form-data"
           style="display:none; flex-direction:column; gap:28px">
           <input type="hidden" name="form-name" value="application-investor">
           <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
@@ -248,7 +248,7 @@
 
         <!-- FORM 3: PROPERTY -->
         <form id="form-prop" name="application-property" method="POST"
-          action="?success=1" data-netlify="true" enctype="multipart/form-data"
+          action="/apply/?success=1" data-netlify="true" enctype="multipart/form-data"
           style="display:none; flex-direction:column; gap:28px">
           <input type="hidden" name="form-name" value="application-property">
           <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
@@ -313,7 +313,7 @@
 
         <!-- FORM 4: INTRODUCER -->
         <form id="form-intro" name="application-introducer" method="POST"
-          action="?success=1" data-netlify="true" enctype="multipart/form-data"
+          action="/apply/?success=1" data-netlify="true" enctype="multipart/form-data"
           style="display:none; flex-direction:column; gap:28px">
           <input type="hidden" name="form-name" value="application-introducer">
           <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
@@ -383,7 +383,8 @@
         <!-- CONFIRMATION -->
         <div id="apply-confirm" style="display:none">
           <div class="form-confirm">
-            <p>Thank you — this is the first step in our process. We&rsquo;ll review what you&rsquo;ve shared and be in touch shortly.</p>
+            <h2 style="font-family:'EB Garamond',Georgia,serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;color:#F0EDE6;margin-bottom:20px;line-height:1.2;">Application received.</h2>
+            <p>Thank you &mdash; this is the first step in our process. We&rsquo;ll review what you&rsquo;ve shared and be in touch shortly.</p>
             <p>In the meantime, connect with us on <a href="https://www.linkedin.com/company/prestige-and-co" target="_blank" rel="noopener noreferrer">LinkedIn</a> or <a href="https://x.com/PrestigeCoUK" target="_blank" rel="noopener noreferrer">X</a>.</p>
           </div>
         </div>
