@@ -22,6 +22,21 @@
   <meta name="twitter:description" content="Corporate finance case studies from Prestige &amp; Co. Commercial Direction and Operating Partner work, with the results set out without embellishment. London.">
   <meta name="twitter:image" content="https://prestigeand.co/prestige-co-uk-corporate-finance-social-share.png">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMX1SWHYSB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      wait_for_update: 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-PMX1SWHYSB');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -315,5 +330,49 @@
     </div>
   </footer>
 
+<!-- Cookie Consent -->
+<div id="pc-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9000;background:#1a1a1a;border-top:1px solid rgba(184,147,90,0.3);padding:16px 24px;">
+  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+    <p style="margin:0;flex:1;min-width:220px;font-family:'EB Garamond',Georgia,serif;font-size:0.95rem;color:#888880;line-height:1.55;">We use analytics cookies to see how the site is used. You can accept or decline.</p>
+    <div style="display:flex;gap:12px;flex-shrink:0;">
+      <button onclick="pcConsent('granted')" style="font-family:'EB Garamond',Georgia,serif;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:#B8935A;background:transparent;border:1px solid #B8935A;padding:10px 22px;cursor:pointer;">Accept</button>
+      <button onclick="pcConsent('denied')" style="font-family:'EB Garamond',Georgia,serif;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:#888880;background:transparent;border:1px solid rgba(240,237,230,0.2);padding:10px 22px;cursor:pointer;">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var CONSENT_KEY = 'pc_consent';
+  var stored;
+  try { stored = localStorage.getItem(CONSENT_KEY); } catch(e) { stored = null; }
+
+  function pcConsent(choice) {
+    gtag('consent', 'update', {
+      analytics_storage: choice,
+      ad_storage: choice,
+      ad_user_data: choice,
+      ad_personalization: choice
+    });
+    try { localStorage.setItem(CONSENT_KEY, choice); } catch(e) {}
+    var b = document.getElementById('pc-banner');
+    if (b) b.style.display = 'none';
+  }
+  window.pcConsent = pcConsent;
+
+  if (stored === 'granted') {
+    gtag('consent', 'update', {
+      analytics_storage: 'granted',
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted'
+    });
+  } else if (!stored) {
+    window.addEventListener('DOMContentLoaded', function() {
+      var b = document.getElementById('pc-banner');
+      if (b) b.style.display = 'block';
+    });
+  }
+})();
+</script>
 </body>
 </html>
