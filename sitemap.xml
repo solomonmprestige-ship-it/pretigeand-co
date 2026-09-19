@@ -116,4 +116,11 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://prestigeand.co/privacy/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
