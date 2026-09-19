@@ -190,7 +190,7 @@
 
         <!-- FORM 2: INVESTOR -->
         <form id="form-inv" name="application-investor" method="POST"
-          action="?success=1" data-netlify="true"
+          action="?success=1" data-netlify="true" enctype="multipart/form-data"
           style="display:none; flex-direction:column; gap:28px">
           <input type="hidden" name="form-name" value="application-investor">
           <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
@@ -237,13 +237,18 @@
             <label class="f-lbl" for="inv-deploy">What are you looking to deploy into right now <span class="req">*</span></label>
             <textarea class="f-textarea" id="inv-deploy" name="deployment" required></textarea>
           </div>
+          <div class="f-field">
+            <label class="f-lbl" for="inv-file">Investment mandate or criteria document (optional)</label>
+            <span class="f-file-desc">PDF, DOC, DOCX, XLS, XLSX, JPG or PNG</span>
+            <input class="f-file" type="file" id="inv-file" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png">
+          </div>
           <button type="submit" class="f-submit">Submit</button>
           <p style="margin-top:10px;font-family:'EB Garamond',Georgia,serif;font-size:0.88rem;color:#888880;">We handle your information as set out in our <a href="/privacy/" style="color:#B8935A;">Privacy Notice</a>.</p>
         </form>
 
         <!-- FORM 3: PROPERTY -->
         <form id="form-prop" name="application-property" method="POST"
-          action="?success=1" data-netlify="true"
+          action="?success=1" data-netlify="true" enctype="multipart/form-data"
           style="display:none; flex-direction:column; gap:28px">
           <input type="hidden" name="form-name" value="application-property">
           <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
@@ -297,13 +302,18 @@
             <label class="f-lbl" for="prop-desc">Brief description <span class="req">*</span></label>
             <textarea class="f-textarea" id="prop-desc" name="description" required></textarea>
           </div>
+          <div class="f-field">
+            <label class="f-lbl" for="prop-file">Site details, brochure or schedule (optional)</label>
+            <span class="f-file-desc">PDF, DOC, DOCX, XLS, XLSX, JPG or PNG</span>
+            <input class="f-file" type="file" id="prop-file" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png">
+          </div>
           <button type="submit" class="f-submit">Submit</button>
           <p style="margin-top:10px;font-family:'EB Garamond',Georgia,serif;font-size:0.88rem;color:#888880;">We handle your information as set out in our <a href="/privacy/" style="color:#B8935A;">Privacy Notice</a>.</p>
         </form>
 
         <!-- FORM 4: INTRODUCER -->
         <form id="form-intro" name="application-introducer" method="POST"
-          action="?success=1" data-netlify="true"
+          action="?success=1" data-netlify="true" enctype="multipart/form-data"
           style="display:none; flex-direction:column; gap:28px">
           <input type="hidden" name="form-name" value="application-introducer">
           <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
@@ -360,6 +370,11 @@
           <div class="f-field">
             <label class="f-lbl" for="intro-network">Tell us about your network and the introductions you have in mind <span class="req">*</span></label>
             <textarea class="f-textarea" id="intro-network" name="network" required></textarea>
+          </div>
+          <div class="f-field">
+            <label class="f-lbl" for="intro-file">Company brochure or profile (optional)</label>
+            <span class="f-file-desc">PDF, DOC, DOCX, XLS, XLSX, JPG or PNG</span>
+            <input class="f-file" type="file" id="intro-file" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png">
           </div>
           <button type="submit" class="f-submit">Submit application</button>
           <p style="margin-top:10px;font-family:'EB Garamond',Georgia,serif;font-size:0.88rem;color:#888880;">We handle your information as set out in our <a href="/privacy/" style="color:#B8935A;">Privacy Notice</a>.</p>
