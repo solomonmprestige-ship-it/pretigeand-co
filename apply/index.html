@@ -301,6 +301,70 @@
           <p style="margin-top:10px;font-family:'EB Garamond',Georgia,serif;font-size:0.88rem;color:#888880;">We handle your information as set out in our <a href="/privacy/" style="color:#B8935A;">Privacy Notice</a>.</p>
         </form>
 
+        <!-- FORM 4: INTRODUCER -->
+        <form id="form-intro" name="application-introducer" method="POST"
+          action="?success=1" data-netlify="true"
+          style="display:none; flex-direction:column; gap:28px">
+          <input type="hidden" name="form-name" value="application-introducer">
+          <p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+          <div class="f-row">
+            <div class="f-field">
+              <label class="f-lbl" for="intro-name">Name <span class="req">*</span></label>
+              <input class="f-input" type="text" id="intro-name" name="name" required autocomplete="name">
+            </div>
+            <div class="f-field">
+              <label class="f-lbl" for="intro-company">Company or firm name <span class="req">*</span></label>
+              <input class="f-input" type="text" id="intro-company" name="company" required autocomplete="organization">
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-field">
+              <label class="f-lbl" for="intro-email">Email <span class="req">*</span></label>
+              <input class="f-input" type="email" id="intro-email" name="email" required autocomplete="email">
+            </div>
+            <div class="f-field">
+              <label class="f-lbl" for="intro-phone">Phone <span class="req">*</span></label>
+              <input class="f-input" type="tel" id="intro-phone" name="phone" required autocomplete="tel">
+            </div>
+          </div>
+          <div class="f-field">
+            <label class="f-lbl" for="intro-profession">Your profession <span class="req">*</span></label>
+            <select class="f-select" id="intro-profession" name="profession" required>
+              <option value="" disabled selected></option>
+              <option value="Accountant">Accountant</option>
+              <option value="Solicitor or lawyer">Solicitor or lawyer</option>
+              <option value="Independent financial adviser">Independent financial adviser</option>
+              <option value="Wealth manager">Wealth manager</option>
+              <option value="Property agent">Property agent</option>
+              <option value="Developer or landowner">Developer or landowner</option>
+              <option value="Valuer">Valuer</option>
+              <option value="Finance broker">Finance broker</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="f-field">
+            <label class="f-lbl" for="intro-country">Country or market you work in <span class="req">*</span></label>
+            <input class="f-input" type="text" id="intro-country" name="country" required placeholder="e.g. United Kingdom">
+          </div>
+          <div class="f-field">
+            <label class="f-lbl" for="intro-introduce">What you would introduce <span class="req">*</span></label>
+            <select class="f-select" id="intro-introduce" name="introduction-type" required>
+              <option value="" disabled selected></option>
+              <option value="Businesses">Businesses</option>
+              <option value="Property or land">Property or land</option>
+              <option value="Investors">Investors</option>
+              <option value="Professional services">Professional services</option>
+              <option value="More than one">More than one</option>
+            </select>
+          </div>
+          <div class="f-field">
+            <label class="f-lbl" for="intro-network">Tell us about your network and the introductions you have in mind <span class="req">*</span></label>
+            <textarea class="f-textarea" id="intro-network" name="network" required></textarea>
+          </div>
+          <button type="submit" class="f-submit">Submit application</button>
+          <p style="margin-top:10px;font-family:'EB Garamond',Georgia,serif;font-size:0.88rem;color:#888880;">We handle your information as set out in our <a href="/privacy/" style="color:#B8935A;">Privacy Notice</a>.</p>
+        </form>
+
         <!-- CONFIRMATION -->
         <div id="apply-confirm" style="display:none">
           <div class="form-confirm">
@@ -343,6 +407,7 @@
         <ul>
           <li><a href="/about">About</a></li>
           <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/join-our-ecosystem/">Join our ecosystem</a></li>
           <li><a href="/privacy/">Privacy Notice</a></li>
         </ul>
       </div>
@@ -372,10 +437,15 @@
           intro: 'Tell us about your investment interests and the type of opportunities you’re looking for.',
           formId: 'form-inv'
         },
-        'property': {
-          title: 'Introduce a property opportunity',
-          intro: 'Tell us about the property opportunity you’d like to discuss.',
-          formId: 'form-prop'
+        ‘property’: {
+          title: ‘Introduce a property opportunity’,
+          intro: ‘Tell us about the property opportunity you’d like to discuss.’,
+          formId: ‘form-prop’
+        },
+        ‘introducer’: {
+          title: ‘Apply to become a partner’,
+          intro: ‘Tell us about your professional network and the introductions you have in mind.’,
+          formId: ‘form-intro’
         }
       };
 
