@@ -336,7 +336,7 @@ footer{background:var(--charcoal);border-top:2px solid var(--brass);padding:2.75
     });
     try { localStorage.setItem(CONSENT_KEY, choice); } catch(e) {}
     var b = document.getElementById('pc-banner');
-    if (b) b.style.display = 'none';
+    if (b) { b.style.display = 'none'; document.body.style.paddingBottom = ''; }
   }
   window.pcConsent = pcConsent;
 
@@ -350,7 +350,7 @@ footer{background:var(--charcoal);border-top:2px solid var(--brass);padding:2.75
   } else if (!stored) {
     window.addEventListener('DOMContentLoaded', function() {
       var b = document.getElementById('pc-banner');
-      if (b) b.style.display = 'block';
+      if (b) { b.style.display = 'block'; document.body.style.paddingBottom = b.offsetHeight + 'px'; }
     });
   }
 })();
