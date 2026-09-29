@@ -3,6 +3,30 @@
   functions = "netlify/functions"
 
 [[redirects]]
+  from = "/commercial-direction"
+  to = "/founders/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial-direction/"
+  to = "/founders/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/operating-partner"
+  to = "/founders/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/operating-partner/"
+  to = "/founders/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/api/crm/contacts/*"
   to = "/.netlify/functions/crm-contacts/:splat"
   status = 200
@@ -30,9 +54,4 @@
 [[redirects]]
   from = "/api/crm/deals"
   to = "/.netlify/functions/crm-deals"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
   status = 200
