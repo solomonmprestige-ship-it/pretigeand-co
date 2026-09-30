@@ -169,6 +169,17 @@
     .pedigree-body { margin-top: 32px; }
     .pedigree-body p { font-size: 1.1rem; line-height: 1.8; color: var(--muted); margin-bottom: 16px; }
     .pedigree-body p:last-child { margin-bottom: 0; }
+    /* PAGE BODY */
+    .page-body { padding: 80px 40px 120px; max-width: 1280px; margin: 0 auto; }
+    .page-body p { font-size: 1.1rem; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
+    .page-body h2 { font-size: 1.2rem; font-weight: 400; color: var(--offwhite); letter-spacing: 0.06em; margin: 56px 0 24px; }
+    .page-body ul { list-style: none; margin-bottom: 28px; }
+    .page-body ul li { font-size: 1.05rem; line-height: 1.7; color: var(--muted); padding: 12px 0; padding-left: 20px; position: relative; }
+    .page-body ul li::before { content: '\2014'; position: absolute; left: 0; color: var(--brass); }
+    .page-body li strong { color: var(--offwhite); font-weight: 400; }
+    .page-body a { color: var(--brass); text-decoration: underline; text-underline-offset: 3px; }
+    .page-body p.apply-else { margin-top: 56px; margin-bottom: 0; }
+    @media (max-width: 640px) { .page-body { padding-inline: 24px; } }
   </style>
 </head>
 <body id="top">
@@ -196,188 +207,39 @@
     </div>
   </section>
 
-  <!-- MOTTO — directly after cover -->
-  <section class="pedigree" aria-label="Introduction">
-    <div class="pedigree-inner">
-      <hr class="pedigree-rule" aria-hidden="true">
-      <p class="pedigree-statement">Tell us what you need. We find it.</p>
-      <div class="pedigree-body">
-        <p>Finance for property development. A buyer for your portfolio. Land or property to develop — sourced before it reaches the open market.</p>
-        <p>One conversation, instead of a day on the property portals.</p>
-      </div>
-    </div>
-  </section>
+  <div class="page-body">
+    <p>Global property consultants for developers, landlords and investors, in the UK and fifteen markets. Lenders, buyers and partners check the numbers, the planning position and the people behind a deal before they commit. We get your project ready.</p>
 
-    <section class="motto-top" aria-label="Our motto">
-    <div class="motto-top-inner">
-      <p class="motto-line">Discretion. Integrity. Diligence.</p>
-    </div>
-  </section>
+    <h2>What we do for you</h2>
+    <ul>
+      <li><strong>Property Sourcing:</strong> development sites, investment property and off-market opportunities, in the UK and abroad.</li>
+      <li><strong>Capital Verification &amp; Deal Assessments:</strong> checking the money behind a deal is real and the numbers work.</li>
+      <li><strong>Lender Intelligence &amp; Market Insights:</strong> which lenders are active, and on what terms.</li>
+      <li><strong>Portfolio Exit Planning:</strong> planning the sale of a property or portfolio.</li>
+      <li><strong>Deal Support:</strong> transaction coordination through to completion. Legal work by a partner solicitor.</li>
+      <li><strong>Market Intelligence Reports:</strong> pricing, yields, planning and lender appetite in your market.</li>
+    </ul>
+    <p>Need finance for property development, bridging finance, private finance for property or finance for property investment? It&rsquo;s arranged by an authorised broker; we make the introduction. Valuations are carried out by a RICS-qualified surveyor, and legal work by a solicitor in the relevant country.</p>
 
-  <!-- INTRO — with image, waffle cut, networks added -->
-  <section class="content-panel" aria-label="Property advisory">
-    <img class="content-panel-bg"
-      src="/uk-property-developers-london-prestige-co.png"
-      alt="The Gherkin and City of London skyline, representing Prestige &amp; Co's real estate advisory network"
-      loading="lazy">
-    <div class="content-panel-overlay" aria-hidden="true"></div>
-    <div class="content-panel-inner">
-      <div class="content-panel-body">
-        <h2>A real estate network built since 2021, on a professional network built since 2005.</h2>
-        <p>Real estate relationships built since 2021, as relationship manager for a boutique real estate company in Spain. Agents, developers, landowners. Now global.</p>
-        <p>We hold signed mandates with investors, funds, and family offices looking to deploy capital into real estate.</p>
-        <p>Nothing reaches you unchecked. Every opportunity is screened and vetted first.</p>
-      </div>
-    </div>
-  </section>
+    <h2>How we work with you</h2>
+    <ul>
+      <li><strong>Discretion.</strong> Your plans and figures stay private.</li>
+      <li><strong>Integrity.</strong> Every point is stated plainly.</li>
+      <li><strong>Diligence.</strong> Every opportunity is checked before it reaches you.</li>
+    </ul>
 
-  <!-- MARKETS -->
-  <section class="markets-section" aria-labelledby="markets-label">
-    <div class="markets-inner">
-      <span class="eyebrow" id="markets-label">Why come to us</span>
-      <div class="markets-grid">
-        <div class="market-item">
-          <h3>Time saved.</h3>
-          <p>You tell us the brief once. We do the searching.</p>
-        </div>
-        <div class="market-item">
-          <h3>Certainty of expertise.</h3>
-          <p>Every deal is different in every country. We bring in the legal and tax expertise for the jurisdiction it sits in — a vetted panel, not a name you found alone.</p>
-        </div>
-        <div class="market-item">
-          <h3>First to look.</h3>
-          <p>We see opportunities before they're publicly listed. First to look means first to negotiate, before the price gets bid up.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHO WE WORK WITH -->
-  <section class="markets-section" style="padding-top: 0;" aria-labelledby="clients-label">
-    <div class="markets-inner">
-      <span class="eyebrow" id="clients-label">Who we work with</span>
-      <div class="markets-grid">
-        <div class="market-item">
-          <h3>Property Developers</h3>
-          <p>You have a site, planning consent, or a scheme underway. Development finance, bridging finance, private finance — we prepare the borrowing case and introduce you to an FCA-authorised broker, and to investors who understand real estate.</p>
-        </div>
-        <div class="market-item">
-          <h3>Landlords &amp; Portfolio Holders</h3>
-          <p>You hold property and want to sell or refinance. We tell you what it's worth today, and what would need to change to move that number. Straight answer, either way.</p>
-        </div>
-        <div class="market-item">
-          <h3>Real Estate Investors</h3>
-          <p>You have capital to deploy into international property. We source and vet every opportunity before it reaches you. When we introduce something, the work is already done.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GLOBE / WHERE WE WORK -->
-  <section class="globe-section" aria-labelledby="globe-heading">
-    <div class="globe-inner">
-      <img class="globe-img"
-        src="/prestige-and-co-global-property-markets.svg"
-        alt="Globe showing the markets where Prestige &amp; Co holds real estate relationships."
-        loading="lazy">
-      <div class="globe-body">
-        <h2 id="globe-heading">Where we work.</h2>
-        <p>We hold relationships with real estate specialists in fifteen markets. That is what makes the work possible: the agent, the valuer, the broker and the lawyer are local to the transaction, not to us.</p>
-        <p class="globe-markets">United Kingdom · Spain · Portugal · France · Italy · Germany · Poland · Czech Republic · Albania · Sweden · Norway · Denmark · United States · Mexico · Dubai, UAE</p>
-      </div>
-    </div>
-  </section>
+    <p class="apply-else">Need something else — raising capital, a minority stake, strategy, property or buying overseas? <a href="/apply/">Apply to work with us</a>.</p>
+  </div>
 
   <div class="apply-cta-section">
     <div class="apply-cta-inner">
       <div class="apply-cta-text">
         <p class="apply-cta-heading">Start with an application.</p>
         <p class="apply-cta-sub">We only take on work where we can make a difference, so the first step is understanding what you need.</p>
-        <p class="apply-else" style="margin:0;font-size:0.95rem;color:var(--muted);line-height:1.65;">Need something else — raising capital, a minority stake, strategy, property or buying overseas? <a href="/apply/" style="color:var(--brass);text-decoration:underline;text-underline-offset:3px;">Apply to work with us</a>.</p>
       </div>
       <a href="/apply?type=property" class="apply-cta-btn">Introduce an opportunity</a>
     </div>
   </div>
-
-  <!-- DIRECT SERVICES -->
-  <section class="services-section" aria-labelledby="services-label">
-    <div class="services-inner">
-      <p class="services-heading" id="services-label">Six direct services.</p>
-      <p class="services-intro">Finance for property development, bridging, and commercial mortgages: we prepare the case and introduce you to an authorised broker. The arranging is theirs. The preparation is ours.</p>
-      <div class="services-grid">
-
-        <div class="service-item">
-          <h3>Property Sourcing</h3>
-          <p>Tell us what you are looking for — a development site, a building to convert, a property to add to the portfolio — and we go to the people who already have it. Sourced through the network, often before it reaches the open market.</p>
-        </div>
-
-        <div class="service-item">
-          <h3>Capital Verification &amp; Deal Assessments</h3>
-          <p>Before anyone commits time to a deal, we check it stands up: the numbers, the ownership, the planning position, and whether the money behind it is real. Fewer wasted weeks on deals that were never going to complete.</p>
-        </div>
-
-        <div class="service-item">
-          <h3>Finance for Property Development — Lender Intelligence</h3>
-          <p>Which lenders are active in that market, on what terms, and what they are declining. We prepare the borrowing case — the numbers, the costs, the exit — then introduce you to an FCA-authorised broker who arranges the finance itself. Development finance, bridging and commercial mortgages.</p>
-        </div>
-
-        <div class="service-item">
-          <h3>Portfolio Exit Planning</h3>
-          <p>Planning how and when a property portfolio is sold — whole, in parts, or over time — and what needs to be in order before a buyer's team starts asking.</p>
-        </div>
-
-        <div class="service-item">
-          <h3>Deal Support</h3>
-          <p>Coordinating the transaction from agreement to completion, keeping the parties moving and the paperwork in sequence. The legal work is done by the appointed solicitor or local lawyer.</p>
-        </div>
-
-        <div class="service-item">
-          <h3>Market Intelligence Reports</h3>
-          <p>Written reports on a specific market: what property is actually selling for, rental yields, the planning environment, and lender appetite. Prepared for the decision you are making, not a general market update.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- REFERRAL SERVICES — elevated with clear "why referred" explanation -->
-  <section class="referral-section" aria-labelledby="referral-label">
-    <div class="referral-inner">
-      <span class="eyebrow" id="referral-label">Three referred services</span>
-      <div class="referral-intro">
-        <p>Valuation, finance arranging, and legal work are regulated activities. We refer them to qualified specialists from our professional network — and remain the point of commercial continuity throughout, so the client has one coherent team across all workstreams.</p>
-      </div>
-      <div class="referral-grid">
-
-        <div class="referral-item">
-          <span class="ref-label">Referred · Regulated activity</span>
-          <h3>Valuation</h3>
-          <p>Where a formal RICS valuation is required — for finance, sale, or investment purposes — we introduce clients to qualified valuers from our professional network. We brief the appointed firm and stay across the process commercially.</p>
-        </div>
-
-        <div class="referral-item">
-          <span class="ref-label">Referred · Regulated activity</span>
-          <h3>Finance Arranging</h3>
-          <p>Where mortgage, development finance, or bridging is required, we introduce clients to specialist brokers and lenders. Arranging regulated credit requires FCA authorisation — our role is commercial preparation and introduction; the broker handles the regulated advice.</p>
-        </div>
-
-        <div class="referral-item">
-          <span class="ref-label">Referred · Regulated activity</span>
-          <h3>Legal &amp; Contracts</h3>
-          <p>Where transaction legal work is required, we introduce clients to specialist property solicitors. Legal advice is regulated in every country — in England and Wales through the Solicitors Regulation Authority (SRA), and through the equivalent body in each other jurisdiction — our role is commercial coordination; the solicitor handles the legal work. We ensure the commercial and legal workstreams are aligned.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- USP -->
-  <section class="usp-section" aria-label="Our experience">
-    <div class="usp-inner">
-      <hr class="section-rule" aria-hidden="true">
-      <p class="usp-statement">Every opportunity checked before it reaches anyone.</p>
-    </div>
-  </section>
 
   <footer class="footer" role="contentinfo" aria-label="Site footer">
     <div class="footer-inner">
