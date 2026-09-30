@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#111111">
 
-<title>Selling an Established UK Business | Prestige &amp; Co</title>
-<meta name="description" content="Helping owners of established UK businesses sell the whole company or a controlling stake. We prepare the business, find the buyer and act for the seller.">
+<title>Boutique Corporate Finance Consultant, London | Prestige &amp; Co</title>
+<meta name="description" content="Boutique corporate finance advisory for owners of established UK businesses preparing to sell. We prepare the business and advise through the sale.">
 
 <link rel="canonical" href="https://prestigeand.co/">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -15,8 +15,8 @@
 <link rel="apple-touch-icon" href="/favicon-64.png">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Selling an Established UK Business | Prestige &amp; Co">
-<meta property="og:description" content="Helping owners of established UK businesses sell the whole company or a controlling stake. We prepare the business, find the buyer and act for the seller.">
+<meta property="og:title" content="Boutique Corporate Finance Consultant, London | Prestige &amp; Co">
+<meta property="og:description" content="Boutique corporate finance advisory for owners of established UK businesses preparing to sell. We prepare the business and advise through the sale.">
 <meta property="og:url" content="https://prestigeand.co/">
 <meta property="og:site_name" content="Prestige &amp; Co">
 <meta property="og:image" content="https://prestigeand.co/prestige-co-uk-corporate-finance-social-share.png">
@@ -24,8 +24,8 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@PrestigeCoUK">
-<meta name="twitter:title" content="Selling an Established UK Business | Prestige &amp; Co">
-<meta name="twitter:description" content="Helping owners of established UK businesses sell the whole company or a controlling stake. We prepare the business, find the buyer and act for the seller.">
+<meta name="twitter:title" content="Boutique Corporate Finance Consultant, London | Prestige &amp; Co">
+<meta name="twitter:description" content="Boutique corporate finance advisory for owners of established UK businesses preparing to sell. We prepare the business and advise through the sale.">
 <meta name="twitter:image" content="https://prestigeand.co/prestige-co-uk-corporate-finance-social-share.png">
 
 <!-- Google tag (gtag.js) -->
@@ -192,6 +192,10 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   text-align: center; padding: 0 40px;
   max-width: 860px;
 }
+.cover-sub {
+  margin-top: 24px; font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--offwhite);
+  line-height: 1.5; max-width: 640px; margin-left: auto; margin-right: auto;
+}
 .cover-statement {
   font-size: clamp(3rem, 6.5vw, 6.5rem);
   font-weight: 400;
@@ -280,6 +284,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   font-size: 1rem; color: var(--muted);
   line-height: 1.68; margin-bottom: 24px; flex: 1;
 }
+.market-inline-link { color: var(--brass); text-decoration: underline; text-underline-offset: 3px; }
 .market-link {
   font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--brass); font-weight: 500;
@@ -437,6 +442,50 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   color: var(--muted);
 }
 
+/* ─── CAREER TIMELINE (moved from About) ─── */
+/* Timeline tile carousel */
+.tl-section { padding: 120px 0 40px; }
+.tl-section .markets-label { margin-bottom: 40px; }
+
+.tl-carousel { display: flex; align-items: center; gap: 16px; }
+.tl-grid-wrap { flex: 1; min-width: 0; overflow: hidden; }
+.tl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+.tl-card { display: none; flex-direction: column; }
+.tl-card.tl-visible { display: flex; }
+
+.tl-card .market-img-wrap {
+  aspect-ratio: 16/9;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  background: rgba(240, 237, 230, 0.03); border: 1px solid var(--rule);
+  margin-bottom: 24px;
+}
+.tl-logo-img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.tl-year-num {
+  font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 400;
+  color: var(--brass); opacity: 0.22; letter-spacing: -0.03em; line-height: 1;
+}
+.tl-card h3 {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brass); font-weight: 500; margin-bottom: 12px;
+}
+.tl-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; flex: 1; }
+
+.tl-arrow {
+  background: none; border: 1px solid var(--rule);
+  color: var(--offwhite); font-size: 1.2rem;
+  width: 44px; height: 44px; flex-shrink: 0;
+  cursor: pointer; transition: border-color 0.2s, color 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.tl-arrow:hover:not(:disabled) { border-color: var(--brass); color: var(--brass); }
+.tl-arrow:disabled { opacity: 0.3; cursor: default; }
+
+@media (max-width: 700px) {
+  .tl-grid { grid-template-columns: 1fr; gap: 0; }
+  .tl-arrow { width: 36px; height: 36px; font-size: 1rem; }
+}
+
 /* ─── TESTIMONIALS ───────────────────────────────────── */
 .testimonials { padding: 120px 0; }
 .testimonials-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
@@ -463,6 +512,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   font-style: normal; letter-spacing: 0.02em; margin-bottom: 4px;
 }
 .testimonial-role { display: block; font-size: 0.85rem; color: var(--muted); letter-spacing: 0.04em; }
+.testimonial-link { display: inline-block; margin-top: 8px; font-size: 0.85rem; color: var(--brass); letter-spacing: 0.04em; text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 860px) { .testimonials-grid { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .testimonial { padding: 40px 28px; } }
 
@@ -551,7 +601,6 @@ section[id], footer[id] { scroll-margin-top: 72px; }
     <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">Menu</button>
     <ul class="nav-links" id="nav-links" role="list">
       <li><a href="#markets">Who We Work With</a></li>
-      <li><a href="#services">Services</a></li>
       <li><a href="/about">About Us</a></li>
     </ul>
   </div>
@@ -572,6 +621,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
     <div class="cover-overlay" aria-hidden="true"></div>
     <div class="cover-inner">
       <h1 class="cover-statement">UK Corporate Finance Consultant</h1>
+      <p class="cover-sub">Corporate finance advisory for owners of established UK businesses preparing to sell.</p>
     </div>
   </section>
 
@@ -579,53 +629,6 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   <section class="motto" id="motto" aria-label="Our motto">
     <div class="motto-inner">
       <p class="motto-statement">Discretion. Integrity. Diligence.</p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 3 · STATS ──────────────────────────────────── -->
-  <section class="stats" id="stats" aria-label="Key figures">
-    <div class="stats-inner">
-      <div class="stats-grid">
-
-        <div class="stat">
-          <span class="stat-label">Commercial Experience</span>
-          <span class="stat-number">25</span>
-          <span class="stat-caption">years</span>
-        </div>
-
-      </div>
-      <p class="stats-footnote">Career track record.</p>
-    </div>
-  </section>
-
-  <!-- ── TESTIMONIALS ─────────────────────────────────────── -->
-  <section class="testimonials" id="testimonials" aria-label="Client testimonials">
-    <div class="testimonials-inner">
-      <div class="testimonials-grid">
-
-        <blockquote class="testimonial">
-          <p class="testimonial-quote">"Solomon is a bit of an acquired taste &mdash; and I think he&rsquo;d probably be fine with me saying that. When we first worked together, I wasn&rsquo;t entirely sure what to make of him. He kept digging into things I thought were already settled, questioning things other people had passed over and generally refusing to just nod along. I realised he&rsquo;d actually taken our project seriously enough to make our problems his problems. And because he approaches things quite differently to most people I&rsquo;ve dealt with around capital, he found things that others simply hadn&rsquo;t. There&rsquo;s something very sincere and almost old-school about the way he works. Once I understood that, I understood Solomon a lot better too."</p>
-          <footer class="testimonial-attr">
-            <div class="testimonial-avatar" aria-hidden="true">ADC</div>
-            <div>
-              <cite class="testimonial-name">Allen DC</cite>
-              <span class="testimonial-role">Co-Founder &amp; Game Director, Cloudbox Studio (CBX)</span>
-            </div>
-          </footer>
-        </blockquote>
-
-        <blockquote class="testimonial">
-          <p class="testimonial-quote">"Solomon knows his stuff inside out! He's been a fantastic advisor for my business, helping it grow and prosper. Working with him has been a real game-changer. I highly recommend him."</p>
-          <footer class="testimonial-attr">
-            <div class="testimonial-avatar" aria-hidden="true">RG</div>
-            <div>
-              <cite class="testimonial-name">Ray Gudrups</cite>
-              <span class="testimonial-role">Owner, Explorite</span>
-            </div>
-          </footer>
-        </blockquote>
-
-      </div>
     </div>
   </section>
 
@@ -646,21 +649,170 @@ section[id], footer[id] { scroll-margin-top: 72px; }
     </div>
   </section>
 
-  <!-- ── APPLICATION / CTA ─────────────────────────────────── -->
-  <section class="apply" id="apply" aria-label="Apply to work with Prestige and Co">
-    <div class="apply-inner">
-      <div class="apply-text">
-        <p class="apply-heading">Start with an application.</p>
-        <p class="apply-sub">We only take on work where we can make a difference, so the first step is understanding what you need.</p>
+  <!-- ── SECTION 3 · STATS ──────────────────────────────────── -->
+  <section class="stats" id="stats" aria-label="Key figures">
+    <div class="stats-inner">
+      <div class="stats-grid">
+
+        <div class="stat">
+          <span class="stat-label">Commercial Experience</span>
+          <span class="stat-number">25</span>
+          <span class="stat-caption">years</span>
+        </div>
+
       </div>
-      <a class="btn" href="/apply/?type=business-owner" aria-label="Apply to work with Prestige and Co">Apply to work with us</a>
+      <p class="stats-footnote">Career track record.</p>
+    </div>
+  </section>
+
+  <!-- ── CAREER TIMELINE (moved from About) ──────────────── -->
+  <section class="tl-section" aria-label="Career timeline" id="timeline">
+    <div class="markets-inner">
+      <span class="markets-label">Career timeline</span>
+
+      <div class="tl-carousel">
+        <button class="tl-arrow" id="tl-prev" aria-label="Previous" disabled>&#8592;</button>
+
+        <div class="tl-grid-wrap">
+          <div class="tl-grid">
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#154281">
+                <img class="tl-logo-img" src="/Bristol_%26_West_Building_Society.svg" alt="Bristol &amp; West Building Society"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2001</span>
+              </div>
+              <h3>2001</h3>
+              <p>Financial Adviser. Bristol &amp; West plc is a former British building society that demutualised and later became part of the Bank of Ireland Group. Learned the importance of customer service. Fact-finding to understand clients' needs. To listen to their financial objectives and tailor the appropriate solution.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#ffffff">
+                <img class="tl-logo-img" src="/WH-ireland-logo.png" alt="WH Ireland"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2005</span>
+              </div>
+              <h3>2005</h3>
+              <p>Relationship Manager. A UK-based financial services firm providing wealth management, investment management and corporate broking. Forming relationships with solicitors, accountants and IFAs (independent financial advisers). Built £92 million in funds under management.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap">
+                <span class="tl-year-num">2009</span>
+              </div>
+              <h3>2009</h3>
+              <p>Mergers &amp; Acquisitions and client book sales of retiring independent financial advisers (IFAs), ahead of the Retail Distribution Review (RDR). The grounding in corporate finance principles. Due diligence — financial, legal, commercial, and operational verification before a deal completes.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap">
+                <span class="tl-year-num">2010</span>
+              </div>
+              <h3>2010</h3>
+              <p>Founder. Bootstrapped revenue, raised investment, negotiated sale. The grounding for understanding how founders raise.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#ffffff">
+                <img class="tl-logo-img" src="/Nomensa-lgo.jpg" alt="Nomensa" style="object-fit:cover"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2012</span>
+              </div>
+              <h3>2012</h3>
+              <p>Head of Outbound Sales. A user experience (UX) design and digital agency. Pitching and winning business with global brands.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#ffffff">
+                <img class="tl-logo-img" src="/Beep-Treat.jpeg" alt="Beep Treat" style="object-fit:cover"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2012</span>
+              </div>
+              <h3>2012</h3>
+              <p>Head of Business Development. A customer loyalty app. Pitched and closed major brands. Secured a flagship deal with Bristol Airport (£250K value).</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap">
+                <span class="tl-year-num">2015</span>
+              </div>
+              <h3>2015</h3>
+              <p>Commercial Director. Scaled an online business to two retail premises, production facility and 4 staff. Building supply chains. Resellers. Routes to market.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#ffffff">
+                <img class="tl-logo-img" src="/H%26H-lgo.png" alt="H&amp;H"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2021</span>
+              </div>
+              <h3>2021 – present</h3>
+              <p>Head of Relationships. A Scandinavian real estate and property investment agency. Forming relationships with family offices and investment funds.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap">
+                <span class="tl-year-num">2025</span>
+              </div>
+              <h3>2025</h3>
+              <p>Investors began asking about deploying their capital into other asset classes. We built a robust due diligence system to vet real estate deals. Prestige &amp; Co was forming.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#111111">
+                <img class="tl-logo-img" src="/new-prestige-and-co-logo.png" alt="Prestige &amp; Co"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2026</span>
+              </div>
+              <h3>2026</h3>
+              <p>Prestige &amp; Co incorporated in the UK. Solomon Prestige Group Ltd, Company No. 17189399. 71–75 Shelton Street, Covent Garden, London WC2H 9JQ.</p>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="tl-arrow" id="tl-next" aria-label="Next">&#8594;</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ─────────────────────────────────────── -->
+  <section class="testimonials" id="testimonials" aria-label="Client testimonials">
+    <div class="testimonials-inner">
+      <div class="testimonials-grid">
+
+        <blockquote class="testimonial">
+          <p class="testimonial-quote">"Solomon is a bit of an acquired taste &mdash; and I think he&rsquo;d probably be fine with me saying that. When we first worked together, I wasn&rsquo;t entirely sure what to make of him. He kept digging into things I thought were already settled, questioning things other people had passed over and generally refusing to just nod along. I realised he&rsquo;d actually taken our project seriously enough to make our problems his problems. And because he approaches things quite differently to most people I&rsquo;ve dealt with around capital, he found things that others simply hadn&rsquo;t. There&rsquo;s something very sincere and almost old-school about the way he works. Once I understood that, I understood Solomon a lot better too."</p>
+          <footer class="testimonial-attr">
+            <div class="testimonial-avatar" aria-hidden="true">ADC</div>
+            <div>
+              <cite class="testimonial-name">Allen DC</cite>
+              <span class="testimonial-role">Co-Founder &amp; Game Director, Cloudbox Studio (CBX)</span>
+              <a class="testimonial-link" href="https://lnkd.in/p/evhPGpQC" target="_blank" rel="noopener noreferrer">Read on LinkedIn</a>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p class="testimonial-quote">"Solomon knows his stuff inside out! He's been a fantastic advisor for my business, helping it grow and prosper. Working with him has been a real game-changer. I highly recommend him."</p>
+          <footer class="testimonial-attr">
+            <div class="testimonial-avatar" aria-hidden="true">RG</div>
+            <div>
+              <cite class="testimonial-name">Ray Gudrups</cite>
+              <span class="testimonial-role">Owner, Explorite</span>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
     </div>
   </section>
 
   <!-- ── SECTION 3 · THREE MARKETS ─────────────────────────── -->
   <section class="markets" id="markets" aria-labelledby="markets-label">
     <div class="markets-inner">
-      <span class="markets-label" id="markets-label">Three markets</span>
+      <span class="markets-label" id="markets-label">Who we work with</span>
       <div class="markets-grid">
 
         <article class="market-card">
@@ -675,7 +827,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
               loading="lazy">
           </div>
           <h3>Business Leaders</h3>
-          <p>You know what you want from the business — investment, a sale, or simply to run it better. We start by asking, then work out what has to happen to get you there.</p>
+          <p>For owner-managers planning an exit, raising development capital, or improving trading performance. We prepare the business for what comes next, including the disposal of the whole company or a controlling interest, and advise through to completion.</p>
           <a class="market-link" href="/founders" aria-label="Prestige and Co services for Business Leaders">Business Leaders</a>
         </article>
 
@@ -690,9 +842,9 @@ section[id], footer[id] { scroll-margin-top: 72px; }
               alt="Historical UK share certificate representing investment capital handled by Prestige &amp; Co"
               loading="lazy">
           </div>
-          <h3>Acquirers</h3>
-          <p>For family offices, private buyers and companies looking to acquire established UK businesses.</p>
-          <a class="market-link" href="/investors" aria-label="Prestige and Co for Acquirers">Acquirers</a>
+          <h3>Investors</h3>
+          <p>For acquirers, including family offices and private buyers, seeking a controlling interest in established businesses and property, in the UK and overseas. Every mandate, whatever the stake, begins with a fact find.</p>
+          <a class="market-link" href="/investors" aria-label="Prestige and Co for Investors">Investors</a>
         </article>
 
         <article class="market-card">
@@ -707,7 +859,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
               loading="lazy">
           </div>
           <h3>Property</h3>
-          <p>You know what you want — to develop a new project, add to your portfolio, or get the best value for what you already hold. We start with your goal, then tell you honestly what it takes to get there.</p>
+          <p>Development, portfolio growth, disposals and purchases abroad. Every opportunity checked before it reaches you, across fifteen markets.</p>
           <a class="market-link" href="/property" aria-label="Prestige and Co services for Property">Property</a>
         </article>
 
@@ -715,42 +867,15 @@ section[id], footer[id] { scroll-margin-top: 72px; }
     </div>
   </section>
 
-  <!-- ── SECTION 6 · SERVICES ──────────────────────────────── -->
-  <section class="services" id="services" aria-labelledby="services-heading">
-    <div class="services-inner">
-      <div class="services-top">
-        <h2 id="services-heading">Corporate finance services</h2>
-        <span class="services-label">Services</span>
+  <!-- ── APPLICATION / CTA ─────────────────────────────────── -->
+  <section class="apply" id="apply" aria-label="Apply to work with Prestige and Co">
+    <div class="apply-inner">
+      <div class="apply-text">
+        <p class="apply-heading">Start with an application.</p>
+        <p class="apply-sub">We only take on work where we can make a difference, so the first step is understanding what you need.</p>
+        <p class="apply-else" style="margin:0;font-size:0.95rem;color:var(--muted);line-height:1.65;">Need something else — raising capital, a minority stake, strategy, property or buying overseas? <a href="/apply/" style="color:var(--brass);text-decoration:underline;text-underline-offset:3px;">Apply to work with us</a>.</p>
       </div>
-
-      <a class="service-row" href="/investability-assessment" aria-label="Investability Assessment: Fact Find — £300">
-        <span class="service-name">Investability Assessment: Fact Find</span>
-        <span class="service-price"></span>
-        <p class="service-desc">The due diligence questionnaire that checks whether a deal is actually ready — before an investor ever sees it.</p>
-        <span class="service-arrow">View →</span>
-      </a>
-
-      <a class="service-row" href="/sale-readiness-assessment" aria-label="Sale-Readiness Assessment">
-        <span class="service-name">Sale Readiness Assessment</span>
-        <span class="service-price"></span>
-        <p class="service-desc">Find what a buyer's team would find, before they find it.</p>
-        <span class="service-arrow">View →</span>
-      </a>
-
-      <a class="service-row" href="/financial-reality-session" aria-label="Financial Reality Session">
-        <span class="service-name">Financial Reality Session</span>
-        <span class="service-price"></span>
-        <p class="service-desc">See what the business is actually worth today.</p>
-        <span class="service-arrow">View →</span>
-      </a>
-
-      <a class="service-row" href="/mergers-and-acquisitions" aria-label="Mergers and Acquisitions">
-        <span class="service-name">Mergers &amp; Acquisitions</span>
-        <span class="service-price"></span>
-        <p class="service-desc">Structuring and preparing the deal itself.</p>
-        <span class="service-arrow">View →</span>
-      </a>
-
+      <a class="btn" href="/apply/?type=business-owner" aria-label="Apply to work with Prestige and Co">Apply to work with us</a>
     </div>
   </section>
 
@@ -781,7 +906,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
         <span class="footer-col-head">Who We Work With</span>
         <ul>
           <li><a href="/founders">Business Leaders</a></li>
-          <li><a href="/investors">Acquirers</a></li>
+          <li><a href="/investors">Investors</a></li>
           <li><a href="/property">Property</a></li>
           <li><a href="/join-our-ecosystem/">Join our ecosystem</a></li>
         </ul>
@@ -895,6 +1020,40 @@ section[id], footer[id] { scroll-margin-top: 72px; }
       if (b) { b.style.display = 'block'; document.body.style.paddingBottom = b.offsetHeight + 'px'; }
     });
   }
+})();
+</script>
+<script>
+(function () {
+  /* Timeline carousel */
+  var tlCards   = Array.prototype.slice.call(document.querySelectorAll('.tl-card'));
+  var tlPrev    = document.getElementById('tl-prev');
+  var tlNext    = document.getElementById('tl-next');
+  var tlCurrent = 0;
+
+  function tlPerPage() {
+    return window.matchMedia('(max-width: 700px)').matches ? 1 : 3;
+  }
+
+  function tlShow(startIndex) {
+    tlCurrent = startIndex;
+    var pp = tlPerPage();
+    tlCards.forEach(function (c, i) {
+      c.classList.toggle('tl-visible', i >= tlCurrent && i < tlCurrent + pp);
+    });
+    tlPrev.disabled = tlCurrent === 0;
+    tlNext.disabled = tlCurrent + pp >= tlCards.length;
+  }
+
+  tlPrev.addEventListener('click', function () {
+    var pp = tlPerPage();
+    tlShow(Math.max(0, tlCurrent - pp));
+  });
+  tlNext.addEventListener('click', function () {
+    var pp = tlPerPage();
+    tlShow(Math.min(tlCards.length - pp, tlCurrent + pp));
+  });
+  window.addEventListener('resize', function () { tlShow(tlCurrent); });
+  tlShow(0);
 })();
 </script>
 </body>
