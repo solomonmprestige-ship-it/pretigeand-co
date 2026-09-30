@@ -301,6 +301,17 @@
 
   /* Pedigree secondary line */
   .pedigree-secondary { font-size: clamp(0.95rem, 1.4vw, 1.1rem); font-weight: 400; line-height: 1.65; color: var(--muted); letter-spacing: 0.01em; margin: 24px 0 0; }
+  /* PAGE BODY */
+  .page-body { padding: 80px 40px 120px; max-width: 1280px; margin: 0 auto; }
+  .page-body p { font-size: 1.1rem; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
+  .page-body h2 { font-size: 1.2rem; font-weight: 400; color: var(--offwhite); letter-spacing: 0.06em; margin: 56px 0 24px; }
+  .page-body ul { list-style: none; margin-bottom: 28px; }
+  .page-body ul li { font-size: 1.05rem; line-height: 1.7; color: var(--muted); padding: 12px 0; padding-left: 20px; position: relative; }
+  .page-body ul li::before { content: '\2014'; position: absolute; left: 0; color: var(--brass); }
+  .page-body li strong { color: var(--offwhite); font-weight: 400; }
+  .page-body a { color: var(--brass); text-decoration: underline; text-underline-offset: 3px; }
+  .page-body p.apply-else { margin-top: 56px; margin-bottom: 0; }
+  @media (max-width: 640px) { .page-body { padding-inline: 24px; } }
   </style>
 </head>
 <body>
@@ -334,102 +345,33 @@
     </div>
   </section>
 
-  <!-- PEDIGREE -->
-  <section class="pedigree" aria-label="Our pedigree">
-    <div class="pedigree-inner">
-      <hr class="pedigree-rule" aria-hidden="true">
-      <p class="pedigree-statement">Independent corporate finance advisory, drawing on insight, wisdom and expertise gained from a career across retail banking, wealth management, tech, retail and entrepreneurship, since 2001.</p>
-      <p class="pedigree-secondary">Trained by the Chartered Insurance Institute (CII) Discretionary Investment Management, Financial Planning and Mortgage Advice. Chartered Institute for Securities &amp; Investment (CISI) Corporate finance</p>
-    </div>
-  </section>
+  <div class="page-body">
+    <p>Independent corporate finance advisory for owners of established UK businesses, for the buyers and investors who want to acquire them, and for property developers, landlords and investors. We bring 25 years of experience across retail banking, wealth management, mergers and acquisitions, business-building and real estate.</p>
+    <p>Trained by the Chartered Insurance Institute in discretionary investment management, financial planning and mortgage advice, and by the Chartered Institute for Securities &amp; Investment in corporate finance.</p>
 
-  <!-- MOTTO -->
-  <section class="motto" aria-label="Our motto">
-    <div class="motto-inner">
-      <p class="motto-statement">Discretion. Integrity. Diligence.</p>
-    </div>
-  </section>
+    <h2>What we bring</h2>
+    <p>We&rsquo;re a corporate finance boutique that has sat where you&rsquo;re sitting.</p>
+    <ul>
+      <li>We&rsquo;ve founded a business, raised investment and sold it.</li>
+      <li>We&rsquo;ve completed more than ten acquisitions and exits of financial advice firms.</li>
+      <li>We&rsquo;ve built sales from nothing: 100 calls a day, pitching investors, hearing no.</li>
+      <li>We&rsquo;ve run fact finds as financial planners: the hard facts (income, assets, liabilities) and the soft facts, like attitude to risk, that decide whether a deal is right for you.</li>
+      <li>We&rsquo;ve worked at institutional level, as a broker consultant in wealth management.</li>
+      <li>We&rsquo;ve spent five years in real estate, sourcing and checking property deals across the UK and Europe.</li>
+    </ul>
 
-  <!-- VALUES -->
-  <section class="values" aria-label="Our values">
-    <div class="values-inner">
-      <div class="values-grid">
-        <div class="values-item">
-          <h3>Discretion</h3>
-          <p>We protect the identity of our clients, investors and partners.</p>
-        </div>
-        <div class="values-item">
-          <h3>Integrity</h3>
-          <p>We speak plainly and act in our clients' best interest, always.</p>
-        </div>
-        <div class="values-item">
-          <h3>Diligence</h3>
-          <p>We look beyond the headline, dig deeper, and check the facts.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <h2>Our approach</h2>
+    <p>Every business goes through the same process before it reaches a buyer or investor: an application, a screening stage, and an Investability Assessment. Buyers go through the same process: proof of funds, and a fact find on what they want to acquire. Property deals are checked the same way before they reach you. Buyers only see opportunities that have been checked, and businesses are only introduced to buyers who fit.</p>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials" aria-label="Client testimonials">
-    <div class="testimonials-inner">
-      <div class="testimonials-grid">
+    <h2>How we work with you</h2>
+    <ul>
+      <li><strong>Discretion.</strong> Your identity and your plans stay private.</li>
+      <li><strong>Integrity.</strong> Every point is stated plainly, and we act in your interest.</li>
+      <li><strong>Diligence.</strong> We check the facts before anything reaches a buyer or investor.</li>
+    </ul>
 
-        <blockquote class="testimonial">
-          <p class="testimonial-quote">"Solomon is a bit of an acquired taste &mdash; and I think he&rsquo;d probably be fine with me saying that. When we first worked together, I wasn&rsquo;t entirely sure what to make of him. He kept digging into things I thought were already settled, questioning things other people had passed over and generally refusing to just nod along. I realised he&rsquo;d actually taken our project seriously enough to make our problems his problems. And because he approaches things quite differently to most people I&rsquo;ve dealt with around capital, he found things that others simply hadn&rsquo;t. There&rsquo;s something very sincere and almost old-school about the way he works. Once I understood that, I understood Solomon a lot better too."</p>
-          <footer class="testimonial-attr">
-            <div class="testimonial-avatar" aria-hidden="true">ADC</div>
-            <div>
-              <cite class="testimonial-name">Allen DC</cite>
-              <span class="testimonial-role">Co-Founder &amp; Game Director, Cloudbox Studio (CBX)</span>
-              <a class="testimonial-link" href="https://lnkd.in/p/evhPGpQC" target="_blank" rel="noopener noreferrer">Read on LinkedIn</a>
-            </div>
-          </footer>
-        </blockquote>
-
-        <blockquote class="testimonial">
-          <p class="testimonial-quote">"Solomon knows his stuff inside out! He's been a fantastic advisor for my business, helping it grow and prosper. Working with him has been a real game-changer. I highly recommend him."</p>
-          <footer class="testimonial-attr">
-            <div class="testimonial-avatar" aria-hidden="true">RG</div>
-            <div>
-              <cite class="testimonial-name">Ray Gudrups</cite>
-              <span class="testimonial-role">Owner, Explorite</span>
-            </div>
-          </footer>
-        </blockquote>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- FOUNDER-STYLE TILE -->
-  <section class="content-panel cp-about" aria-labelledby="cp-about-heading">
-    <img class="content-panel-bg" src="/solomon-prestige-corporate-finance-london.png"
-      alt="Solomon Prestige, founder of Prestige &amp; Co, boutique corporate finance London"
-      loading="lazy">
-    <div class="content-panel-overlay" aria-hidden="true"></div>
-    <div class="content-panel-inner">
-      <div class="content-panel-body">
-        <h2 id="cp-about-heading">A boutique corporate finance firm drawing on 25 years across banking, real estate and business-building.</h2>
-        <p class="cp-subtitle">A corporate finance boutique with an edge.</p>
-        <p>What do we have that many corporate finance firms don't?</p>
-        <p>Experience building a business as a founder. Raising money to fund a startup, then selling the business. Taking a startup to market as an early employee.</p>
-        <p>A grounding in business development. Bootstrapping to revenue. Making 100 sales calls a day. Pitching investors, and feeling the rejection when it doesn't go to plan.</p>
-        <p>A foundation in financial planning. The discipline of a deep fact-find: the hard facts (income, assets, liabilities) and the soft facts that decide whether an opportunity is right for someone. Attitude to risk. Tolerance of risk. Capacity for risk.</p>
-        <p>The same discipline at institutional level, as a broker consultant in wealth management, raising millions in funds under management.</p>
-        <p>All of this backed by technical study in corporate finance, investment management, financial planning and mortgage advice.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- APPROACH -->
-  <section class="narrative" aria-labelledby="approach-label">
-    <div class="narrative-inner">
-      <h2 id="approach-label">Our approach to corporate finance advisory.</h2>
-      <p>Every business we work with goes through the same process before it ever reaches a buyer or investor: an application form, a screening stage, and an Investability Assessment. On the investor side, the same discipline applies — proof of funds, and fact-finding to understand exactly what they're looking for before any introduction is made. This means investors only see opportunities that have already been checked, and businesses are only introduced to investors who actually fit what they're looking for — saving time on both sides.</p>
-    </div>
-  </section>
+    <p class="apply-else">Need something else — raising capital, a minority stake, strategy, property or buying overseas? <a href="/apply/">Apply to work with us</a>.</p>
+  </div>
 
   <!-- CTA -->
   <section class="apply" id="apply" aria-label="Apply to work with Prestige and Co">
@@ -437,7 +379,6 @@
       <div class="apply-text">
         <p class="apply-heading">Start with an application.</p>
         <p class="apply-sub">We only take on work where we can make a difference, so the first step is understanding what you need.</p>
-        <p class="apply-else" style="margin:0;font-size:0.95rem;color:var(--muted);line-height:1.65;">Need something else — raising capital, a minority stake, strategy, property or buying overseas? <a href="/apply/" style="color:var(--brass);text-decoration:underline;text-underline-offset:3px;">Apply to work with us</a>.</p>
       </div>
       <a class="btn" href="/apply/?type=business-owner" aria-label="Apply to work with Prestige and Co">Apply to work with us</a>
     </div>
