@@ -442,6 +442,50 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   color: var(--muted);
 }
 
+/* ─── CAREER TIMELINE (moved from About) ─── */
+/* Timeline tile carousel */
+.tl-section { padding: 120px 0 40px; }
+.tl-section .markets-label { margin-bottom: 40px; }
+
+.tl-carousel { display: flex; align-items: center; gap: 16px; }
+.tl-grid-wrap { flex: 1; min-width: 0; overflow: hidden; }
+.tl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+.tl-card { display: none; flex-direction: column; }
+.tl-card.tl-visible { display: flex; }
+
+.tl-card .market-img-wrap {
+  aspect-ratio: 16/9;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  background: rgba(240, 237, 230, 0.03); border: 1px solid var(--rule);
+  margin-bottom: 24px;
+}
+.tl-logo-img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.tl-year-num {
+  font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 400;
+  color: var(--brass); opacity: 0.22; letter-spacing: -0.03em; line-height: 1;
+}
+.tl-card h3 {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--brass); font-weight: 500; margin-bottom: 12px;
+}
+.tl-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; flex: 1; }
+
+.tl-arrow {
+  background: none; border: 1px solid var(--rule);
+  color: var(--offwhite); font-size: 1.2rem;
+  width: 44px; height: 44px; flex-shrink: 0;
+  cursor: pointer; transition: border-color 0.2s, color 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.tl-arrow:hover:not(:disabled) { border-color: var(--brass); color: var(--brass); }
+.tl-arrow:disabled { opacity: 0.3; cursor: default; }
+
+@media (max-width: 700px) {
+  .tl-grid { grid-template-columns: 1fr; gap: 0; }
+  .tl-arrow { width: 36px; height: 36px; font-size: 1rem; }
+}
+
 /* ─── TESTIMONIALS ───────────────────────────────────── */
 .testimonials { padding: 120px 0; }
 .testimonials-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
@@ -557,7 +601,6 @@ section[id], footer[id] { scroll-margin-top: 72px; }
     <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">Menu</button>
     <ul class="nav-links" id="nav-links" role="list">
       <li><a href="#markets">Who We Work With</a></li>
-      <li><a href="#services">Services</a></li>
       <li><a href="/about">About Us</a></li>
     </ul>
   </div>
@@ -589,6 +632,23 @@ section[id], footer[id] { scroll-margin-top: 72px; }
     </div>
   </section>
 
+  <!-- ── SECTION 5 · FOUNDER ───────────────────────────────── -->
+  <section class="content-panel" id="founder" aria-labelledby="founder-heading">
+    <img class="content-panel-bg"
+      src="/founder-silhouette-office%20%281%29.jpg"
+      alt="Silhouette of the founder of Prestige &amp; Co, a UK corporate finance consultancy"
+      loading="lazy">
+    <div class="content-panel-overlay" aria-hidden="true"></div>
+    <div class="content-panel-inner">
+      <div class="content-panel-body">
+        <span class="founder-eyebrow">The Founder</span>
+        <h2 id="founder-heading">A corporate financier who has built, raised, and sold.</h2>
+        <p>25 years across banking, wealth management, real estate and business-building. Raised money for our own startup, then sold it. Took another to market — landing Bristol Airport and SSP as launch partners.</p>
+        <p>We have sat where you are sitting.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ── SECTION 3 · STATS ──────────────────────────────────── -->
   <section class="stats" id="stats" aria-label="Key figures">
     <div class="stats-inner">
@@ -602,6 +662,118 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 
       </div>
       <p class="stats-footnote">Career track record.</p>
+    </div>
+  </section>
+
+  <!-- ── CAREER TIMELINE (moved from About) ──────────────── -->
+  <section class="tl-section" aria-label="Career timeline" id="timeline">
+    <div class="markets-inner">
+      <span class="markets-label">Career timeline</span>
+
+      <div class="tl-carousel">
+        <button class="tl-arrow" id="tl-prev" aria-label="Previous" disabled>&#8592;</button>
+
+        <div class="tl-grid-wrap">
+          <div class="tl-grid">
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#154281">
+                <img class="tl-logo-img" src="/Bristol_%26_West_Building_Society.svg" alt="Bristol &amp; West Building Society"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2001</span>
+              </div>
+              <h3>2001</h3>
+              <p>Financial Adviser. Bristol &amp; West plc is a former British building society that demutualised and later became part of the Bank of Ireland Group. Learned the importance of customer service. Fact-finding to understand clients' needs. To listen to their financial objectives and tailor the appropriate solution.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#ffffff">
+                <img class="tl-logo-img" src="/WH-ireland-logo.png" alt="WH Ireland"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2005</span>
+              </div>
+              <h3>2005</h3>
+              <p>Relationship Manager. A UK-based financial services firm providing wealth management, investment management and corporate broking. Forming relationships with solicitors, accountants and IFAs (independent financial advisers). Built £92 million in funds under management.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap">
+                <span class="tl-year-num">2009</span>
+              </div>
+              <h3>2009</h3>
+              <p>Mergers &amp; Acquisitions and client book sales of retiring independent financial advisers (IFAs), ahead of the Retail Distribution Review (RDR). The grounding in corporate finance principles. Due diligence — financial, legal, commercial, and operational verification before a deal completes.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap">
+                <span class="tl-year-num">2010</span>
+              </div>
+              <h3>2010</h3>
+              <p>Founder. Bootstrapped revenue, raised investment, negotiated sale. The grounding for understanding how founders raise.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#ffffff">
+                <img class="tl-logo-img" src="/Nomensa-lgo.jpg" alt="Nomensa" style="object-fit:cover"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2012</span>
+              </div>
+              <h3>2012</h3>
+              <p>Head of Outbound Sales. A user experience (UX) design and digital agency. Pitching and winning business with global brands.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#ffffff">
+                <img class="tl-logo-img" src="/Beep-Treat.jpeg" alt="Beep Treat" style="object-fit:cover"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2012</span>
+              </div>
+              <h3>2012</h3>
+              <p>Head of Business Development. A customer loyalty app. Pitched and closed major brands. Secured a flagship deal with Bristol Airport (£250K value).</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap">
+                <span class="tl-year-num">2015</span>
+              </div>
+              <h3>2015</h3>
+              <p>Commercial Director. Scaled an online business to two retail premises, production facility and 4 staff. Building supply chains. Resellers. Routes to market.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#ffffff">
+                <img class="tl-logo-img" src="/H%26H-lgo.png" alt="H&amp;H"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2021</span>
+              </div>
+              <h3>2021 – present</h3>
+              <p>Head of Relationships. A Scandinavian real estate and property investment agency. Forming relationships with family offices and investment funds.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap">
+                <span class="tl-year-num">2025</span>
+              </div>
+              <h3>2025</h3>
+              <p>Investors began asking about deploying their capital into other asset classes. We built a robust due diligence system to vet real estate deals. Prestige &amp; Co was forming.</p>
+            </article>
+
+            <article class="market-card tl-card">
+              <div class="market-img-wrap" style="background:#111111">
+                <img class="tl-logo-img" src="/new-prestige-and-co-logo.png" alt="Prestige &amp; Co"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <span class="tl-year-num" style="display:none">2026</span>
+              </div>
+              <h3>2026</h3>
+              <p>Prestige &amp; Co incorporated in the UK. Solomon Prestige Group Ltd, Company No. 17189399. 71–75 Shelton Street, Covent Garden, London WC2H 9JQ.</p>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="tl-arrow" id="tl-next" aria-label="Next">&#8594;</button>
+      </div>
+
     </div>
   </section>
 
@@ -637,35 +809,6 @@ section[id], footer[id] { scroll-margin-top: 72px; }
     </div>
   </section>
 
-  <!-- ── SECTION 5 · FOUNDER ───────────────────────────────── -->
-  <section class="content-panel" id="founder" aria-labelledby="founder-heading">
-    <img class="content-panel-bg"
-      src="/founder-silhouette-office%20%281%29.jpg"
-      alt="Silhouette of the founder of Prestige &amp; Co, a UK corporate finance consultancy"
-      loading="lazy">
-    <div class="content-panel-overlay" aria-hidden="true"></div>
-    <div class="content-panel-inner">
-      <div class="content-panel-body">
-        <span class="founder-eyebrow">The Founder</span>
-        <h2 id="founder-heading">A corporate financier who has built, raised, and sold.</h2>
-        <p>25 years across banking, wealth management, real estate and business-building. Raised money for our own startup, then sold it. Took another to market — landing Bristol Airport and SSP as launch partners.</p>
-        <p>We have sat where you are sitting.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── APPLICATION / CTA ─────────────────────────────────── -->
-  <section class="apply" id="apply" aria-label="Apply to work with Prestige and Co">
-    <div class="apply-inner">
-      <div class="apply-text">
-        <p class="apply-heading">Start with an application.</p>
-        <p class="apply-sub">We only take on work where we can make a difference, so the first step is understanding what you need.</p>
-        <p class="apply-else" style="margin:0;font-size:0.95rem;color:var(--muted);line-height:1.65;">Need something else — raising capital, a minority stake, strategy, property or buying overseas? <a href="/apply/" style="color:var(--brass);text-decoration:underline;text-underline-offset:3px;">Apply to work with us</a>.</p>
-      </div>
-      <a class="btn" href="/apply/?type=business-owner" aria-label="Apply to work with Prestige and Co">Apply to work with us</a>
-    </div>
-  </section>
-
   <!-- ── SECTION 3 · THREE MARKETS ─────────────────────────── -->
   <section class="markets" id="markets" aria-labelledby="markets-label">
     <div class="markets-inner">
@@ -684,7 +827,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
               loading="lazy">
           </div>
           <h3>Business Leaders</h3>
-          <p>You know what you want from the business — a sale, investment, or simply to run it better. We start by asking, then work out what has to happen to get you there.</p>
+          <p>For owner-managers planning an exit, raising development capital, or improving trading performance. We prepare the business for what comes next, including the disposal of the whole company or a controlling interest, and advise through to completion.</p>
           <a class="market-link" href="/founders" aria-label="Prestige and Co services for Business Leaders">Business Leaders</a>
         </article>
 
@@ -700,7 +843,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
               loading="lazy">
           </div>
           <h3>Investors</h3>
-          <p>For family offices, private buyers and companies looking to acquire established UK businesses and <a class="market-inline-link" href="/property/">property</a>.</p>
+          <p>For acquirers, including family offices and private buyers, seeking a controlling interest in established businesses and property, in the UK and overseas. Every mandate, whatever the stake, begins with a fact find.</p>
           <a class="market-link" href="/investors" aria-label="Prestige and Co for Investors">Investors</a>
         </article>
 
@@ -716,7 +859,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
               loading="lazy">
           </div>
           <h3>Property</h3>
-          <p>You know what you want — to develop a new project, add to your portfolio, or get the best value for what you already hold. We start with your goal, then tell you honestly what it takes to get there.</p>
+          <p>Development, portfolio growth, disposals and purchases abroad. Every opportunity checked before it reaches you, across fifteen markets.</p>
           <a class="market-link" href="/property" aria-label="Prestige and Co services for Property">Property</a>
         </article>
 
@@ -724,42 +867,15 @@ section[id], footer[id] { scroll-margin-top: 72px; }
     </div>
   </section>
 
-  <!-- ── SECTION 6 · SERVICES ──────────────────────────────── -->
-  <section class="services" id="services" aria-labelledby="services-heading">
-    <div class="services-inner">
-      <div class="services-top">
-        <h2 id="services-heading">Corporate finance services</h2>
-        <span class="services-label">Services</span>
+  <!-- ── APPLICATION / CTA ─────────────────────────────────── -->
+  <section class="apply" id="apply" aria-label="Apply to work with Prestige and Co">
+    <div class="apply-inner">
+      <div class="apply-text">
+        <p class="apply-heading">Start with an application.</p>
+        <p class="apply-sub">We only take on work where we can make a difference, so the first step is understanding what you need.</p>
+        <p class="apply-else" style="margin:0;font-size:0.95rem;color:var(--muted);line-height:1.65;">Need something else — raising capital, a minority stake, strategy, property or buying overseas? <a href="/apply/" style="color:var(--brass);text-decoration:underline;text-underline-offset:3px;">Apply to work with us</a>.</p>
       </div>
-
-      <a class="service-row" href="/investability-assessment" aria-label="Investability Assessment: Fact Find">
-        <span class="service-name">Investability Assessment: Fact Find</span>
-        <span class="service-price"></span>
-        <p class="service-desc">A fact find that shows where the business stands and what needs doing — before an investor ever sees it.</p>
-        <span class="service-arrow">View →</span>
-      </a>
-
-      <a class="service-row" href="/sale-readiness-assessment" aria-label="Sale-Readiness Assessment">
-        <span class="service-name">Sale Readiness Assessment</span>
-        <span class="service-price"></span>
-        <p class="service-desc">Find what a buyer's team would find, before they find it.</p>
-        <span class="service-arrow">View →</span>
-      </a>
-
-      <a class="service-row" href="/financial-reality-session" aria-label="Financial Reality Session">
-        <span class="service-name">Financial Reality Session</span>
-        <span class="service-price"></span>
-        <p class="service-desc">See what the business is actually worth today.</p>
-        <span class="service-arrow">View →</span>
-      </a>
-
-      <a class="service-row" href="/mergers-and-acquisitions" aria-label="Mergers and Acquisitions">
-        <span class="service-name">Mergers &amp; Acquisitions</span>
-        <span class="service-price"></span>
-        <p class="service-desc">Structuring and preparing the deal itself.</p>
-        <span class="service-arrow">View →</span>
-      </a>
-
+      <a class="btn" href="/apply/?type=business-owner" aria-label="Apply to work with Prestige and Co">Apply to work with us</a>
     </div>
   </section>
 
@@ -904,6 +1020,40 @@ section[id], footer[id] { scroll-margin-top: 72px; }
       if (b) { b.style.display = 'block'; document.body.style.paddingBottom = b.offsetHeight + 'px'; }
     });
   }
+})();
+</script>
+<script>
+(function () {
+  /* Timeline carousel */
+  var tlCards   = Array.prototype.slice.call(document.querySelectorAll('.tl-card'));
+  var tlPrev    = document.getElementById('tl-prev');
+  var tlNext    = document.getElementById('tl-next');
+  var tlCurrent = 0;
+
+  function tlPerPage() {
+    return window.matchMedia('(max-width: 700px)').matches ? 1 : 3;
+  }
+
+  function tlShow(startIndex) {
+    tlCurrent = startIndex;
+    var pp = tlPerPage();
+    tlCards.forEach(function (c, i) {
+      c.classList.toggle('tl-visible', i >= tlCurrent && i < tlCurrent + pp);
+    });
+    tlPrev.disabled = tlCurrent === 0;
+    tlNext.disabled = tlCurrent + pp >= tlCards.length;
+  }
+
+  tlPrev.addEventListener('click', function () {
+    var pp = tlPerPage();
+    tlShow(Math.max(0, tlCurrent - pp));
+  });
+  tlNext.addEventListener('click', function () {
+    var pp = tlPerPage();
+    tlShow(Math.min(tlCards.length - pp, tlCurrent + pp));
+  });
+  window.addEventListener('resize', function () { tlShow(tlCurrent); });
+  tlShow(0);
 })();
 </script>
 </body>

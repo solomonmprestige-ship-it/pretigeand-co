@@ -136,6 +136,17 @@
     .pedigree-inner { max-width: 800px; margin: 0 auto; padding: 0 40px; text-align: center; }
     .pedigree-rule { width: 40px; height: 1px; background: var(--brass); margin: 0 auto 56px; border: none; }
     .pedigree-statement { font-size: clamp(1.3rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.42; color: var(--offwhite); letter-spacing: 0.01em; margin: 0; }
+    /* PAGE BODY */
+    .page-body { padding: 80px 40px 120px; max-width: 1280px; margin: 0 auto; }
+    .page-body p { font-size: 1.1rem; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
+    .page-body h2 { font-size: 1.2rem; font-weight: 400; color: var(--offwhite); letter-spacing: 0.06em; margin: 56px 0 24px; }
+    .page-body ul { list-style: none; margin-bottom: 28px; }
+    .page-body ul li { font-size: 1.05rem; line-height: 1.7; color: var(--muted); padding: 12px 0; padding-left: 20px; position: relative; }
+    .page-body ul li::before { content: '\2014'; position: absolute; left: 0; color: var(--brass); }
+    .page-body li strong { color: var(--offwhite); font-weight: 400; }
+    .page-body a { color: var(--brass); text-decoration: underline; text-underline-offset: 3px; }
+    .page-body p.apply-else { margin-top: 56px; margin-bottom: 0; }
+    @media (max-width: 640px) { .page-body { padding-inline: 24px; } }
   </style>
 </head>
 <body id="top">
@@ -163,107 +174,38 @@
     </div>
   </section>
 
-  <!-- MOTTO — directly after cover -->
-  <!-- PEDIGREE -->
-  <section class="pedigree" aria-label="Our pedigree">
-    <div class="pedigree-inner">
-      <hr class="pedigree-rule" aria-hidden="true">
-      <p class="pedigree-statement">We have sold a business ourselves, and prepared others for sale.</p>
-    </div>
-  </section>
+  <div class="page-body">
+    <p>Preparing your business for sale takes longer than you might expect. A buyer checks your accounts, contracts, staff and legal position before agreeing a price. If your business is ready for those checks, you&rsquo;re more likely to achieve your price. We get your business ready.</p>
+    <p>Investors run the same checks before putting in development capital, so the same preparation applies if you&rsquo;re raising money to grow.</p>
 
-    <section class="motto-top" aria-label="Our motto">
-    <div class="motto-top-inner">
-      <p class="motto-line">Discretion. Integrity. Diligence.</p>
-    </div>
-  </section>
+    <h2>What we do for you</h2>
+    <ul>
+      <li><a href="/investability-assessment/">Investability Assessment</a>: your fact find. Where your business stands today, and what needs doing.</li>
+      <li><a href="/sale-readiness-assessment/">Sale Readiness Assessment</a>: what a buyer&rsquo;s checks would find, before a buyer sees your business.</li>
+      <li><a href="/financial-reality-session/">Financial Reality Session</a>: what your business is worth today. Not a formal valuation.</li>
+      <li><a href="/mergers-and-acquisitions/">Mergers &amp; Acquisitions</a>: selling your whole company or a controlling interest, through to completion.</li>
+    </ul>
+    <p>Raising development capital? We prepare your business; the raise itself is handled by authorised partners.</p>
 
-  <!-- INTRO — with image -->
-  <section class="content-panel" aria-label="Who we work with">
-    <img class="content-panel-bg"
-      src="/uk-founders-growth-businesses-prestige-co.png"
-      alt="Jonathan's Coffee House, the original home of the London Stock Exchange — where UK business finance has its roots"
-      loading="lazy">
-    <div class="content-panel-overlay" aria-hidden="true"></div>
-    <div class="content-panel-inner">
-      <div class="content-panel-body">
-        <h2>We check the business before a buyer does.</h2>
-        <p>You've built something real — revenue, a team, a business that works. Preparing a business for sale is how you get what those years are worth: we find what a buyer's team would find, and help you fix it first.</p>
-        <p><strong>We have founded, fundraised and done deals ourselves</strong> — we know exactly what gets picked apart, because we have been on both sides of that process. We have raised capital as founders and reviewed businesses as advisers. We have sat across the table from buyers and prepared vendors for that process.</p>
-        <p>Nothing about your business goes further than it needs to. We operate on a strict need-to-know basis. The work we do for you stays between us.</p>
-      </div>
-    </div>
-  </section>
+    <h2>How we work with you</h2>
+    <ul>
+      <li><strong>Discretion.</strong> Your plans stay private. Buyers see detailed information only after signing a non-disclosure agreement, so your competitors, customers and staff hear of it only when you choose.</li>
+      <li><strong>Integrity.</strong> You hear what a buyer would find, including where your value can be improved. If you need a lawyer, tax adviser or regulated firm, we say so and refer you.</li>
+      <li><strong>Diligence.</strong> We check your business commercially, financially and legally, as a buyer would.</li>
+    </ul>
 
-  <!-- SECONDARY IMAGE ROW -->
-  <section class="content-panel" aria-label="Our advisory approach">
-    <img class="content-panel-bg"
-      src="/tech-startup-founder-dashboard.jpg"
-      alt="Modern business workspace representing the growth-stage founders Prestige &amp; Co works with"
-      loading="lazy">
-    <div class="content-panel-overlay" aria-hidden="true"></div>
-    <div class="content-panel-inner">
-      <div class="content-panel-body">
-        <h2>We have prepared vendors for sale, and raised capital as founders.</h2>
-        <p>The advisers who have only ever advised will tell you what it should look like in theory. We tell you what it actually looks like when the investor's team goes through the model, when the buyer's lawyers open the data room, when the deal is live and something comes up.</p>
-        <p>We have been in those rooms. That is the difference.</p>
-        <p>Raising capital instead? The <a href="/investability-assessment/" style="color:var(--brass);text-decoration:underline;text-underline-offset:3px;">Investability Assessment</a> is a fact find that shows where the business stands before investors see it.</p>
-      </div>
-    </div>
-  </section>
+    <p class="apply-else">Need something else — raising capital, a minority stake, strategy, property or buying overseas? <a href="/apply/">Apply to work with us</a>.</p>
+  </div>
 
   <div class="apply-cta-section">
     <div class="apply-cta-inner">
       <div class="apply-cta-text">
         <p class="apply-cta-heading">Start with an application.</p>
         <p class="apply-cta-sub">We only take on work where we can make a difference, so the first step is understanding what you need.</p>
-        <p class="apply-else" style="margin:0;font-size:0.95rem;color:var(--muted);line-height:1.65;">Need something else — raising capital, a minority stake, strategy, property or buying overseas? <a href="/apply/" style="color:var(--brass);text-decoration:underline;text-underline-offset:3px;">Apply to work with us</a>.</p>
       </div>
       <a href="/apply/?type=business-owner" class="apply-cta-btn">Apply to work with us</a>
     </div>
   </div>
-
-  <!-- SERVICES -->
-  <section class="services-section" aria-labelledby="services-label">
-    <div class="services-inner">
-      <span class="eyebrow" id="services-label">What we offer</span>
-      <div class="services-grid">
-
-        <div class="service-item">
-          <h3>Investability Assessment</h3>
-          <p>A fact find that shows where the business stands and what needs doing — before an investor ever sees it. We identify what will be challenged and address it first.</p>
-          <a class="service-link" href="/investability-assessment">Investability Assessment</a>
-        </div>
-
-        <div class="service-item">
-          <h3>Sale Readiness Assessment</h3>
-          <p>Find what a buyer's team would find, before they find it. A rigorous review of the business through the lens of a buyer's due diligence process.</p>
-          <a class="service-link" href="/sale-readiness-assessment">Sale Readiness Assessment</a>
-        </div>
-
-        <div class="service-item">
-          <h3>Financial Reality Session</h3>
-          <p>See what the business is actually worth today — not what you hope it is worth — what an informed buyer or investor will conclude when they look at the numbers properly.</p>
-          <a class="service-link" href="/financial-reality-session">Financial Reality Session</a>
-        </div>
-
-        <div class="service-item">
-          <h3>Mergers &amp; Acquisitions</h3>
-          <p>Structuring and preparing the deal itself. We prepare and advise through the M&amp;A process, on the buy side or the sell side. The transaction is completed with your solicitors.</p>
-          <a class="service-link" href="/mergers-and-acquisitions">Mergers &amp; Acquisitions</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- USP -->
-  <section class="usp-section" aria-label="Our experience">
-    <div class="usp-inner">
-      <hr class="section-rule" aria-hidden="true">
-      <p class="usp-statement">We check the business before a buyer does.</p>
-    </div>
-  </section>
 
   <footer class="footer" role="contentinfo" aria-label="Site footer">
     <div class="footer-inner">
