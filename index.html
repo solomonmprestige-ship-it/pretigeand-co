@@ -589,6 +589,17 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   .footer-cols { grid-template-columns: 1fr; }
   .footer-social { margin-left: 0; }
 }
+/* ─── SPACING: aligned with the rest of the site ─── */
+.stats { padding: 80px 0 0; }
+.tl-section { padding: 48px 0 80px; }
+.testimonials { padding: 80px 0; }
+.markets { padding: 80px 0; }
+.content-panel { min-height: 0; }
+.content-panel-inner { padding: 80px 40px; }
+@media (max-width: 860px) {
+  .content-panel { min-height: 0; }
+  .content-panel-inner { padding: 64px 24px; }
+}
 </style>
 </head>
 
@@ -663,7 +674,6 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   <!-- ── CAREER TIMELINE (moved from About) ──────────────── -->
   <section class="tl-section" aria-label="Career timeline" id="timeline">
     <div class="markets-inner">
-      <span class="markets-label">Career timeline</span>
 
       <div class="tl-carousel">
         <button class="tl-arrow" id="tl-prev" aria-label="Previous" disabled>&#8592;</button>
