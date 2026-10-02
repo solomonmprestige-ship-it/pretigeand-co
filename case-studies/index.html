@@ -52,7 +52,7 @@
     .nav-links { display: flex; gap: 40px; list-style: none; }
     .nav-links a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; }
     .nav-links a:hover, .nav-links a[aria-current] { color: var(--gold); }
-    @media (max-width: 640px) { .nav { padding: 24px; } .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } .case-study-inner { padding-inline: 24px; } .forthcoming-inner { padding-inline: 24px; } }
+    @media (max-width: 640px) { .nav { padding: 24px; } .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } .case-study-inner { padding-inline: 24px; } }
     /* COVER */
     .cover { position: relative; width: 100%; height: clamp(420px, 60vh, 700px); overflow: hidden; }
     .cover-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
@@ -91,16 +91,32 @@
     .case-study-body p strong { color: var(--text); font-weight: 400; }
     @media (max-width: 600px) { .case-study-meta { flex-direction: column; gap: 24px; } .case-study-img { height: 280px; } }
 
-    /* FORTHCOMING */
-    .forthcoming-section { padding: 80px 0 120px; }
-    .forthcoming-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
-    .forthcoming-heading { font-size: 1.2rem; font-weight: 400; color: var(--navy); letter-spacing: 0.06em; margin-bottom: 48px; }
-    .forthcoming-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); }
-    .forthcoming-item { background: var(--bg); padding: 40px 32px; }
-    .forthcoming-item .fi-label { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy); display: block; margin-bottom: 16px; font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; }
-    .forthcoming-item h3 { font-size: 1rem; color: var(--navy); font-weight: 400; margin-bottom: 12px; line-height: 1.4; }
-    .forthcoming-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-    @media (max-width: 800px) { .forthcoming-grid { grid-template-columns: 1fr; } }
+    /* ACS CASE STUDY CARD */
+    .acs-card { border: 1px solid var(--rule); background: var(--bg); padding: 56px; margin-bottom: 0; }
+    .acs-head { display: flex; align-items: center; gap: 40px; padding-bottom: 40px; margin-bottom: 48px; border-bottom: 1px solid var(--rule); }
+    .acs-logo { width: 180px; height: auto; flex-shrink: 0; }
+    .acs-id { display: flex; flex-direction: column; gap: 10px; }
+    .acs-name { font-size: 1.5rem; color: var(--navy); margin: 0; line-height: 1.2; }
+    .acs-name a { color: var(--navy); border-bottom: 1px solid var(--rule); transition: color 0.2s, border-color 0.2s; }
+    .acs-name a:hover { color: var(--gold); border-color: var(--gold); }
+    .acs-details { font-size: 1rem; color: var(--muted); margin: 0; }
+    .acs-shots { display: grid; grid-template-columns: 1fr 200px; gap: 32px; align-items: end; padding: 40px; background: var(--alt); margin-bottom: 56px; }
+    .acs-shots figure { margin: 0; }
+    .acs-shots img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); box-shadow: 0 12px 32px rgba(26, 29, 35, 0.10); }
+    .acs-shot-mobile img { border-radius: 18px; border: 6px solid #1A1D23; }
+    .case-study-body a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+    .case-study-body a:hover { color: var(--gold); }
+    .acs-card .case-study-content { padding-bottom: 0; }
+    .more-cases { padding: 64px 40px 96px; text-align: center; }
+    .more-cases-label { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy); font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; line-height: 1.9; margin: 0; }
+    @media (max-width: 800px) {
+      .acs-card { padding: 32px 24px; }
+      .acs-head { flex-direction: column; align-items: flex-start; gap: 24px; }
+      .acs-logo { width: 150px; }
+      .acs-shots { grid-template-columns: 1fr; padding: 24px; gap: 24px; }
+      .acs-shot-mobile { width: 58%; max-width: 220px; margin: 0 auto !important; }
+    }
+    @media (max-width: 640px) { .more-cases { padding: 48px 24px 72px; } }
 
     /* MOTTO BOTTOM */
     .motto-section { padding: 100px 0; text-align: center; }
@@ -222,67 +238,49 @@ body { font-family: 'EB Garamond', Georgia, serif; }
         <p>The work that gets a business past the ceiling working harder cannot move. The work that gets it ready for sale at the price its years are worth. The work done before anyone is asking.</p>
       </div>
 
-      <img class="case-study-img"
-        src="/marina-alta-waste-management-case-study-prestige-co.jpg"
-        alt="All Clear Solutions — waste and property services, Marina Alta, Spain"
-        loading="lazy">
-
-      <div class="case-study-content">
-        <div class="case-study-meta">
-          <div class="meta-item">
-            <span class="meta-label">Client</span>
-            <span class="meta-value"><a href="https://allclearsolutions.eu" target="_blank" rel="noopener">All Clear Solutions</a></span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Location</span>
-            <span class="meta-value">Marina Alta, Spain</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Sector</span>
-            <span class="meta-value">Waste &amp; Property Services</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Services</span>
-            <span class="meta-value">Commercial Direction · Operating Partner</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Status</span>
-            <span class="meta-value">Exit under evaluation</span>
+      <article class="acs-card">
+        <div class="acs-head">
+          <img class="acs-logo" src="/all-clear-solutions-logo.jpg" alt="All Clear Solutions logo" width="800" height="458" loading="lazy">
+          <div class="acs-id">
+            <span class="meta-label">Investor &amp; Builder</span>
+            <p class="acs-name"><a href="https://allclearsolutions.eu" target="_blank" rel="noopener">All Clear Solutions</a></p>
+            <p class="acs-details">Marina Alta, Spain · Waste management &amp; property services</p>
           </div>
         </div>
 
-        <h2 class="case-study-title" id="acs-title">From Man-and-Van to Compliance Operation</h2>
-
-        <div class="case-study-body">
-          <p>How a successful clearance round was repositioned away from the contents-resale model, around a documented compliance proposition, and into a business with retained monthly revenue and a B2B referral channel — saleable at a different multiple to a different kind of buyer.</p>
+        <div class="acs-shots">
+          <figure class="acs-shot-desktop">
+            <img src="/all-clear-solutions-website-desktop.jpg" alt="All Clear Solutions website homepage on desktop" width="1440" height="900" loading="lazy">
+          </figure>
+          <figure class="acs-shot-mobile">
+            <img src="/all-clear-solutions-website-mobile.jpg" alt="All Clear Solutions website homepage on a phone" width="780" height="1688" loading="lazy">
+          </figure>
         </div>
-      </div>
+
+        <div class="case-study-content">
+          <h2 class="case-study-title" id="acs-title">From man-and-van to waste management company.</h2>
+
+          <div class="case-study-body">
+            <p>I took over a man-and-van business. It ran on free house clearances, paid for by reselling the furniture it collected.</p>
+            <p>The model was flawed. So we rebuilt it.</p>
+            <p>Repositioned as a paid, documented waste management company. Aligned with Spain&rsquo;s 2022 Waste Law: every load documented to an authorised facility.</p>
+            <p>Five defined services. A new pricing structure. New brand, new website, automated booking.</p>
+            <p>A referral network of estate agents, solicitors and property managers. Localised marketing and lead generation across nine Marina Alta towns.</p>
+            <p>Through the change, one focus: service excellence. Every job done properly, every client asked to say so publicly.</p>
+            <p>A team of four now delivers the service.</p>
+            <p><a href="https://www.facebook.com/AllClearSolutionsMarinaAlta/reviews" target="_blank" rel="noopener">100% recommend across 25 reviews on Facebook (October 2026)</a>, built while the business moved from furniture resale to waste management.</p>
+            <p>Next: a regular domestic rubbish collection service, now in development.</p>
+            <p>The process we run for clients. We ran it on our own business first.</p>
+          </div>
+        </div>
+      </article>
 
     </div>
   </section>
 
-  <!-- FORTHCOMING -->
-  <section class="forthcoming-section" aria-labelledby="forthcoming-label">
-    <div class="forthcoming-inner">
-      <p class="forthcoming-heading" id="forthcoming-label">Forthcoming case studies.</p>
-      <div class="forthcoming-grid">
-        <div class="forthcoming-item">
-          <span class="fi-label">In preparation</span>
-          <h3>Sale Readiness — Technology Services</h3>
-          <p>Preparing a founder-led technology services business for an exit process, with a complete pre-sale due diligence review and deal structuring advice.</p>
-        </div>
-        <div class="forthcoming-item">
-          <span class="fi-label">In preparation</span>
-          <h3>Real Estate Capital Introduction — Residential Development</h3>
-          <p>A residential development opportunity introduced to a family office investor following a full investability assessment and project review.</p>
-        </div>
-        <div class="forthcoming-item">
-          <span class="fi-label">In preparation</span>
-          <h3>Operating Partner — Growth-Stage Business</h3>
-          <p>A six-month operating partner engagement supporting a founder through a period of commercial restructuring ahead of a Series A fundraise.</p>
-        </div>
-      </div>
-    </div>
+  <!-- MORE CASE STUDIES -->
+  <section class="more-cases" aria-label="More case studies">
+    <p class="more-cases-label">More case studies coming soon. Published only with the client&rsquo;s permission.</p>
   </section>
 
   <!-- MOTTO BOTTOM -->
@@ -298,7 +296,7 @@ body { font-family: 'EB Garamond', Georgia, serif; }
       <div class="apply-cta-text">
         <p class="apply-cta-heading">Start with an application.</p>
         <p class="apply-cta-sub">We only take on work where we can make a difference, so the first step is understanding what you need.</p>
-        <p class="apply-else" style="margin:0;font-size:0.95rem;color:var(--muted);line-height:1.65;">Need something else — raising capital, a minority stake, strategy, property or buying overseas? <a href="/apply/" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;">Apply to work with us</a>.</p>
+        <p class="apply-else" style="margin:0;font-size:0.95rem;color:var(--muted);line-height:1.65;">Need something else — strategy, property or buying overseas? <a href="/apply/" style="color:var(--navy);text-decoration:underline;text-underline-offset:3px;">Apply to work with us</a>.</p>
       </div>
       <a href="/apply/?type=business-owner" class="apply-cta-btn btn-brand">Apply to work with us</a>
     </div>
