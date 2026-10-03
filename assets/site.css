@@ -571,8 +571,5 @@ html.reveal-on .r.is-in { opacity: 1; transform: none; }
 .cover--plain .cover-statement + .cover-line, .cover--plain .cover-statement + .cover-sub { margin-top: 24px; }
 
 /* ─── FOLLOW-UP ────────────────────────────────────────── */
-.apply-alias { margin-top: 14px; font-size: 0.92rem; color: var(--muted); }
-.apply-alias a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); display: inline-block; min-height: 44px; line-height: 44px; }
-.apply-alias a:hover { color: var(--gold); }
 .swp-logo .wordmark { font-size: 1.55rem; }
 @media (max-width: 640px) { .swp-logo .wordmark { font-size: 1.3rem; } }
