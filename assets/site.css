@@ -570,3 +570,14 @@ html.reveal-on .r.is-in { opacity: 1; transform: none; }
 /* ─── FOLLOW-UP ────────────────────────────────────────── */
 .swp-logo .wordmark { font-size: 1.55rem; }
 @media (max-width: 640px) { .swp-logo .wordmark { font-size: 1.3rem; } }
+
+/* ─── HOMEPAGE: who we work with (text columns with image boxes beneath) ─── */
+.market-cols { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; column-gap: 40px; margin-top: 8px; }
+.market-col { display: grid; grid-row: span 2; grid-template-rows: subgrid; row-gap: 28px; }
+.market-col .item { padding-left: 0; border-left: none; }
+.market-col .icard { min-height: 420px; }
+@media (max-width: 900px) {
+  .market-cols { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 56px; }
+  .market-col { grid-row: auto; grid-template-rows: auto auto; }
+  .market-col .icard { min-height: 340px; }
+}
