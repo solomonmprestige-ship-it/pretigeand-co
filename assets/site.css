@@ -185,7 +185,6 @@ ul, ol { list-style: none; }
 .cover-motto { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: #E9DCC4; }
 .cover-line { font-style: italic; font-size: clamp(1.3rem, 2.2vw, 1.75rem); color: #FFFFFF; line-height: 1.4; }
 .cover-sub { margin-top: 14px; font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: rgba(255, 255, 255, 0.9); line-height: 1.6; max-width: 620px; }
-.cover .btn-row { justify-content: center; margin-top: 40px; }
 .cover-place {
   position: absolute; left: 0; right: 0; bottom: 58px; z-index: 3; text-align: center;
   font-family: var(--sans); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.5em; color: rgba(255, 255, 255, 0.7);
@@ -202,8 +201,6 @@ ul, ol { list-style: none; }
   .cover::before { inset: 14px; }
   .cover-eyebrow { letter-spacing: 0.2em; gap: 0; margin-bottom: 26px; }
   .cover-eyebrow::before, .cover-eyebrow::after { display: none; }
-  .cover .btn-row { flex-direction: column; width: 100%; }
-  .cover .btn-row .btn { width: 100%; }
   .cover-place { bottom: 32px; letter-spacing: 0.35em; }
   .cover--plain { padding: 80px 20px 64px; }
 }
@@ -572,3 +569,10 @@ html.reveal-on .r.is-in { opacity: 1; transform: none; }
   .footer-col ul { gap: 0; }
 }
 .cover--plain .cover-statement + .cover-line, .cover--plain .cover-statement + .cover-sub { margin-top: 24px; }
+
+/* ─── FOLLOW-UP ────────────────────────────────────────── */
+.apply-alias { margin-top: 14px; font-size: 0.92rem; color: var(--muted); }
+.apply-alias a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); display: inline-block; min-height: 44px; line-height: 44px; }
+.apply-alias a:hover { color: var(--gold); }
+.swp-logo .wordmark { font-size: 1.55rem; }
+@media (max-width: 640px) { .swp-logo .wordmark { font-size: 1.3rem; } }
