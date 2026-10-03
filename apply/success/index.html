@@ -1,203 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#FFFFFF">
-  <meta name="robots" content="noindex">
-  <title>Application received | Prestige &amp; Co</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMX1SWHYSB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      analytics_storage: 'denied',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      wait_for_update: 500
-    });
-    gtag('js', new Date());
-    gtag('config', 'G-PMX1SWHYSB');
-  </script>
-  <link rel="icon" type="image/svg+xml" href="/favicon-p.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-p-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg: #FFFFFF; --alt: #FAF8F3; --text: #1A1D23; --muted: #5A5F69; --navy: #1F3A5F; --navy-dark: #162B47; --gold: #8A6A35; --gold-soft: #9A7A45; --line: #B8935A; --rule: #ECE6DA; }
-    html { background: var(--bg); color: var(--text); font-family: 'EB Garamond', Georgia, serif; }
-    body { background: var(--bg); padding: 0 16px; }
-    a { color: inherit; text-decoration: none; }
-
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 32px 0; max-width: 1280px; margin: 0 auto; }
-    .nav-logo { font-size: 1.05rem; letter-spacing: 0.08em; color: var(--navy); }
-    .nav-links { display: flex; gap: 40px; list-style: none; }
-    .nav-links a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; }
-    .nav-links a:hover { color: var(--gold); }
-    @media (max-width: 640px) { .nav-links { gap: 20px; } .nav-links a { font-size: 0.68rem; } }
-
-    .success-wrap { min-height: 60vh; display: flex; align-items: center; justify-content: center; padding: 80px 40px; }
-    .success-inner { max-width: 540px; text-align: center; }
-    .success-inner h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.15; color: var(--navy); margin-bottom: 28px; }
-    .success-inner p { font-size: 1.05rem; line-height: 1.75; color: var(--text); margin-bottom: 40px; }
-    .btn-back { display: inline-flex; align-items: center; font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--navy); border: 1px solid var(--navy); padding: 18px 40px; background: transparent; text-decoration: none; transition: background 0.25s, color 0.25s; }
-    .btn-back:hover { background: var(--navy); color: var(--bg); }
-
-    .footer { padding: 80px 0 160px; max-width: 1280px; margin: 0 auto; border-top: 1px solid var(--rule); }
-    @media (max-width: 768px) { .footer { padding-bottom: 200px; } }
-    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px; margin-bottom: 60px; }
-    .footer-col-head { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--navy); display: block; margin-bottom: 24px; font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 12px; }
-    .footer-col ul a { font-size: 0.88rem; color: var(--muted); letter-spacing: 0.04em; transition: color 0.2s; }
-    .footer-col ul a:hover { color: var(--gold); }
-    .footer-col p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--muted); letter-spacing: 0.06em; }
-    @media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; gap: 12px; text-align: center; } }
-  
-/* ─── BRAND 2026 (light theme, logo, type) ─── */
-html, body { background: var(--bg); color: var(--text); }
-body { font-family: 'EB Garamond', Georgia, serif; }
-.brand-logo { display: inline-flex; align-items: center; gap: 14px; line-height: 1; font-family: 'EB Garamond', Georgia, serif; text-decoration: none; border: none; letter-spacing: 0.01em; flex-shrink: 0; }
-.brand-logo:hover { color: inherit; }
-.pc-mark { font-size: 1.55rem; white-space: nowrap; letter-spacing: 0; }
-.pc-p { color: #8A6A35; font-weight: 700; font-size: 1.06em; }
-.pc-amp { color: #1F3A5F; font-weight: 500; font-size: 0.8em; }
-.pc-c { color: #1F3A5F; font-weight: 500; }
-.brand-divider { display: block; width: 1px; height: 1.6rem; background: #ECE6DA; }
-.wordmark { font-size: 1.3rem; white-space: nowrap; }
-.wm-prestige { color: #8A6A35; font-weight: 700; }
-.wm-amp { color: #1F3A5F; font-weight: 500; font-size: 0.8em; white-space: pre; }
-.wm-co { color: #1F3A5F; font-weight: 500; }
-@media (max-width: 640px) {
-  .brand-logo { gap: 10px; }
-  .pc-mark { font-size: 1.3rem; }
-  .brand-divider { height: 1.3rem; }
-  .wordmark { font-size: 1.1rem; }
-}
-.motto-text {
-  font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif !important; font-weight: 600 !important;
-  font-style: normal !important; text-transform: uppercase; letter-spacing: 4px !important;
-  color: #9A7A45 !important; font-size: clamp(0.95rem, 1.7vw, 1.3rem) !important; line-height: 1.6 !important;
-}
-.btn-brand {
-  font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif !important; font-weight: 500;
-  background: #1F3A5F !important; color: #FFFFFF !important; border: 1px solid #1F3A5F !important;
-}
-.nav-links a[aria-current], .topbar nav a[aria-current] { color: var(--navy) !important; }
-@media (max-width: 640px) { nav.nav { flex-wrap: wrap; row-gap: 14px; } nav.nav > .nav-links { flex-wrap: wrap; gap: 10px 18px; } }
-.btn-brand:hover { background: #162B47 !important; border-color: #162B47 !important; color: #FFFFFF !important; }
-</style>
-</head>
-<body>
-
-  <nav class="nav" aria-label="Main navigation">
-    <a href="/" class="nav-logo brand-logo" aria-label="Prestige &amp; Co — home"><span class="pc-mark" aria-hidden="true"><span class="pc-p">P</span><span class="pc-amp">&amp;</span><span class="pc-c">C</span></span><span class="brand-divider" aria-hidden="true"></span><span class="wordmark"><span class="wm-prestige">Prestige</span><span class="wm-amp"> &amp; </span><span class="wm-co">Co</span></span></a>
-    <ul class="nav-links">
-      <li><a href="/about">About</a></li>
-      <li><a href="/founders">Business Leaders</a></li>
-      <li><a href="/investors">Investors</a></li>
-      <li><a href="/property">Property</a></li>
-      <li><a href="/case-studies">Case Studies</a></li>
-    </ul>
-  </nav>
-
-  <main class="success-wrap">
-    <div class="success-inner">
-      <h1>Application received.</h1>
-      <p>Thank you. We read every application ourselves. If we can help, we will be in touch.</p>
-      <a href="/" class="btn-back">Back to the site</a>
-    </div>
-  </main>
-
-  <footer class="footer" aria-label="Site footer">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <span class="footer-col-head">Prestige &amp; Co</span>
-        <p>A boutique UK corporate finance consultancy.</p>
-      </div>
-      <div class="footer-col">
-        <span class="footer-col-head">Services</span>
-        <ul>
-          <li><a href="/investability-assessment">Investability Assessment</a></li>
-          <li><a href="/sale-readiness-assessment">Sale Readiness Assessment</a></li>
-          <li><a href="/financial-reality-session">Financial Reality Session</a></li>
-          <li><a href="/mergers-and-acquisitions">Mergers &amp; Acquisitions</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <span class="footer-col-head">Who We Work With</span>
-        <ul>
-          <li><a href="/founders">Business Leaders</a></li>
-          <li><a href="/investors">Investors</a></li>
-          <li><a href="/property">Property</a></li>
-          <li><a href="/join-our-ecosystem/">Join our ecosystem</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <span class="footer-col-head">Company</span>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/case-studies">Case Studies</a></li>
-          <li><a href="/privacy/">Privacy Notice</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="motto-text">Discretion. Integrity. Diligence.</span>
-      <span>&copy; 2026 Prestige &amp; Co</span>
-    </div>
-  </footer>
-
-<!-- Cookie Consent -->
-<div id="pc-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9000;background:#FFFFFF;border-top:1px solid #ECE6DA;padding:16px 24px;">
-  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
-    <p style="margin:0;flex:1;min-width:220px;font-family:'EB Garamond',Georgia,serif;font-size:0.95rem;color:#5A5F69;line-height:1.55;">We use analytics cookies to see how the site is used. You can accept or decline. <a href="/privacy/" style="color:#1F3A5F;text-decoration:underline;">Read our Privacy Notice.</a></p>
-    <div style="display:flex;gap:12px;flex-shrink:0;">
-      <button onclick="pcConsent('granted')" style="font-family:'Jost','Helvetica Neue',Arial,sans-serif;font-weight:500;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:#FFFFFF;background:#1F3A5F;border:1px solid #1F3A5F;padding:10px 22px;cursor:pointer;">Accept</button>
-      <button onclick="pcConsent('denied')" style="font-family:'Jost','Helvetica Neue',Arial,sans-serif;font-weight:500;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:#1F3A5F;background:transparent;border:1px solid #1F3A5F;padding:10px 22px;cursor:pointer;">Decline</button>
-    </div>
-  </div>
-</div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="robots" content="noindex">
+<title>Application received | Prestige &amp; Co</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PMX1SWHYSB"></script>
 <script>
-(function(){
-  var CONSENT_KEY = 'pc_consent';
-  var stored;
-  try { stored = localStorage.getItem(CONSENT_KEY); } catch(e) { stored = null; }
-
-  function pcConsent(choice) {
-    gtag('consent', 'update', {
-      analytics_storage: choice,
-      ad_storage: choice,
-      ad_user_data: choice,
-      ad_personalization: choice
-    });
-    try { localStorage.setItem(CONSENT_KEY, choice); } catch(e) {}
-    var b = document.getElementById('pc-banner');
-    if (b) { b.style.display = 'none'; document.body.style.paddingBottom = ''; }
-  }
-  window.pcConsent = pcConsent;
-
-  if (stored === 'granted') {
-    gtag('consent', 'update', {
-      analytics_storage: 'granted',
-      ad_storage: 'granted',
-      ad_user_data: 'granted',
-      ad_personalization: 'granted'
-    });
-  } else if (!stored) {
-    window.addEventListener('DOMContentLoaded', function() {
-      var b = document.getElementById('pc-banner');
-      if (b) { b.style.display = 'block'; document.body.style.paddingBottom = b.offsetHeight + 'px'; }
-    });
-  }
-})();
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+analytics_storage: 'denied',
+ad_storage: 'denied',
+ad_user_data: 'denied',
+ad_personalization: 'denied',
+wait_for_update: 500
+});
+gtag('js', new Date());
+gtag('config', 'G-PMX1SWHYSB');
 </script>
+<link rel="icon" type="image/svg+xml" href="/favicon-p.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-p-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script>(function(){var d=document.documentElement;if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;d.classList.add("reveal-on");setTimeout(function(){if(!window.__pcReveal)d.classList.remove("reveal-on");},4000);})();</script>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="frame" aria-hidden="true"></div>
+<div class="cred-bar">Chartered Insurance Institute · Chartered Institute for Securities &amp; Investment · London</div>
+<nav class="nav" aria-label="Main navigation"><div class="nav-inner"><a href="/" class="nav-mark brand-logo" aria-label="Prestige &amp; Co — home"><span class="pc-mark" aria-hidden="true"><span class="pc-p">P</span><span class="pc-amp">&amp;</span><span class="pc-c">C</span></span><span class="brand-divider" aria-hidden="true"></span><span class="wordmark"><span class="wm-prestige">Prestige</span><span class="wm-amp"> &amp; </span><span class="wm-co">Co</span></span></a><button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">Menu</button><div class="nav-menu" id="nav-menu"><ul class="nav-links"><li><a href="/about/">About</a></li><li><a href="/founders/">Business Leaders</a></li><li><a href="/investors/">Investors</a></li><li><a href="/property/">Property</a></li><li><a href="/case-studies/">Case Studies</a></li><li><a href="/blog/">Blog</a></li></ul><a class="btn btn--sm" href="/apply/">Apply →</a></div></div></nav>
+<main id="main">
+<section class="cover cover--plain" aria-label="Application received"><div class="cover-inner"><h1 class="cover-statement">Application received.</h1><div class="cover-rule"></div><p class="cover-line">Thank you. We read every application ourselves. If we can help, we will be in touch. If we cannot, we will say so.</p><div class="btn-row success-actions"><a class="btn" href="/">Back to the site →</a></div></div></section>
+</main>
+<footer class="footer" role="contentinfo"><div class="wrap"><div class="footer-cols"><div class="footer-col"><div class="footer-brand">Prestige &amp; Co</div><p class="footer-desc">A boutique UK corporate finance consultancy. Your concierge for the sale and purchase of businesses and property.</p></div><div class="footer-col"><span class="footer-col-head">Services</span><ul><li><a href="/investability-assessment/">Investability Assessment</a></li><li><a href="/sale-readiness-assessment/">Sale Readiness Assessment</a></li><li><a href="/financial-reality-session/">Financial Reality Session</a></li><li><a href="/mergers-and-acquisitions/">Mergers &amp; Acquisitions</a></li></ul></div><div class="footer-col"><span class="footer-col-head">Who We Work With</span><ul><li><a href="/founders/">Business Leaders</a></li><li><a href="/investors/">Investors</a></li><li><a href="/property/">Property</a></li><li><a href="/join-our-ecosystem/">Join our ecosystem</a></li></ul></div><div class="footer-col"><span class="footer-col-head">Company</span><ul><li><a href="/about/">About</a></li><li><a href="/case-studies/">Case Studies</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacy/">Privacy Notice</a></li><li><a href="https://soldwithprestige.com" target="_blank" rel="noopener">Sold With Prestige ↗</a></li></ul></div><div class="footer-col"><span class="footer-col-head">Contact</span><ul><li><a href="mailto:solomon@prestigeand.co">solomon@prestigeand.co</a></li><li><a href="tel:+442045112452">020 4511 2452</a></li><li><a href="https://wa.me/447835822331" target="_blank" rel="noopener">WhatsApp UK</a></li><li><a href="https://www.linkedin.com/company/prestige-and-co" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://x.com/PrestigeCoUK" target="_blank" rel="noopener noreferrer">X</a></li></ul></div></div><p class="footer-legal">Prestige &amp; Co is the trading name of Solomon Prestige Group Ltd — a commercial advisory consultancy. Not authorised or regulated by the Financial Conduct Authority. Where regulated advice is required, we refer to appropriately authorised partners. Company No. 17189399, 71–75 Shelton Street, Covent Garden, London WC2H 9JQ.</p><div class="footer-bottom"><span>&copy; <span id="yr">2026</span> Prestige &amp; Co</span><span class="motto-inline">Discretion. Integrity. Diligence.</span><a class="footer-top" href="#top">Back to top ↑</a></div></div></footer>
+<!-- Cookie Consent -->
+<div id="pc-banner" class="pc-banner"><div class="pc-banner-inner"><p>We use analytics cookies to see how the site is used. You can accept or decline. <a href="/privacy/">Read our Privacy Notice.</a></p><div class="pc-banner-btns"><button type="button" class="pc-accept" data-consent="granted">Accept</button><button type="button" class="pc-decline" data-consent="denied">Decline</button></div></div></div>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
