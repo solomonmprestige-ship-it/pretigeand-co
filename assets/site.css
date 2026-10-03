@@ -581,3 +581,6 @@ html.reveal-on .r.is-in { opacity: 1; transform: none; }
   .market-col { grid-row: auto; grid-template-rows: auto auto; }
   .market-col .icard { min-height: 340px; }
 }
+
+/* ─── JOIN OUR ECOSYSTEM: second list heading ─── */
+.sec .panel-h2 { margin-top: 72px; }
