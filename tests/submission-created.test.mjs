@@ -141,6 +141,30 @@ function checkCols(table, cols, where) {
   assert.throws(() => checkCols('contacts', ['aims_objectives'], 'self-test'), /not a known live column/); ok('column guard fails on aims_objectives (self-test)')
 }
 
+// ---- KEY STYLES: new-style sb_ keys go in the apikey header only; old-style (eyJ...) keys keep apikey + Bearer
+{ const NEW = 'sb_secret_TESTONLY1234567890', OLD = 'eyJhbGciOiJIUzI1NiJ9.TESTONLY.sig'
+  for (const [key, expectBearer] of [[NEW, false], [OLD, true]]) {
+    const seen = []
+    const fake = async (url, o) => { seen.push(o.headers); return { ok: true, status: 200, text: async () => '[]' } }
+    await makeDb(key, fake).findContactByEmail('a@b.co')
+    assert.equal(seen[0].apikey, key); assert.equal('Authorization' in seen[0], expectBearer)
+    if (expectBearer) assert.equal(seen[0].Authorization, 'Bearer ' + key)
+  }
+  ok('submission-created: new key -> apikey only; old key -> apikey + Bearer')
+  for (const fnFile of ['crm-contacts', 'crm-companies', 'crm-deals']) {
+    for (const [key, expectBearer] of [[NEW, false], [OLD, true]]) {
+      const seen = []; const real = globalThis.fetch
+      globalThis.fetch = async (u, o) => { seen.push(o.headers); return { ok: true, status: 200, text: async () => '[]' } }
+      process.env.SUPABASE_SERVICE_ROLE_KEY = key; process.env.CRM_API_SECRET = 'sec'
+      try { const m = await import(`../netlify/functions/${fnFile}.mjs?k=${key}`); await m.handler({ httpMethod: 'GET', path: '/api/crm/x', headers: { authorization: 'Bearer sec' }, queryStringParameters: {} }) }
+      finally { globalThis.fetch = real }
+      assert.ok(seen.length && seen.every(h => h.apikey === key && ('Authorization' in h) === expectBearer), fnFile + ' ' + key.slice(0, 4))
+    }
+  }
+  ok('crm-contacts / crm-companies / crm-deals: new key -> apikey only; old key -> apikey + Bearer')
+  delete process.env.SUPABASE_SERVICE_ROLE_KEY; delete process.env.CRM_API_SECRET
+}
+
 // ---- REST shapes (fake fetch, no network)
 { const seen = []; const fake = async (url, o) => { seen.push({ url, method: o.method, body: o.body }); return { ok: true, status: 200, text: async () => (o.method === 'GET' ? '[]' : '[{"id":"new1"}]') } }
   const db = makeDb('KEY', fake); await db.findContactByEmail('a_b@x.com'); await db.insertContact({ name: 'n' }); await db.upsertStep({ a: 1 }); await db.setProcessIfEmpty('u1', 'Property')
