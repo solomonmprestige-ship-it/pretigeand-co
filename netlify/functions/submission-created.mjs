@@ -3,7 +3,8 @@
 // Netlify Forms keeps the full submission and emails the alias whatever happens here, so this function never throws.
 //
 // Needs the site environment variable SUPABASE_SERVICE_ROLE_KEY (server only; never in the browser or the repo).
-// Writes ONLY when CONTEXT === 'production'; on previews and branch deploys it just logs what it would have created.
+// Writes only where the service key exists (Production only) and CONTEXT, if visible, is 'production';
+// otherwise it just logs what it would have created.
 
 const SB_URL = 'https://hifvkyqkqhwzcmuuihyd.supabase.co'
 const MAX_TEXT = 5000
@@ -285,14 +286,16 @@ export async function handler(event) {
     if (app.skip) { console.log('[submission-created] ignored:', app.skip); return { statusCode: 200, body: 'ignored' } }
     if (app.invalid) { console.log('[submission-created] stopped:', app.invalid, '| form:', body.payload?.form_name); return { statusCode: 200, body: 'stopped' } }
 
-    if (process.env.CONTEXT !== 'production') {
-      console.log('[submission-created] NOT production (' + (process.env.CONTEXT || 'unknown') + '): nothing written. Would have created:',
-        JSON.stringify({ contact: mask(app.contact), tick_step_1: !!app.process, activity: `Applied via website: ${app.formName}` }))
-      return { statusCode: 200, body: 'dry run' }
-    }
-
+    // Netlify does not pass CONTEXT to functions at runtime, so previews are kept out two ways:
+    // the service key is set for Production only (so it is absent on previews), and if CONTEXT is ever
+    // visible and is not 'production', nothing is written either.
+    const ctx = process.env.CONTEXT
     const key = process.env.SUPABASE_SERVICE_ROLE_KEY
-    if (!key) { console.error('[submission-created] SUPABASE_SERVICE_ROLE_KEY is not set on this site; nothing written'); return { statusCode: 200, body: 'no key' } }
+    if (!key || (ctx && ctx !== 'production')) {
+      console.log('[submission-created] nothing written (' + (!key ? 'no service key on this deploy' : 'context ' + ctx) + '). Would have created:',
+        JSON.stringify({ contact: mask(app.contact), tick_step_1: !!app.process, activity: `Applied via website: ${app.formName}` }))
+      return { statusCode: 200, body: !key ? 'no key' : 'dry run' }
+    }
 
     const result = await processApplication(app, makeDb(key), new Date().toISOString())
     console.log('[submission-created] done:', JSON.stringify(result), '| form:', app.formName)
