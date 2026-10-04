@@ -1,3 +1,4 @@
+import { supabaseHeaders } from '../lib/supabase-headers.mjs'
 // Runs automatically after each Netlify Forms submission (Netlify's own spam filter has already run).
 // For application forms it creates a contact in the CRM (Supabase), using only tables and columns that already exist.
 // Netlify Forms keeps the full submission and emails the alias whatever happens here, so this function never throws.
@@ -229,12 +230,10 @@ async function tickApply(db, contactId, process, nowIso) {
 
 // Real database access (service role key, server only)
 export function makeDb(key, fetchImpl = fetch) {
-  const headers = {
-    apikey: key,
-    Authorization: 'Bearer ' + key,
+  const headers = supabaseHeaders(key, {
     'Content-Type': 'application/json',
     Accept: 'application/json',
-  }
+  })
   async function req(method, path, body, prefer) {
     const res = await fetchImpl(SB_URL + '/rest/v1/' + path, {
       method,

@@ -1,3 +1,4 @@
+import { supabaseHeaders } from '../lib/supabase-headers.mjs'
 const SB_URL = 'https://hifvkyqkqhwzcmuuihyd.supabase.co'
 
 function getKey() { return process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY }
@@ -12,13 +13,11 @@ function auth(event) {
 async function sbReq(method, path, body) {
   const res = await fetch(SB_URL + '/rest/v1/' + path, {
     method,
-    headers: {
-      apikey: getKey(),
-      Authorization: 'Bearer ' + getKey(),
+    headers: supabaseHeaders(getKey(), {
       'Content-Type': 'application/json',
       Accept: 'application/json',
       Prefer: 'return=representation',
-    },
+    }),
     body: body ? JSON.stringify(body) : undefined,
   })
   const text = await res.text()
