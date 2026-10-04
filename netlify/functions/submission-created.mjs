@@ -11,7 +11,8 @@ const MAX_TEXT = 5000
 const MAX_NAME = 200
 
 // Per form: the process to set, and where each answer goes.
-// 'profile' answers go in contacts.background, 'goals' answers in contacts.aims_objectives.
+// 'profile' and 'goals' answers are both written, labelled, into contacts.background (the notes column the CRM uses on contacts;
+// contacts.aims_objectives no longer exists in the live database).
 const FORMS = {
   'application-business-owner': {
     label: 'Business owner',
@@ -138,8 +139,11 @@ export function buildApplication(payload) {
     `Applied via website (${form.label} form, ${formName}) on ${date}.`,
     'Any uploaded file is kept in Netlify Forms, not in the CRM.',
   ].filter(Boolean)
-  const background = [...header, ...lines.profile].join('\n')
-  const aims = lines.goals.join('\n')
+  const background = [
+    ...header,
+    ...lines.profile,
+    ...(lines.goals.length ? ['', 'Application answers:', ...lines.goals] : []),
+  ].join('\n')
 
   return {
     formName,
@@ -159,7 +163,6 @@ export function buildApplication(payload) {
       ...(process ? { process } : {}),
       ...(form.roleType ? { role_type: form.roleType } : {}),
       background,
-      ...(aims ? { aims_objectives: aims } : {}),
     },
   }
 }
@@ -267,7 +270,9 @@ export function makeDb(key, fetchImpl = fetch) {
       await req('POST', 'process_step_log', row, 'return=minimal')
     },
     async insertActivity(row) {
-      await req('POST', 'activities', row, 'return=minimal')
+      // fingerprint is built the same way the CRM builds it, so the same note cannot be added twice
+      const fingerprint = `${row.contact_id}-${row.activity_at}-${(row.body || '').slice(0, 50)}`
+      await req('POST', 'activities', { ...row, fingerprint }, 'return=minimal')
     },
   }
 }
